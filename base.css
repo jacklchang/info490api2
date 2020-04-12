@@ -11,6 +11,7 @@
 
   h1, h3 {
       font-family: "Source Sans Pro";
+      color:white;
   }
 
   #jumbocard{
@@ -21,18 +22,35 @@
  
  #softwaredev, #datascience, #cyber, #nontech {
     display:block;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     border: 1px solid white;  
-    background-color: black;
     color:white;
     margin-left:3rem;
     margin-right:3rem;
+    padding: 1rem;
  }
 
- .line {
-    width: 100px;
-    height: 1px;
-    background-color: white;
+ .btn-group {
+    padding-left: 15rem;
+ }
+
+ .caption {
+    margin-top: 2rem;
+    display: block;
+    color:white;
+}
+
+#capstoneteam {
+    background-color:white;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: fit-content;
+}
+
+#team-pic {
+    width: 100%;
+    height: 100%;
+    background-size:cover;
 }
