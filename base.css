@@ -8,9 +8,31 @@
     margin-right: 0.5vw;
 }
 
-.loader {
-    border-top: 16px solid blue;
-    border-right: 16px solid green;
-    border-bottom: 16px solid red;
-    border-left: 16px solid yellow;
+
+  h1, h3 {
+      font-family: "Source Sans Pro";
   }
+
+  #jumbocard{
+    background-image: linear-gradient(to right, #33ccff 0%, #00FF7F 100%);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+ 
+ #softwaredev, #datascience, #cyber, #nontech {
+    display:block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid white;  
+    background-color: black;
+    color:white;
+    margin-left:3rem;
+    margin-right:3rem;
+ }
+
+ .line {
+    width: 100px;
+    height: 1px;
+    background-color: white;
+}

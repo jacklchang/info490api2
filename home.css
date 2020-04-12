@@ -31,7 +31,7 @@ p, h1, h2, h3, h4, h5, a {
 }
 
 .jumbotron {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('./imgs/heroimagedark.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('./imgs/microsoft.jpg');
     background-size: cover;
     height: 50vh;
     margin-bottom: 0;
