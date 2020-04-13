@@ -9,6 +9,10 @@ p, h1, h2, h3, h4, h5, a {
     /* position: sticky; */ /*Trying this to make the nav elements line up*/
 }
 
+#desc-button:hover {
+    color: rgb(75, 75, 75);
+}
+
 #nav-button span, #desc-button span {
     margin-left: 1.5vw;
     margin-right: 1.5vw;
@@ -55,4 +59,11 @@ p, h1, h2, h3, h4, h5, a {
 
 .card-text {
     opacity: 1 !important;
+}
+
+#capstoneteam {
+    background-color:white;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: fit-content;
 }

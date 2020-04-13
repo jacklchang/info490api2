@@ -2,330 +2,345 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>A-PI</title>
-    <meta name="author" content="A-PI CapstoneAD2020">
-    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
-    <meta name="keywords"
-        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel='stylesheet' href='./index.css'>
-    <link rel='stylesheet' href='./base.css'>
-    <link rel='icon' type='img/jpg' href='./imgs/logo.jpg'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>A-PI</title>
+  <meta name="author" content="A-PI CapstoneAD2020">
+  <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+  <meta name="keywords"
+    content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel='stylesheet' href='./index.css'>
+  <link rel='stylesheet' href='./base.css'>
+  <link rel='icon' type='img/jpg' href='./imgs/logo.jpg'>
 </head>
 
 <body class='bg-dark'>
 
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"><img src='./imgs/logo.jpg' width='30' height="30"
-                    class='d-inline-block align-top' alt='Microsoft Encounter logo'></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg mt-2">
+      <a class="navbar-brand" href="#"><img src='./imgs/logo.jpg' width='30' height="30"
+          class='d-inline-block align-top' alt='Microsoft Encounter logo'></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">References</a>
-                    </li>
-                </ul>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link text-light" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-light" href="#">References</a>
+          </li>
+        </ul>
 
-                <a class="btn btn-outline-primary my-2 my-sm-0 mr-3" type="submit" id='login-btn' data-toggle='modal'
-                    data-target='#login-window'><span>Log In</span></a>
-                <a class="btn btn-outline-primary my-2 my-sm-0 mr-3" type="submit" id='signup-btn' data-toggle="modal"
-                    data-target="#signup-window"><span>Sign Up</span></a>
-            </div>
-        </nav>
-
-        <div class="modal fade" id="login-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Welcome back!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                    placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder='Password'>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" id='login'>Take Me to Encounter!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="signup-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Welcome to Encounter!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form class='container'>
-                            <div class="form-group row">
-                                <div class='col'>
-                                    <label for="First Name">First Name</label>
-                                    <input type="text" class="form-control" id="fname" aria-describedby="nameHelp"
-                                        placeholder="First Name">
-                                </div>
-                                <div class='col'>
-                                    <label for="Last Name">Last Name</label>
-                                    <input type="text" class="form-control" id="lname" aria-describedby="nameHelp"
-                                        placeholder="Last Name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email Address</label>
-                                <input type="email" class="form-control" id="nemail" aria-describedby="emailHelp"
-                                    placeholder="Email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                    anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="npassword" placeholder='Password'>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" id='next'>Continue Signup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class='row justify-content-center'>
-                <div class="card border-light mb-3 bg-dark" style="width: 30rem;">
-                    <div class="card-body" id="jumbocard">
-                        <h1 class="card-title text-light text-center">Microsoft Encounter</h1>
-                        <h3 class="card-text text-light text-center mb-5">Developing Developers</h3>
-                        <div class='row text-center'>
-                            <div class='col'>
-                                <a class="btn btn-primary my-2 my-sm-0 mx-auto" type="submit" id='desc-button'
-                                    href='./home.html'><span>Learn with
-                                        Encounter</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class='container-fluid' id="capstoneteam">
-        <div class='row justify-content-center'>
-            <div class='col text-dark'>
-                <h1 class="text-center mb-5 mt-5 text-dark">About the Team</h1>
-                <p class="pl-5">We are team of 4 students at the University of Washington Information School, building this as our senior
-                    capstone project. 
-                </p>
-                <p class="pl-5">
-                    Our sponsors, Microsoft Learn, want us to look at their
-                    platform from a technical and non-technical students perspective.
-                    By filling this content-gap, we will be able to connect students to these Microsoft
-                    resources and provide them with the skills to become adept users,
-                    thereby turning them into lifelong customers.
-                </p>
-            </div>
-            <div class='col'>
-                 <img src="./imgs/teampic.jpg" id="team-pic">
-            </div>
-        </div>
-    </div>
-    <div class='container-fluid'>
-        <div class='row justify-content-center'>
-            <div class='col'>
-                <h1 class="card-title text-light text-center mb-5 mt-5 pt-5">Four student tracks</h1>
-                <div class="btn-group text-center mb-5 ml-5 mr-5 pb-5">
-                    <div class="icon1">
-                        <img src="./imgs/dev.png" id="softwaredev" alt="Avatar">
-                        <span class="caption">Software Developer</span>
-                    </div>
-                    <div class="icon2">
-                        <img src="./imgs/datasci.png" id="datascience" alt="Avatar">
-                        <span class="caption">Data Scientist</span>
-                    </div>
-                    <div class="icon3">
-                        <img src="./imgs/cyber.png" id="cyber" alt="Avatar">
-                        <span class="caption">Cybersecurity</span>
-                    </div>
-                    <div class="icon4">
-                        <img src="./imgs/nontech.png" id="nontech" alt="Avatar">
-                        <span class="caption">Non-technical</span>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-
-    <!--https://mdbootstrap.com/docs/jquery/javascript/carousel/-->
-    <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
-
-        <!--Controls-->
-        <div class="controls-top">
-          <a class="btn-floating" href="#carousel-example-multi" data-slide="prev"><i
-              class="fas fa-chevron-left"></i></a>
-          <a class="btn-floating" href="#carousel-example-multi" data-slide="next"><i
-              class="fas fa-chevron-right"></i></a>
-        </div>
-        <!--/.Controls-->
-      
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-multi" data-slide-to="1"></li>
-          <li data-target="#carousel-example-multi" data-slide-to="2"></li>
-          <li data-target="#carousel-example-multi" data-slide-to="3"></li>
-          <li data-target="#carousel-example-multi" data-slide-to="4"></li>
-          <li data-target="#carousel-example-multi" data-slide-to="5"></li>
-        </ol>
-        <!--/.Indicators-->
-      
-        <div class="carousel-inner v-2" role="listbox">
-      
-          <div class="carousel-item active">
-            <div class="col-12 col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn1.png"
-                  alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Cloud Computing</h4>
-                  <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
-                  <a class="btn btn-primary btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="col-12 col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn2.png"
-                  alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Data Science</h4>
-                  <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
-                  <a class="btn btn-primary btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="col-12 col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn3.png"
-                  alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">No experience necessary</h4>
-                  <p class="card-text">Encounter is built from the group up to provide a student-accessible experience for using Azure.
-                      All skill levels are welcome.
-                  </p>
-                  <a class="btn btn-primary btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="col-12 col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (29).jpg"
-                  alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Card title</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                  <a class="btn btn-primary btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="col-12 col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (30).jpg"
-                  alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Card title</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                  <a class="btn btn-primary btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="col-12 col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (27).jpg"
-                  alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Card title</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                  <a class="btn btn-primary btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-        </div>
-      
+        <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='login-btn' data-toggle='modal'
+          data-target='#login-window'><span>Log In</span></a>
+        <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='signup-btn' data-toggle="modal"
+          data-target="#signup-window"><span>Sign Up</span></a>
       </div>
-    
-    <footer class='text-center text-light py-5 mt-5 bg-secondary'>
-        <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
-            <h4>Contact Us</h4>
-        </a>
-    </footer>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    </nav>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+
+
+    <div class="modal fade" id="login-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Welcome back!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="password" placeholder='Password'>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id='login'>Take Me to Encounter!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="signup-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Welcome to Encounter!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class='container'>
+              <div class="form-group row">
+                <div class='col'>
+                  <label for="First Name">First Name</label>
+                  <input type="text" class="form-control" id="fname" aria-describedby="nameHelp"
+                    placeholder="First Name">
+                </div>
+                <div class='col'>
+                  <label for="Last Name">Last Name</label>
+                  <input type="text" class="form-control" id="lname" aria-describedby="nameHelp"
+                    placeholder="Last Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email Address</label>
+                <input type="email" class="form-control" id="nemail" aria-describedby="emailHelp" placeholder="Email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                  anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="npassword" placeholder='Password'>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id='next'>Continue Signup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container mt-3">
+      <div class='row justify-content-center'>
+        <div class="card mb-3" style="width: 30rem;">
+          <div class="card-body" id="jumbocard">
+            <h1 class="card-title text-light text-center">Microsoft Encounter</h1>
+            <p class="lead card-text text-light text-center mb-5">Developing Developers</p>
+            <div class='row text-center'>
+              <div class='col'>
+                <a class="btn btn-outline-light my-2 my-sm-0 mx-auto" type="submit" id='desc-button'
+                  data-toggle="modal" data-target="#signup-window"><span>Learn with
+                    Encounter</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='container-fluid'>
+    <h1 class="card-title text-light text-center my-3 pt-5">Four student tracks</h1>
+    <p class='lead text-light text-center mb-5'>Content designed specifically for early career skills development.</p>
+    <div class='row justify-content-center'>
+      <ul class="btn-group text-center mb-5 ml-5 mr-5 pb-5">
+        <li class="icon1 col-3">
+          <img src="./imgs/dev.png" id="softwaredev" alt="Avatar">
+          <span class="caption">Software Developer</span>
+        </li>
+        <li class="icon2 col-3">
+          <img src="./imgs/datasci.png" id="datascience" alt="Avatar">
+          <span class="caption">Data Scientist</span>
+        </li>
+        <li class="icon3 col-3">
+          <img src="./imgs/cyber.png" id="cyber" alt="Avatar">
+          <span class="caption">Cybersecurity</span>
+        </li>
+        <li class="icon4 col-3">
+          <img src="./imgs/nontech.png" id="nontech" alt="Avatar">
+          <span class="caption">Non-technical</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="multi-item-example" class="carousel slide carousel-multi-item px-4" data-ride="carousel">
+    <h3 class='text-light text-center'>Our Most Popular Modules</h3>
+    <p class='lead text-light text-center'>Take a look at what people are encountering</p>
+    <!--Controls-->
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
+
+    <!--Indicators-->
+    <ol class="carousel-indicators mt-5">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner text-light" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Data Science</h4>
+                <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                  for
+                  using Azure.
+                  All skill levels are welcome.
+                </p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Data Science</h4>
+                <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                  for
+                  using Azure.
+                  All skill levels are welcome.
+                </p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Second slide-->
+
+      <!--Third slide-->
+      <div class="carousel-item">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Data Science</h4>
+                <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                  for
+                  using Azure.
+                  All skill levels are welcome.
+                </p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Third slide-->
+
+    </div>
+    <!--/.Slides-->
+
+  </div>
+
+
+  <footer class='text-center text-light py-5 mt-5 bg-secondary'>
+    <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+      <h4>Contact Us</h4>
+    </a>
+  </footer>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
 
-    <script>
-    </script>
+  <script>
+  </script>
 </body>
 <script src='./base.js'></script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </html>
