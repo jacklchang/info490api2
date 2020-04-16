@@ -18,6 +18,20 @@ p, h1, h2, h3, h4, h5, a {
     margin-right: 1.5vw;
 }
 
+#login-btn, #signup-btn, #desc-button {
+    border-radius: 30px;
+    color: white;
+}
+
+#login-btn:hover, #signup-btn:hover, #desc-button:hover {
+    color: rgb(75, 75, 75);
+}
+
+#login-btn span, #signup-btn span {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
 .bg-secondary {
     background-color: #505050!important;
 }

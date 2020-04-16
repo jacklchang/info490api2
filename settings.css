@@ -17,8 +17,16 @@ p, h1, h2, h3, h4, h5, a {
     margin-right: 1.5vw;
 }
 
+#search-funct {
+    max-width: 300px;
+}
+
 #profile-id, #profile-name {
     color:white;
+}
+
+#nav-search, #search-btn {
+    border-radius: 30px;
 }
 
 #profile-pic {

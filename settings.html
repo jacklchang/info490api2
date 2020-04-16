@@ -11,14 +11,14 @@
     content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel='stylesheet' href='./settings.css'>
+    <link rel='stylesheet' href='./settings.css'>
   <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
 </head>
 
 <body class='bg-dark'>
   <div class="container-fluid">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg mt-2">
       <a class="navbar-brand" href="#"><img src='./imgs/logo.jpg' width='30' height="30"
           class='d-inline-block align-top' alt='Microsoft Encounter logo'></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -29,17 +29,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item mx-2">
-            <a class="nav-link" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
+            <a class="nav-link text-light" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#">References</a>
+            <a class="nav-link text-light" href="#">References</a>
           </li>
         </ul>
 
         <form class='form-inline'>
-          <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary my-2 my-sm-0 mr-3" type="submit">Search</button>
+          <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search" id='nav-search'>
+          <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i class="fas fa-search mx-1"></i></button>
         </form>
+
         <div class="dropdown">
           <span>
             <div id="profile-id"></div>
