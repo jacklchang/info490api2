@@ -39,3 +39,49 @@ p, h1, h2, h3, h4, h5, a {
     border-top-color: grey;
     padding-top:1.5rem;
 }
+
+.fa-plus {
+    position: absolute;
+    top: 54%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    /* background-color: #555;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none; */
+    cursor: pointer;
+    /* border-radius: 5px;     */
+}
+
+.fa-plus:hover {
+    color: blue;
+}
+
+.card, .card .card-header {
+    border: 0px solid;
+    background-color: transparent;
+}
+
+.card .btn {
+    width: 100%;
+}
+
+.card h3 {
+    display: inline-block;
+}
+
+#save-fname {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#lname {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#save-role {
+    width: 8vw;
+}

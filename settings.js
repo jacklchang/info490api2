@@ -18,8 +18,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     firebase.database().ref("users").once('value').then((snapshot) => {
       var users = snapshot.val();
       name_val = users[uid].fname;
-    $("#profile-id").append(name_val);
+      email = users[uid].email
+    // $("#profile-id").append(name_val);
+    document.querySelector('#profile-id').textContent = name_val
     $("#profile-name").append(name_val);
+    $('#email').append(email)
     })
 
   } else {
