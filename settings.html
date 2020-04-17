@@ -11,19 +11,19 @@
     content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- <link rel='stylesheet' href='./index.css'> -->
-    <!-- <link rel='stylesheet' href='./base.css'> -->
-    <link rel='stylesheet' href='./home.css'>
-    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
-    <link rel='stylesheet' href='./settings.css'>
+  <!-- <link rel='stylesheet' href='./index.css'> -->
+  <!-- <link rel='stylesheet' href='./base.css'> -->
+  <link rel='stylesheet' href='./home.css'>
+  <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='./settings.css'>
 </head>
 
 <body class='bg-dark'>
   <div class="container-fluid">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg mt-2">
-      <a class="navbar-brand"><img src='./imgs/logo.jpg' width='30' height="30"
-          class='d-inline-block align-top' alt='Microsoft Encounter logo'></a>
+      <a class="navbar-brand"><img src='./imgs/logo.jpg' width='30' height="30" class='d-inline-block align-top'
+          alt='Microsoft Encounter logo'></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
-        </li>
+          </li>
           <li class="nav-item mx-2">
             <a class="nav-link text-light" href="#">References</a>
           </li>
@@ -44,7 +44,8 @@
 
         <form class='form-inline'>
           <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search" id='nav-search'>
-          <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i class="fas fa-search mx-1"></i></button>
+          <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+              class="fas fa-search mx-1"></i></button>
         </form>
 
         <div class="dropdown">
@@ -92,7 +93,7 @@
 
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body p-0 mt-3">
-              <label class="text-light">General Info</label>
+              <label class="text-light">General Information</label>
               <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="First Name" aria-label="First name"
                   aria-describedby="basic-addon2" id='fname'>
@@ -206,33 +207,73 @@
             </div>
           </div>
         </div>
+        <div class="card">
+          <div class="card-header p-0 mt-3" id="headingThree">
+            <h3 class="mb-0">
+              <button class="btn collapsed text-white p-0" type="button" data-toggle="collapse"
+                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h3>Completed Courses</h3>
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </h3>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col" class="text-light">Course name</th>
+                    <th scope="col" class="text-light">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"></th>
+                    <td class="text-light">Azure Fundamentals</td>
+                    <td class="text-light">02/04/20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td class="text-light">Introduction to Power Platform</td>
+                    <td class="text-light">01/23/20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td class="text-light">Microsoft 365 Fundamentals</td>
+                    <td class="text-light">01/17/20</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <footer class='text-center text-light text-bold pt-3 pb-5 bg-secondary'>
-    <div class='container mx-0'>
-      <div class='row'>
-        <p class='col font-weight-bold'>Catalog</p>
-        <p class='col font-weight-bold'>References</p>
-        <p class='col font-weight-bold'>Your Profile</p>
-        <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col font-weight-bold' id='contact-link'>
-          <p>Contact Us</p>
-        </a>
-        <p class='col font-weight-bold'>More from Microsoft</p>
+    <footer class='text-center text-light text-bold pt-3 pb-5 bg-secondary'>
+      <div class='container mx-0'>
+        <div class='row'>
+          <p class='col font-weight-bold'>Catalog</p>
+          <p class='col font-weight-bold'>References</p>
+          <p class='col font-weight-bold'>Your Profile</p>
+          <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col font-weight-bold' id='contact-link'>
+            <p>Contact Us</p>
+          </a>
+          <p class='col font-weight-bold'>More from Microsoft</p>
+        </div>
       </div>
-    </div>
-    <p class='text-center'>This project is part of the Informatics 2020 Capstone.</p>
-  </footer>
+      <p class='text-center'>This project is part of the Informatics 2020 Capstone.</p>
+    </footer>
 
-  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
 
 </body>
 <script src='./settings.js'></script>
