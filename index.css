@@ -99,3 +99,8 @@ p, h1, h2, h3, h4, h5, a {
     margin-right: 0 !important;
     width: fit-content;
 }
+
+#team-pic {
+    width: 40rem;
+    height:auto;
+}
