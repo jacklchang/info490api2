@@ -113,9 +113,11 @@ a {
     margin: 0;
 }
 
-.dropdown-menu li:hover {
+
+.dropdown-menu li:hover, .dropdown-menu li:hover a, .dropdown-menu li:hover p{
     background-color: white!important;
     color: black!important;
+    text-decoration: none;
 }
 
 .dropdown:hover .dropdown-content {
