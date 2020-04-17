@@ -100,3 +100,7 @@
 .modal-content {
     background-color: #303d52;
 }
+
+#sticky-footer {
+    flex-shrink: none;
+  }
