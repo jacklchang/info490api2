@@ -18,7 +18,7 @@
   }
 
   #jumbocard{
-    background-image: linear-gradient(90deg, rgba(84, 195, 225, 0.9), rgba(107, 195, 120, 0.9));
+    background-image: linear-gradient(108.25deg, #142135 1.44%, #037DFF 140.24%);
     padding-top: 5rem;
     padding-bottom: 5rem;
     border-radius: 5px;
@@ -91,4 +91,12 @@
 
 .navbar-brand {
     background-color: transparent !important;
+}
+
+.encountertitles {
+    color: #71C2CC;
+}
+
+.modal-content {
+    background-color: #3d4654;
 }
