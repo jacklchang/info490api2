@@ -33,7 +33,7 @@
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-light" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link text-light" href="#">References</a>
@@ -47,26 +47,22 @@
                             class="fas fa-search mx-1"></i></button>
                 </form>
 
-                <!-- <div class="dropdown">
-                    <span>
-                        <img src="./imgs/microsoft_user.jpeg" id="profile-id">
-                    </span>
-                    <div class="dropdown-content">
-                        <a href="./settings.html">Settings</a>
-                    </div>
-                </div> -->
-
-                <div class="dropdown">
+                <div class="dropdown text-light">
                     <span class="dropdown-toggle" type="button" id="profile-pic"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
                 </span>
-                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="profile-pic">
-                        <li class="dropdown-item text-center text-dark mb-3 h5" id='profile-id'>
-                            
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3" id='profile-id'>
+                            <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
                         </li>
-                        <li class="dropdown-item"><a href='./settings.html' class='text-dark'>View Profile</a></li>
-                        <li class="dropdown-item">Something else here</li>
+                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
                     </ul>
                 </div>
             </div>
@@ -80,8 +76,8 @@
                     <h1 class="display-4 text-light text-center mt-5" id="profile-name">Hello, </h1>
                     <p class="lead text-light text-center mt-5">Welcome back to Microsoft Encounter</p>
                 </div>
-                <div class="col-6 mt-5">
-                    <div class="card border-dark mb-3 mx-auto mt-4" style="max-width: 18rem;">
+                <div class="col-6">
+                    <div class="card border-dark mb-3 mx-auto" style="max-width: 18rem;">
                         <div class="card-body text-light">
                             <h5 class="card-title">Jump back in...</h5>
                             <img class="card-img"
