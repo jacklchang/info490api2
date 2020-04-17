@@ -22,13 +22,74 @@ quiz.addEventListener("click", () => {
   var lname = document.querySelector("#lname").value;
   // Clear modal content on click
   modal.innerHTML = "";
-  // Add question prompt
+  // Add question prompt 1
+  let generalquestion = document.createElement("label");
+  generalquestion.textContent = "Do you have any programming experience?";
+  generalquestion.classList.add("text-light");
+  modal.appendChild(generalquestion);
+
+  // add divs for options 1
+  let option1 = document.createElement("div");
+  option1.classList.add("form-check");
+
+  let option2 = document.createElement("div");
+  option2.classList.add("form-check");
+
+  let option3 = document.createElement("div");
+  option3.classList.add("form-check");
+
+  // add input options for divs 1
+  let geninput1 = document.createElement("INPUT");
+  geninput1.classList.add("form-check-input");
+  geninput1.id = "genexample1";
+  geninput1.name = "options";
+
+  let geninput2 = document.createElement("INPUT");
+  geninput2.classList.add("form-check-input");
+  geninput2.id = "genexample2";
+  geninput2.name = "options";
+
+  let geninput3 = document.createElement("INPUT");
+  geninput3.classList.add("form-check-input");
+  geninput3.id = "genexample3";
+  geninput3.name = "options";
+
+  // add role labels 1
+  let genlabel1 = document.createElement("label");
+  genlabel1.classList.add("form-check-label", "text-light");
+  genlabel1.for = "genexample1";
+  genlabel1.textContent = "I've never written a line of code."
+
+  let genlabel2 = document.createElement("label");
+  genlabel2.classList.add("form-check-label", "text-light");
+  genlabel2.for = "genexample2";
+  genlabel2.textContent = "I have some experience."
+
+  let genlabel3 = document.createElement("label");
+  genlabel3.classList.add("form-check-label", "text-light");
+  genlabel3.for = "genexample3";
+  genlabel3.textContent = "I'm an experienced developer."
+
+  // pull together all elements 1
+  option1.appendChild(geninput1);
+  option1.appendChild(genlabel1);
+  modal.appendChild(option1);
+
+  option2.appendChild(geninput2);
+  option2.appendChild(genlabel2);
+  modal.appendChild(option2);
+
+  option3.appendChild(geninput3);
+  option3.appendChild(genlabel3);
+  modal.appendChild(option3);
+
+  // Add question prompt 2
   let roleTitle = document.createElement("label");
   roleTitle.textContent = "What role are you interested in?";
-  roleTitle.classList.add("text-dark");
+  roleTitle.classList.add("text-light");
   modal.appendChild(roleTitle);
 
-  // add divs for options
+  // add divs for options 2
   let div1 = document.createElement("div");
   div1.classList.add("form-check");
 
@@ -44,7 +105,7 @@ quiz.addEventListener("click", () => {
   let div5 = document.createElement("div");
   div5.classList.add("form-check");
 
-  // add input options for divs
+  // add input options for divs 2
   let input1 = document.createElement("INPUT");
   input1.classList.add("form-check-input");
   input1.type = "radio";
@@ -80,33 +141,33 @@ quiz.addEventListener("click", () => {
   input5.id = "example5";
   input5.name = "options";
 
-  // add role labels
+  // add role labels 2
   let label1 = document.createElement("label");
-  label1.classList.add("form-check-label", "text-dark");
+  label1.classList.add("form-check-label", "text-light");
   label1.for = "example1";
   label1.textContent = "Data Science";
 
   let label2 = document.createElement("label");
-  label2.classList.add("form-check-label", "text-dark");
+  label2.classList.add("form-check-label", "text-light");
   label2.for = "example2";
   label2.textContent = "Software Developer";
 
   let label3 = document.createElement("label");
-  label3.classList.add("form-check-label", "text-dark");
+  label3.classList.add("form-check-label", "text-light");
   label3.for = "example3";
   label3.textContent = "Cybersecurity";
 
   let label4 = document.createElement("label");
-  label4.classList.add("form-check-label", "text-dark");
+  label4.classList.add("form-check-label", "text-light");
   label4.for = "example4";
   label4.textContent = "Product/Project Manager";
 
   let label5 = document.createElement("label");
-  label5.classList.add("form-check-label", "text-dark");
+  label5.classList.add("form-check-label", "text-light");
   label5.for = "example5";
   label5.textContent = "Other";
 
-  // pull together all elements
+  // pull together all elements 2
   div1.appendChild(input1);
   div1.appendChild(label1);
   modal.appendChild(div1);
@@ -189,17 +250,17 @@ login.addEventListener("click", () => {
     });
 });
 
-$('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
+$('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
   var next = $(this).next();
   if (!next.length) {
     next = $(this).siblings(':first');
   }
   next.children(':first-child').clone().appendTo($(this));
 
-  for (var i=0;i<4;i++) {
-    next=next.next();
+  for (var i = 0; i < 4; i++) {
+    next = next.next();
     if (!next.length) {
-      next=$(this).siblings(':first');
+      next = $(this).siblings(':first');
     }
     next.children(':first-child').clone().appendTo($(this));
   }
