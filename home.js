@@ -23,6 +23,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     })
 
   } else {
-    console.log('uh oh')
+    window.location = "./base.html";
   }
 });
+
+let logOutBtn = document.querySelector('#log-out')
+logOutBtn.addEventListener('click', () => {
+  firebase.auth().signOut()
+  .catch(err => console.log(err))
+})
