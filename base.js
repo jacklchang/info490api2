@@ -22,10 +22,18 @@ quiz.addEventListener("click", () => {
   var lname = document.querySelector("#lname").value;
   // Clear modal content on click
   modal.innerHTML = "";
+
+  modal.classList.add('p-4')
+
+  let heading = document.createElement('h2');
+  heading.classList.add('text-light');
+  heading.textContent = 'Just a few more questions...';
+  modal.appendChild(heading)
+
   // Add question prompt 1
   let generalquestion = document.createElement("label");
   generalquestion.textContent = "Do you have any programming experience?";
-  generalquestion.classList.add("text-light");
+  generalquestion.classList.add("text-light", "h5", 'mt-3');
   modal.appendChild(generalquestion);
 
   // add divs for options 1
@@ -42,17 +50,23 @@ quiz.addEventListener("click", () => {
   let geninput1 = document.createElement("INPUT");
   geninput1.classList.add("form-check-input");
   geninput1.id = "genexample1";
-  geninput1.name = "options";
+  geninput1.name = "options1";
+  geninput1.value = 'fundamental';
+  geninput1.type = 'radio';
 
   let geninput2 = document.createElement("INPUT");
   geninput2.classList.add("form-check-input");
   geninput2.id = "genexample2";
-  geninput2.name = "options";
+  geninput2.name = "options1";
+  geninput2.value = 'intermediate';
+  geninput2.type = 'radio';
 
   let geninput3 = document.createElement("INPUT");
   geninput3.classList.add("form-check-input");
   geninput3.id = "genexample3";
-  geninput3.name = "options";
+  geninput3.name = "options1";
+  geninput3.value = 'advanced';
+  geninput3.type = 'radio';
 
   // add role labels 1
   let genlabel1 = document.createElement("label");
@@ -86,7 +100,7 @@ quiz.addEventListener("click", () => {
   // Add question prompt 2
   let roleTitle = document.createElement("label");
   roleTitle.textContent = "What role are you interested in?";
-  roleTitle.classList.add("text-light");
+  roleTitle.classList.add("text-light", "mt-3", "h5");
   modal.appendChild(roleTitle);
 
   // add divs for options 2
