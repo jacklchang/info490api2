@@ -11,61 +11,63 @@
         content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel='stylesheet' href='./index.css'>
-        <link rel='stylesheet' href='./base.css'>
-        <link rel='stylesheet' href='./home.css'>
+    <link rel='stylesheet' href='./home.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
 </head>
 
 <body class='bg-dark'>
     <div class="container-fluid">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg mt-2">
-            <a class="navbar-brand"><img src='./imgs/logo.jpg' width='30' height="30"
-                class='d-inline-block align-top' alt='Microsoft Encounter logo'></a>
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand"><img src='./imgs/logo.jpg' width='30' height="30" class='d-inline-block align-top'
+                    alt='Microsoft Encounter logo'></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-      
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item mx-2">
-                  <a class="nav-link text-light" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
-              </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link text-light" href="#">References</a>
-                </li>
-              </ul>
-      
-              <form class='form-inline'>
-                <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search" id='nav-search'>
-                <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i class="fas fa-search mx-1"></i></button>
-              </form>
-      
-              <div class="dropdown">
-                <span>
-                  <div id="profile-id"></div>
-                </span>
-                <div class="dropdown-content">
-                  <a href="./settings.html">Settings</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="#">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown">
+                    <span>
+                        <img src="./imgs/microsoft_user.jpeg" id="profile-id">
+                    </span>
+                    <div class="dropdown-content">
+                        <a href="./settings.html">Settings</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </div>
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid" id='home-banner'>
-        <div class="container">
-            <div class='row justify-content-between'>
-                <div class='col-6'>
+        <div class="container mt-3">
+            <div class='row justify-content-between mt-5'>
+                <div class='col-6 mt-5'>
                     <h1 class="display-4 text-light text-center mt-5" id="profile-name">Hello, </h1>
                     <p class="lead text-light text-center mt-5">Welcome back to Microsoft Encounter</p>
                 </div>
-                <div class="col-6">
-                    <div class="card border-dark mb-3 mx-auto" style="max-width: 18rem;">
+                <div class="col-6 mt-5">
+                    <div class="card border-dark mb-3 mx-auto mt-4" style="max-width: 18rem;">
                         <div class="card-body text-light">
                             <h5 class="card-title">Jump back in...</h5>
                             <img class="card-img"
