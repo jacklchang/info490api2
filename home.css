@@ -85,6 +85,7 @@ a {
   padding-top: 1rem;
   /* padding-left: 1rem; */
   padding-right: 1rem;
+  margin-right: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -98,7 +99,7 @@ a {
   z-index: 1;
 }
 
-#profile-id {
+#profile-pic {
     border-radius: 80rem;
     width: 2.5rem;
     height:auto;
