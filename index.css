@@ -3,14 +3,23 @@ p, h1, h2, h3, h4, h5, a {
 }
 
 #nav-button, #desc-button {
-    /* border: 2px solid #0029ff; */
-    /* background-color: #0029ff!important; */
     border-radius: 30px;
-    /* position: sticky; */ /*Trying this to make the nav elements line up*/
+    color: white;
 }
 
-#desc-button:hover {
+#nav-button:hover, #desc-button:hover {
     color: rgb(75, 75, 75);
+}
+
+.navbar {
+    background-color: transparent !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-brand {
+    background-color: transparent !important;
 }
 
 #nav-button span, #desc-button span {

@@ -82,13 +82,3 @@
     color: #4f4f4f!important;
 }
 
-.navbar {
-    background-color: transparent !important;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.navbar-brand {
-    background-color: transparent !important;
-}
