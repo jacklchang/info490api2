@@ -69,19 +69,14 @@
       </div>
     </nav>
   </div>
-  <div class="container my-5">
-    <div class="row mt-5">
-      <div class="col profileinfo">
-        <div class='container'>
-          <div class='row justify-content-center text-center'>
-            <div class="col my-5 ">
-              <img src="./imgs/microsoft_user.jpeg" id="profile">
-              <i class="fas fa-plus"></i>
-              <h3 id="profile-name" class="pt-3"></h3>
-              <p id='email'></p>
-            </div>
-          </div>
-          <!-- Progress circle
+  <div class="container my-5 pt-5">
+    <div class="row mt-7 profileinfo pl-5 pt-4 pb-4">
+      <img src="./imgs/microsoft_user.jpeg" id="profile">
+      <!-- <i class="fas fa-plus"></i> -->
+      <!-- the plus sign for the icon -->
+      <h3 id="profile-name" class="pt-3 pl-4"></h3>
+      <p id='email'></p>
+      <!-- Progress circle
           <div class='row justify-content-center text-center'>
             <div class='col'>
               <div id="progress">95%</div>
@@ -89,335 +84,313 @@
             </div>
           </div>
           -->
-        </div>
-      </div>
-      <div class="accordion col-6 mt-4" id="accordionExample">
-        <div class="card text-white">
-          <div class="card-header p-0" id="headingOne">
-            <h3 class="mb-0">
-              <button class="btn text-white p-0" type="button" data-toggle="collapse" data-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-                <h3>Personal Information</h3>
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h3>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3>Personal Information</h3>
+        <i class="fas fa-caret-down"></i>
+        <div class="card-body p-0 mt-3">
+          <label class="text-light">General Information</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="First Name" aria-label="First name"
+              aria-describedby="basic-addon2" id='fname'>
+            <div class="input-group-append">
+              <span class="input-group-text btn mr-1" id="save-fname">Save</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Last Name" aria-label="Last name"
+              aria-describedby="basic-addon2" id='lname'>
+            <div class="input-group-append">
+              <span class="input-group-text btn" id="save-lname">Save</span>
+            </div>
           </div>
-
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="card-body p-0 mt-3">
-              <label class="text-light">General Information</label>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="First Name" aria-label="First name"
-                  aria-describedby="basic-addon2" id='fname'>
-                <div class="input-group-append">
-                  <span class="input-group-text btn mr-1" id="save-fname">Save</span>
-                </div>
-                <input type="text" class="form-control" placeholder="Last Name" aria-label="Last name"
-                  aria-describedby="basic-addon2" id='lname'>
-                <div class="input-group-append">
-                  <span class="input-group-text btn" id="save-lname">Save</span>
-                </div>
-              </div>
-              <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Email Address" aria-label="Email address"
-                  aria-describedby="basic-addon2" id='email'>
-                <div class="input-group-append">
-                  <span class="input-group-text btn" id="save-email">Save</span>
-                </div>
-              </div>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                  aria-describedby="basic-addon1" id='username'>
-                <div class="input-group-append">
-                  <span class="input-group-text btn" id="save-username">Save</span>
-                </div>
-              </div>
-
-              <label for="url" class="text-light">Your URL</label>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" id="url" aria-describedby="basic-addon3"
-                  placeholder='https://example.com/users/'>
-                <div class="input-group-append">
-                  <span class="input-group-text btn" id="save-url">Save</span>
-                </div>
-              </div>
-
-              <label for="Bio" class="text-light">Bio</label>
-              <div class="input-group">
-                <textarea class="form-control" aria-label="With textarea" id='bio'
-                  placeholder="Enter your bio here."></textarea>
-                <div class="input-group-append">
-                  <span class="input-group-text btn" id='save-bio'>Save</span>
-                </div>
-              </div>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Email Address" aria-label="Email address"
+              aria-describedby="basic-addon2" id='email'>
+            <div class="input-group-append">
+              <span class="input-group-text btn" id="save-email">Save</span>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+              aria-describedby="basic-addon1" id='username'>
+            <div class="input-group-append">
+              <span class="input-group-text btn" id="save-username">Save</span>
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header p-0 mt-3" id="headingTwo">
-            <h3 class="mb-0">
-              <button class="btn collapsed text-white p-0" type="button" data-toggle="collapse"
-                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h3>Content Settings</h3>
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h3>
+        <label for="url" class="text-light">Your URL</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="url" aria-describedby="basic-addon3"
+            placeholder='https://example.com/users/'>
+          <div class="input-group-append">
+            <span class="input-group-text btn" id="save-url">Save</span>
           </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="card-body">
-              <div class='form-group text-light'>
-                <label>Preferred Role</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                    value="Data Science" checked>
-                  <label class="form-check-label" for="exampleRadios1">
-                    Data Science
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                    value="Software Developer">
-                  <label class="form-check-label" for="exampleRadios2">
-                    Software Developer
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                    value="Cybersecurity">
-                  <label class="form-check-label" for="exampleRadios3">
-                    Cybersecurity
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
-                    value="Product/Project Manager" checked>
-                  <label class="form-check-label" for="exampleRadios4">
-                    Product/Project Manager
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
-                    value="Non-technical">
-                  <label class=" form-check-label" for="exampleRadios5">
-                    Non-technical
-                  </label>
-                </div>
-                <button class='btn btn-light mt-2' id='save-role'>Save</button>
-              </div>
-              <label class='text-light'>Difficulty</label>
-              <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                  <option selected>Choose...</option>
-                  <option value="1">Fundamental</option>
-                  <option value="2">Intermediate</option>
-                  <option value="3">Advanced</option>
-                </select>
-                <div class="input-group-append">
-                  <label class="input-group-text btn" for="inputGroupSelect02">Save</label>
-                </div>
-              </div>
+        </div>
+        <label for="Bio" class="text-light">Bio</label>
+        <div class="input-group">
+          <textarea class="form-control" aria-label="With textarea" id='bio'
+            placeholder="Enter your bio here."></textarea>
+          <div class="input-group-append">
+            <span class="input-group-text btn" id='save-bio'>Save</span>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+          <h3>Content Settings</h3>
+          <div class='form-group text-light'>
+            <label>Preferred Role</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Data Science"
+                checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Data Science
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                value="Software Developer">
+              <label class="form-check-label" for="exampleRadios2">
+                Software Developer
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                value="Cybersecurity">
+              <label class="form-check-label" for="exampleRadios3">
+                Cybersecurity
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
+                value="Product/Project Manager" checked>
+              <label class="form-check-label" for="exampleRadios4">
+                Product/Project Manager
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                value="Non-technical">
+              <label class=" form-check-label" for="exampleRadios5">
+                Non-technical
+              </label>
+            </div>
+            <button class='btn btn-light mt-2' id='save-role'>Save</button>
+          </div>
+          <label class='text-light'>Difficulty</label>
+          <div class="input-group mb-3">
+            <select class="custom-select" id="inputGroupSelect02">
+              <option selected>Choose...</option>
+              <option value="1">Fundamental</option>
+              <option value="2">Intermediate</option>
+              <option value="3">Advanced</option>
+            </select>
+            <div class="input-group-append">
+              <label class="input-group-text btn" for="inputGroupSelect02">Save</label>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div>
-      <h2 class='text-center encountertitles'>Completed Courses</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col" class="text-light">Course name</th>
-            <th scope="col" class="text-light">Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row"></th>
-            <td class="text-light">Azure Fundamentals</td>
-            <td class="text-light">02/04/20</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td class="text-light">Introduction to Power Platform</td>
-            <td class="text-light">01/23/20</td>
-          </tr>
-          <tr>
-            <th scope="row"></th>
-            <td class="text-light">Microsoft 365 Fundamentals</td>
-            <td class="text-light">01/17/20</td>
-          </tr>
-        </tbody>
-      </table>
+  </div>
+  <div>
+    <h2 class='text-center encountertitles pt-5'>Completed Courses</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col" class="text-light">Course name</th>
+          <th scope="col" class="text-light">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td class="text-light">Azure Fundamentals</td>
+          <td class="text-light">02/04/20</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td class="text-light">Introduction to Power Platform</td>
+          <td class="text-light">01/23/20</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td class="text-light">Microsoft 365 Fundamentals</td>
+          <td class="text-light">01/17/20</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="multi-item-example" class="carousel slide carousel-multi-item px-5 mx-5 mb-5 pb-5" data-ride="carousel">
+    <h2 class='text-center encountertitles'>Recent Courses</h2>
+
+    <!--Slides-->
+    <div class="carousel-inner text-light" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Data Science</h4>
+                <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                  for
+                  using Azure.
+                  All skill levels are welcome.
+                </p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Data Science</h4>
+                <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                  for
+                  using Azure.
+                  All skill levels are welcome.
+                </p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Second slide-->
+
+      <!--Third slide-->
+      <div class="carousel-item">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">Data Science</h4>
+                <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                  for
+                  using Azure.
+                  All skill levels are welcome.
+                </p>
+                <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Third slide-->
+
     </div>
-    <div id="multi-item-example" class="carousel slide carousel-multi-item px-5 mx-5 mb-5 pb-5" data-ride="carousel">
-      <h2 class='text-center encountertitles'>Recent Courses</h2>
-
-      <!--Slides-->
-      <div class="carousel-inner text-light" role="listbox">
-
-        <!--First slide-->
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Cloud Computing</h4>
-                  <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 clearfix d-none d-md-block">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Data Science</h4>
-                  <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 clearfix d-none d-md-block">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">No experience necessary</h4>
-                  <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
-                    for
-                    using Azure.
-                    All skill levels are welcome.
-                  </p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--/.First slide-->
-
-        <!--Second slide-->
-        <div class="carousel-item">
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Cloud Computing</h4>
-                  <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 clearfix d-none d-md-block">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Data Science</h4>
-                  <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 clearfix d-none d-md-block">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">No experience necessary</h4>
-                  <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
-                    for
-                    using Azure.
-                    All skill levels are welcome.
-                  </p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--/.Second slide-->
-
-        <!--Third slide-->
-        <div class="carousel-item">
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Cloud Computing</h4>
-                  <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 clearfix d-none d-md-block">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">Data Science</h4>
-                  <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 clearfix d-none d-md-block">
-              <div class="card mb-2">
-                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title font-weight-bold">No experience necessary</h4>
-                  <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
-                    for
-                    using Azure.
-                    All skill levels are welcome.
-                  </p>
-                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--/.Third slide-->
-
-      </div>
-      <!--/.Slides-->
-      <!--Controls-->
-      <div class="carousel-indicators controls-top row justify-content-between">
-        <a class="btn-floating col-1 text-light text-left" href="#multi-item-example" data-slide="prev"><i
-            class="fa fa-chevron-left"></i></a>
-        <a class="btn-floating col-1 text-light text-right" href="#multi-item-example" data-slide="next"><i
-            class="fa fa-chevron-right"></i></a>
-      </div>
-      <!--/.Controls-->
+    <!--/.Slides-->
+    <!--Controls-->
+    <div class="carousel-indicators controls-top row justify-content-between">
+      <a class="btn-floating col-1 text-light text-left" href="#multi-item-example" data-slide="prev"><i
+          class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating col-1 text-light text-right" href="#multi-item-example" data-slide="next"><i
+          class="fa fa-chevron-right"></i></a>
     </div>
-    <!--Footer-->
-    <footer id="sticky-footer" class="py-4 bg-light">
-      <div class="container text-center">
-        <div class='row'>
-          <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
-            <h4 class="text-dark">Contact them</h4>
-          </a>
-          <p class='col font-weight-bold text-dark'>Catalog</p>
-          <p class='col font-weight-bold text-dark'>References</p>
-          <p class='col font-weight-bold text-dark'>Your Profile</p>
-        </div>
-        <p class='text-center text-dark'>This project is part of the Informatics 2020 Capstone.</p>
+    <!--/.Controls-->
+  </div>
+  <!--Footer-->
+  <footer id="sticky-footer" class="py-4 bg-light">
+    <div class="container text-center">
+      <div class='row'>
+        <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+          <h4 class="text-dark">Contact them</h4>
+        </a>
+        <p class='col font-weight-bold text-dark'>Catalog</p>
+        <p class='col font-weight-bold text-dark'>References</p>
+        <p class='col font-weight-bold text-dark'>Your Profile</p>
       </div>
-    </footer>
+      <p class='text-center text-dark'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+  </footer>
 
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
 
-    <script src='./home.js'></script>
+  <script src='./home.js'></script>
 
 
 </body>
