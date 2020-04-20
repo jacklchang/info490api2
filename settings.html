@@ -54,7 +54,7 @@
             <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
           </span>
           <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
-            <li class="dropdown-item text-center text-light mb-3" id='profile-id'>
+            <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
               <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
               <div class="progress mb-2">
                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="12"
@@ -217,50 +217,179 @@
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header p-0 mt-3" id="headingThree">
-            <h3 class="mb-0">
-              <button class="btn collapsed text-white p-0" type="button" data-toggle="collapse"
-                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <h3>Completed Courses</h3>
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h3>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col" class="text-light">Course name</th>
-                    <th scope="col" class="text-light">Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row"></th>
-                    <td class="text-light">Azure Fundamentals</td>
-                    <td class="text-light">02/04/20</td>
-                  </tr>
-                  <tr>
-                    <th scope="row"></th>
-                    <td class="text-light">Introduction to Power Platform</td>
-                    <td class="text-light">01/23/20</td>
-                  </tr>
-                  <tr>
-                    <th scope="row"></th>
-                    <td class="text-light">Microsoft 365 Fundamentals</td>
-                    <td class="text-light">01/17/20</td>
-                  </tr>
-                </tbody>
-              </table>
+      </div>
+    </div>
+    <div>
+      <h2 class='text-center encountertitles'>Completed Courses</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col" class="text-light">Course name</th>
+            <th scope="col" class="text-light">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td class="text-light">Azure Fundamentals</td>
+            <td class="text-light">02/04/20</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td class="text-light">Introduction to Power Platform</td>
+            <td class="text-light">01/23/20</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td class="text-light">Microsoft 365 Fundamentals</td>
+            <td class="text-light">01/17/20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="multi-item-example" class="carousel slide carousel-multi-item px-5 mx-5 mb-5 pb-5" data-ride="carousel">
+      <h2 class='text-center encountertitles'>Recent Courses</h2>
+
+      <!--Slides-->
+      <div class="carousel-inner text-light" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                  <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">Data Science</h4>
+                  <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                  <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                    for
+                    using Azure.
+                    All skill levels are welcome.
+                  </p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        <!--/.First slide-->
 
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                  <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">Data Science</h4>
+                  <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                  <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                    for
+                    using Azure.
+                    All skill levels are welcome.
+                  </p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/.Second slide-->
+
+        <!--Third slide-->
+        <div class="carousel-item">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                  <p class="card-text">Learn how to build distributed applicatinos to change the world.</p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">Data Science</h4>
+                  <p class="card-text">Apply machine learning using to automate and predict what matters to you.</p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                  <p class="card-text">Encounter is built from the group up to provide a student-accessible experience
+                    for
+                    using Azure.
+                    All skill levels are welcome.
+                  </p>
+                  <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/.Third slide-->
+
+      </div>
+      <!--/.Slides-->
+      <!--Controls-->
+      <div class="carousel-indicators controls-top row justify-content-between">
+        <a class="btn-floating col-1 text-light text-left" href="#multi-item-example" data-slide="prev"><i
+            class="fa fa-chevron-left"></i></a>
+        <a class="btn-floating col-1 text-light text-right" href="#multi-item-example" data-slide="next"><i
+            class="fa fa-chevron-right"></i></a>
+      </div>
+      <!--/.Controls-->
+    </div>
     <!--Footer-->
     <footer id="sticky-footer" class="py-4 bg-light">
       <div class="container text-center">
@@ -275,7 +404,7 @@
         <p class='text-center text-dark'>This project is part of the Informatics 2020 Capstone.</p>
       </div>
     </footer>
-    
+
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use

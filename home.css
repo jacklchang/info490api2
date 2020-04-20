@@ -120,8 +120,13 @@ a {
     text-decoration: none;
 }
 
+/*This doesn't work*/
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown-item:hover {
+  color:black !important;
 }
 
 .loader {
@@ -145,3 +150,4 @@ a {
 #sticky-footer {
   flex-shrink: none;
 }
+
