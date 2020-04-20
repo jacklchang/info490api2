@@ -141,3 +141,7 @@ a {
 .navbar-brand {
     background-color: transparent !important;
 }
+
+#sticky-footer {
+  flex-shrink: none;
+}
