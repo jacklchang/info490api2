@@ -141,3 +141,7 @@ p, h1, h2, h3, h4, h5, a {
 .encountertitles {
     color: #71C2CC;
 }
+
+.profileinfo{
+    background-image: linear-gradient(108.25deg, #142135 1.44%, #037DFF 140.24%) !important;
+}
