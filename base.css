@@ -1,15 +1,21 @@
-#login-btn, #signup-btn, #desc-button {
+#login-btn, #signup-btn {
     border-radius: 30px;
     color: white;
 }
 
-#login-btn:hover, #signup-btn:hover, #desc-button:hover {
+#login-btn:hover, #signup-btn:hover, #desc-button {
     color: rgb(75, 75, 75);
 }
 
 #login-btn span, #signup-btn span {
     margin-left: 0.5vw;
     margin-right: 0.5vw;
+}
+
+#desc-button:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
 }
 
   h1, h3 {
@@ -34,7 +40,7 @@
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    border: 1px solid white;  
+    border: 2px solid white;  
     color:white;
     margin-left:3rem;
     margin-right:3rem;
@@ -80,6 +86,11 @@
 
 .carousel .btn:hover {
     color: #4f4f4f!important;
+}
+
+.carousel-indicators {
+    padding-bottom: 25vh!important;
+    margin: 0;
 }
 
 .navbar {

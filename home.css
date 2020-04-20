@@ -114,7 +114,7 @@ a {
 }
 
 
-.dropdown-menu li:hover, .dropdown-menu li:hover a, .dropdown-menu li:hover p{
+#settings:hover, #settings:hover a, #log-out:hover #log-out:hover small {
     background-color: white!important;
     color: black!important;
     text-decoration: none;

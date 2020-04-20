@@ -21,8 +21,8 @@
 
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg mt-2">
-      <a class="navbar-brand" href="#"><img src='./imgs/logo.jpg' width='30' height="30"
-          class='d-inline-block align-top' alt='Microsoft Encounter logo'></a>
+      <a class="navbar-brand text-light" href="#" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+          class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,8 +34,8 @@
             <a class="nav-link text-light" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
-        </li>
+            <a class="nav-link text-light" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
+          </li>
           <li class="nav-item mx-2">
             <a class="nav-link text-light" href="#">References</a>
           </li>
@@ -130,12 +130,12 @@
           <div class="card-body" id="jumbocard">
             <h1 class="card-title text-light text-center">Microsoft Encounter</h1>
             <h2 class="text-light text-center">Code today, Build tomorrow</h2>
-            <p class="lead card-text text-light text-center mb-5">Thousands of lessons available for free. Personalized for you.</p>
+            <p class="lead card-text text-light text-center mb-5">Thousands of lessons available for free. Personalized
+              for you.</p>
             <div class='row text-center'>
               <div class='col'>
-                <a class="btn btn-outline-light my-2 my-sm-0 mx-auto" type="submit" id='desc-button'
-                  data-toggle="modal" data-target="#signup-window"><span>Learn with
-                    Encounter</span></a>
+                <a class="btn btn-light my-2 my-sm-0 mx-auto" type="submit" id='desc-button' data-toggle="modal"
+                  data-target="#signup-window"><span>Get Started</span></a>
               </div>
             </div>
           </div>
@@ -143,16 +143,17 @@
       </div>
     </div>
   </div>
-  <div class='container-fluid'>
+  <div class='container-fluid px-5'>
     <h1 class="card-title text-center my-3 pt-5 encountertitles">What is Encounter?</h1>
-    <p class='lead text-light text-left mb-5 font-weight-light'>
+    <p class='lead text-light text-left mb-5 mt-2 font-weight-light'>
       Encounter is a learning platform designed to guide people using Microsoft products
       to build tomorrow. Whether you are trying to implement machine learning into your app or you
       have never written a line of code, we tailer your experience to help you reach your goals.
     </p>
 
-    <h1 class="card-title text-center my-3 pt-5 encountertitles">Four student tracks</h1>
-    <p class='lead text-light text-center mb-5 font-weight-light'>Content designed specifically for early career skills development.</p>
+    <h1 class="card-title text-center mb-3 mt-5 pt-5 encountertitles">Four student tracks</h1>
+    <p class='lead text-light text-center mb-5 font-weight-light'>Content designed specifically for early career skills
+      development.</p>
     <div class='row justify-content-center'>
       <ul class="btn-group text-center mb-5 ml-5 mr-5 pb-5">
         <li class="icon1 col-3">
@@ -175,16 +176,16 @@
     </div>
   </div>
 
-  <div id="multi-item-example" class="carousel slide carousel-multi-item px-4" data-ride="carousel">
-    <h3 class='text-light text-center'>Our Most Popular Modules</h3>
+  <div id="multi-item-example" class="carousel slide carousel-multi-item px-5 mx-5 mb-5 pb-5" data-ride="carousel">
+    <h2 class='text-center encountertitles'>Our Most Popular Modules</h2>
     <p class='lead text-light text-center'>Take a look at what people are encountering</p>
 
     <!--Indicators-->
-    <ol class="carousel-indicators mt-5">
+    <!-- <ol class="carousel-indicators mt-5">
       <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
       <li data-target="#multi-item-example" data-slide-to="1"></li>
       <li data-target="#multi-item-example" data-slide-to="2"></li>
-    </ol>
+    </ol> -->
     <!--/.Indicators-->
 
     <!--Slides-->
@@ -318,21 +319,16 @@
     </div>
     <!--/.Slides-->
     <!--Controls-->
-    <div class="controls-top">
-      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    <div class="carousel-indicators controls-top row justify-content-between">
+      <a class="btn-floating col-1 text-light text-left" href="#multi-item-example" data-slide="prev"><i
+          class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating col-1 text-light text-right" href="#multi-item-example" data-slide="next"><i
+          class="fa fa-chevron-right"></i></a>
     </div>
     <!--/.Controls-->
 
-    <!--Footer-->
-    <footer id="sticky-footer" class="py-4 bg-light">
-      <div class="container text-center">
-        <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
-          <h4 class="text-dark">Contact Us</h4>
-        </a>      
-      </div>
-    </footer>
 
+  </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
 
@@ -347,6 +343,14 @@
   <script>
   </script>
 </body>
+<!--Footer-->
+<footer id="sticky-footer" class="mt-5 py-4 bg-light">
+  <div class="container text-center">
+    <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+      <h4 class="text-dark">Contact Us</h4>
+    </a>
+  </div>
+</footer>
 <script src='./base.js'></script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
