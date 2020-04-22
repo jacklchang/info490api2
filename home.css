@@ -70,6 +70,26 @@ a {
   opacity: 1 !important;
 }
 
+.card-img {
+  max-width: 40%;
+}
+
+.card-footer button {
+  border-radius: 0.5rem;
+}
+
+.explore .card-header {
+  min-height: 8rem;
+}
+
+.card-header {
+  min-height: 6rem;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
 #profile-id {
   color: #ffffff;
   margin-top: 2vh;
@@ -119,6 +139,14 @@ a {
     color: black!important;
     text-decoration: none;
 }
+
+li.dropdown-item#settings a {
+  color: white;
+}
+
+/* li.dropdown-item:hover, li.dropdown-item#settings a:hover {
+  color:black !important;
+} */
 
 /*This doesn't work*/
 .dropdown:hover .dropdown-content {

@@ -5,6 +5,14 @@ p, h1, h2, h3, h4, h5, a {
     color:white;
 }
 
+/* .container {
+    max-width: 100%;
+    padding-right: 10rem!important;
+    padding-left: 10rem!important;
+    margin-right: auto;
+    margin-left: auto;
+} */
+
 #nav-button, #desc-button {
     /* border: 2px solid #0029ff; */
     /* background-color: #0029ff!important; */
@@ -31,7 +39,7 @@ p, h1, h2, h3, h4, h5, a {
 
 #profile {
     border-radius: 80rem;
-    width: 5rem;
+    width: 7rem;
     height:auto;
 }
 
@@ -96,14 +104,20 @@ p, h1, h2, h3, h4, h5, a {
 }
 
 #save-role {
-    width: 8vw;
+    width: 6vw;
 }
 
 #sticky-footer {
     flex-shrink: none;
-  }
+}
 
-  .carousel .card {
+.carousel {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel .card {
     border: 1px solid;
     border-color: #d5d5d5;
     height: 27rem;
