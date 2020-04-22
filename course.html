@@ -11,19 +11,19 @@
         content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel='stylesheet' href='./home.css'>
-        <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
-        <link rel='stylesheet' href='./catalog.css'>
+    <link rel='stylesheet' href='./home.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='./course.css'>
 </head>
 
 <body class='bg-dark'>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg pt-0">
-            <a class="navbar-brand text-light" href="home.html" id="logo"><img src='./imgs/logo.png' width='30' height="30"
-                class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <a class="navbar-brand text-light" href="home.html" id="logo"><img src='./imgs/logo.png' width='30'
+                    height="30" class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -33,7 +33,8 @@
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-light" href="./bookmarks.html">Bookmarks<span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link text-light" href="#">References</a>
@@ -48,10 +49,10 @@
                 </form>
 
                 <div class="dropdown text-light">
-                    <span class="dropdown-toggle" type="button" id="profile-pic"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
-                </span>
+                    </span>
                     <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
                         <li class="dropdown-item text-center text-light mb-3" id='profile-id'>
                             <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
@@ -61,7 +62,8 @@
                             </div>
                             <p class="card-text mb-2">12% complete</p>
                         </li>
-                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View Profile</small></a></li>
+                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
                         <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
                     </ul>
                 </div>
@@ -82,49 +84,55 @@
             </a>
         </div>
         <div class='text-light'>
-        <h3 class='text-light mt-4'>Create Intelligent Bots with the Azure Bot Service</h3>
-        <h5 class='text-light my-2 font-weight-lighter'>Overview</h5>
-        <p class='mt-4'>One way to improve customer satisfaction is to help customers quickly locate answers to their questions. The
-            information they're looking for might be in a frequently asked questions (FAQ) list, support documentation,
-            or product manuals. </p>
-        <p>Search pages can help, but many organizations look for ways to interact more personally
-            with customers while still using automation.
-        </p>
-        <p> The QnA Maker service answers your users' natural language
-            questions by matching them with the best possible answers from your knowledge base (KB). To find the
-            information they need, customers can have an interactive and natural conversation with the automated
-            service. You create a QnA Maker KB by using a web portal. In the portal, you can create, manage, train, and
-            publish your service without any developer experience. After the service is published to an endpoint, a
-            client application like a chatbot can use the service to process a conversation with a user to determine the
-            question asked and respond with the best answer.</p>
+            <h3 class='text-light mt-4'>Create Intelligent Bots with the Azure Bot Service</h3>
+            <h5 class='text-light my-2 font-weight-lighter'>Overview</h5>
+            <p class='mt-4'>One way to improve customer satisfaction is to help customers quickly locate answers to
+                their questions. The
+                information they're looking for might be in a frequently asked questions (FAQ) list, support
+                documentation,
+                or product manuals. </p>
+            <p>Search pages can help, but many organizations look for ways to interact more personally
+                with customers while still using automation.
+            </p>
+            <p> The QnA Maker service answers your users' natural language
+                questions by matching them with the best possible answers from your knowledge base (KB). To find the
+                information they need, customers can have an interactive and natural conversation with the automated
+                service. You create a QnA Maker KB by using a web portal. In the portal, you can create, manage, train,
+                and
+                publish your service without any developer experience. After the service is published to an endpoint, a
+                client application like a chatbot can use the service to process a conversation with a user to determine
+                the
+                question asked and respond with the best answer.</p>
         </div>
-        <div class='row text-light'>
-            <div class='col-4 bg-secondary pt-3 mx-2 mb-5'>
-                <p class='font-weight-bold'>
-                    Create Intelligent Bots with the Azure Bot Service
-                </p>
-                <p>
-                    Introduction
-                </p>
-                <p>
-                    <a href='./unit.html' class='text-light text-decoration-none'>Overview of QnA Maker</a>
-                </p>
-                <p>
-                    Exercise - Create a QnA knowledge base
-                </p>
-                <p>
-                    Exercise - Publish a knowledge base
-                </p>
-                <p>
-                    Exercise - Integrate QnA with a bot
-                </p>
-                <p>
-                    Knowledge check
-                </p>
-                <p>
-                    Summary
-                </p>
-            </div>
+        <div class='row text-light pb-5'>
+            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 text-left" id="intro">
+                <img src="./imgs/award.png" class="coursepics">
+                Module 1: Introduction         
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 text-left" href='./unit.html'>
+                <img src="./imgs/play-button.png" class="coursepics">
+                Module 2: Overview of QnA Maker
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 text-left">
+                <img src="./imgs/play-button.png" class="coursepics">
+                Module 3: Exercise - Create a QnA knowledge base
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 text-left">                
+                <img src="./imgs/play-button.png" class="coursepics">
+                Module 4: Exercise - Publish a knowledge base
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 text-left">
+                <img src="./imgs/play-button.png" class="coursepics">
+                Module 5: Exercise - Integrate QnA with a bot
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 text-left">
+                <img src="./imgs/play-button.png" class="coursepics">
+                Module 6: Knowledge check
+            </button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 text-left">
+                <img src="./imgs/play-button.png" class="coursepics">
+                Module 7: Summary
+            </button>
         </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
