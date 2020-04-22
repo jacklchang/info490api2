@@ -72,7 +72,7 @@ p, h1, h2, h3, h4, h5, a {
 }
 
 .jumbotron {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('./imgs/microsoft.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('./imgs/heroimagedark.jpg');
     background-size: cover;
     height: 75vh;
     margin-bottom: 0;
@@ -87,6 +87,7 @@ p, h1, h2, h3, h4, h5, a {
     margin-top: 3vh;
     position: inline;
     opacity: 0.8 !important;
+    background-image: linear-gradient(108.25deg, #142135 1.44%, #037DFF 140.24%);
 }
 
 .card-text {
