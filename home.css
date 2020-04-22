@@ -45,11 +45,12 @@ a {
   background-color: #2e2e2e !important;
 }
 
-.jumbotron {
+.welcome {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-    url("./imgs/microsoft.jpg");
-  background-size: cover;
-  height: 60vh;
+    url("./imgs/heroimagedark.jpg");
+    background-size: cover;
+  height: auto;
+  width: auto;
   margin-bottom: 0;
   padding: 2rem;
 }
@@ -179,3 +180,9 @@ li.dropdown-item#settings a {
   flex-shrink: none;
 }
 
+.welcoming {
+  background: linear-gradient(108.25deg, #142135 1.44%, #037DFF 140.24%);
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 5rem;
+}
