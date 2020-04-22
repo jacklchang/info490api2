@@ -223,7 +223,7 @@ quiz.addEventListener("click", () => {
       .then((userCredentials) => {
         let rootRef = firebase.database().ref("users");
         var uid = userCredentials.user.uid;
-        var user = { [uid]: { fname: fname, lname: lname, role: value, email: email, saved: [] } };
+        var user = { [uid]: { fname: fname, lname: lname, role: value, email: email} };
         return rootRef.update(user);
       })
       .then(() => {

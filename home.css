@@ -28,8 +28,16 @@ a {
   margin-right: 1.5vw;
 }
 
+#continue {
+  border: 2px solid white;
+}
+
 .bg-secondary {
   background-color: #505050 !important;
+}
+
+.progress {
+  max-width: 60%;
 }
 
 .bg-dark,
