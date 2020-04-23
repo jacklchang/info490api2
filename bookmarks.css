@@ -5,6 +5,10 @@
     /* background-color: white!important; */
 }
 
+.card {
+    max-width: 33%;
+}
+
 .carousel-indicators {
     /* padding-bottom: 30vh!important; */
     padding-bottom: 30%!important;

@@ -70,8 +70,24 @@ firebase.auth().onAuthStateChanged(function (user) {
             let wrapper = document.createElement("div");
             wrapper.classList.add("carousel-item");
             // create card deck
-            let deck1 = document.createElement("div");
-            deck1.classList.add("card-deck", "text-left", "mx-5");
+            let deck = document.createElement("div");
+            deck.classList.add("card-deck", "text-left", "mx-5");
+
+            card1 = makecard(courses[courseRef[i]])
+            deck.appendChild(card1)
+            i++
+            if (i < courseRef.length) {
+              card2 = makecard(courses[courseRef[i]])
+              deck.appendChild(card2)
+              i++
+              if (i < courseRef.length) {
+                card3 = makecard(courses[courseRef[i]])
+                deck.appendChild(card3)
+                i++
+              }
+            }
+            wrapper.appendChild(deck)
+            carousel.appendChild(wrapper)
           }
         }
       });
