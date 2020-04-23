@@ -104,6 +104,9 @@ p, h1, h2, h3, h4, h5, a {
 #team-pic {
     width: 30rem;
     height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #sticky-footer {
