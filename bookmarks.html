@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Catalog</title>
+    <title>Saved Courses</title>
     <meta name="author" content="A-PI CapstoneAD2020">
     <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
     <meta name="keywords"
@@ -20,8 +20,8 @@
 <body class='bg-dark'>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg pt-0">
-            <a class="navbar-brand text-light" id="logo"><img src='./imgs/logo.png' width='30'
-                    height="30" class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <a class="navbar-brand text-light" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -71,180 +71,12 @@
             </div>
         </nav>
     </div>
-    <!-- Filter -->
-    <!-- <div class='container-fluid px-5 py-3 mt-5'>
-        <h3 class='text-light mt-4'>Filter by:</h3>
-        <div class='row justify-content-start'>
-            <div class="col-auto dropdown">
-                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Subjects
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Software Developer</a>
-                    <a class="dropdown-item" href="#">Data Scientist</a>
-                    <a class="dropdown-item" href="#">Cybersecurity</a>
-                    <a class="dropdown-item" href="#">Other</a>
-                </div>
-            </div>
-            <div class="col-auto dropdown">
-                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Language
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Python</a>
-                    <a class="dropdown-item" href="#">Java</a>
-                    <a class="dropdown-item" href="#">C</a>
-                </div>
-            </div>
-            <div class="col-auto dropdown">
-                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Role
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Software Developer</a>
-                    <a class="dropdown-item" href="#">Data Scientist</a>
-                    <a class="dropdown-item" href="#">Cybersecurity</a>
-                    <a class="dropdown-item" href="#">Other</a>
-                </div>
-            </div>
-            <div class="col-auto dropdown">
-                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Skill Level
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Fundamental</a>
-                    <a class="dropdown-item" href="#">Intermediate</a>
-                    <a class="dropdown-item" href="#">Advanced</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
-    <div class='container-fluid px-5 py-3 mt-5 pt-5'>
-        <div id="multi-item-example" class="carousel slide carousel-multi-item px-5 mx-5 mb-5 pb-5"
-            data-ride="carousel">
-            <h2 class='text-center encountertitles'>Saved by You</h2>
-
-            <!--Indicators-->
-            <!-- <ol class="carousel-indicators mt-5">
-              <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-              <li data-target="#multi-item-example" data-slide-to="1"></li>
-              <li data-target="#multi-item-example" data-slide-to="2"></li>
-            </ol> -->
-            <!--/.Indicators-->
-
-            <!--Slides-->
-            <div class="carousel-inner text-light" role="listbox">
-
-
-                <!--Second slide-->
-                <!-- <div class="carousel-item">
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title font-weight-bold">Cloud Computing</h4>
-                                    <p class="card-text">Learn how to build distributed applicatinos to change the
-                                        world.</p>
-                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title font-weight-bold">Data Science</h4>
-                                    <p class="card-text">Apply machine learning using to automate and predict what
-                                        matters to you.</p>
-                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title font-weight-bold">No experience necessary</h4>
-                                    <p class="card-text">Encounter is built from the group up to provide a
-                                        student-accessible experience
-                                        for
-                                        using Azure.
-                                        All skill levels are welcome.
-                                    </p>
-                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!--/.Second slide-->
-
-                <!--Third slide-->
-                <!-- <div class="carousel-item">
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title font-weight-bold">Cloud Computing</h4>
-                                    <p class="card-text">Learn how to build distributed applicatinos to change the
-                                        world.</p>
-                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title font-weight-bold">Data Science</h4>
-                                    <p class="card-text">Apply machine learning using to automate and predict what
-                                        matters to you.</p>
-                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title font-weight-bold">No experience necessary</h4>
-                                    <p class="card-text">Encounter is built from the group up to provide a
-                                        student-accessible experience
-                                        for
-                                        using Azure.
-                                        All skill levels are welcome.
-                                    </p>
-                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!--/.Third slide-->
-
-            </div>
-            <!--/.Slides-->
-            <!--Controls-->
-            <div class="carousel-indicators controls-top row justify-content-between">
-                <a class="btn-floating col-1 text-light text-left" href="#multi-item-example" data-slide="prev"><i
-                        class="fa fa-chevron-left"></i></a>
-                <a class="btn-floating col-1 text-light text-right" href="#multi-item-example" data-slide="next"><i
-                        class="fa fa-chevron-right"></i></a>
-            </div>
-            <!--/.Controls-->
-
+    <div class='container-fluid px-5 py-3 mt-5 pt-5 saved-cards'>
+        <h2 class='text-center encountertitles'>Saved by You</h2>
+        <div class='card-deck row row-cols-3 text-left'>
 
         </div>
-        <!--/.Carousel Wrapper-->
     </div>
     <div class='container-fluid px-5 py-3'>
         <h2 class='text-light'>Subsection</h2>
@@ -300,7 +132,8 @@
             <p class='col-auto font-weight-bold'>Catalog</p>
             <p class='col-auto font-weight-bold'>References</p>
             <p class='col-auto font-weight-bold'>Your Profile</p>
-            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col-auto font-weight-bold' id='contact-link'>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col-auto font-weight-bold'
+                id='contact-link'>
                 <p>Contact Us</p>
             </a>
             <p class='col-auto font-weight-bold'>More from Microsoft</p>
