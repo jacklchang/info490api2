@@ -1,0 +1,21 @@
+.carousel .card {
+    border: 1px solid;
+    border-color: #d5d5d5;
+    height: auto;
+    /* background-color: white!important; */
+}
+
+.carousel-indicators {
+    /* padding-bottom: 30vh!important; */
+    padding-bottom: 30%!important;
+    margin: 0;
+    pointer-events: none;
+}
+
+.carousel-indicators a {
+    pointer-events: all;
+}
+
+.encountertitles {
+    color: #71C2CC!important;
+}

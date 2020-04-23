@@ -23,17 +23,17 @@ quiz.addEventListener("click", () => {
   // Clear modal content on click
   modal.innerHTML = "";
 
-  modal.classList.add('p-4')
+  modal.classList.add("p-4");
 
-  let heading = document.createElement('h2');
-  heading.classList.add('text-light');
-  heading.textContent = 'Just a few more questions...';
-  modal.appendChild(heading)
+  let heading = document.createElement("h2");
+  heading.classList.add("text-light");
+  heading.textContent = "Just a few more questions...";
+  modal.appendChild(heading);
 
   // Add question prompt 1
   let generalquestion = document.createElement("label");
   generalquestion.textContent = "Do you have any programming experience?";
-  generalquestion.classList.add("text-light", "h5", 'mt-3');
+  generalquestion.classList.add("text-light", "h5", "mt-3");
   modal.appendChild(generalquestion);
 
   // add divs for options 1
@@ -51,38 +51,38 @@ quiz.addEventListener("click", () => {
   geninput1.classList.add("form-check-input");
   geninput1.id = "genexample1";
   geninput1.name = "options1";
-  geninput1.value = 'fundamental';
-  geninput1.type = 'radio';
+  geninput1.value = "fundamental";
+  geninput1.type = "radio";
 
   let geninput2 = document.createElement("INPUT");
   geninput2.classList.add("form-check-input");
   geninput2.id = "genexample2";
   geninput2.name = "options1";
-  geninput2.value = 'intermediate';
-  geninput2.type = 'radio';
+  geninput2.value = "intermediate";
+  geninput2.type = "radio";
 
   let geninput3 = document.createElement("INPUT");
   geninput3.classList.add("form-check-input");
   geninput3.id = "genexample3";
   geninput3.name = "options1";
-  geninput3.value = 'advanced';
-  geninput3.type = 'radio';
+  geninput3.value = "advanced";
+  geninput3.type = "radio";
 
   // add role labels 1
   let genlabel1 = document.createElement("label");
   genlabel1.classList.add("form-check-label", "text-light");
   genlabel1.for = "genexample1";
-  genlabel1.textContent = "I've never written a line of code."
+  genlabel1.textContent = "I've never written a line of code.";
 
   let genlabel2 = document.createElement("label");
   genlabel2.classList.add("form-check-label", "text-light");
   genlabel2.for = "genexample2";
-  genlabel2.textContent = "I have some experience."
+  genlabel2.textContent = "I have some experience.";
 
   let genlabel3 = document.createElement("label");
   genlabel3.classList.add("form-check-label", "text-light");
   genlabel3.for = "genexample3";
-  genlabel3.textContent = "I'm an experienced developer."
+  genlabel3.textContent = "I'm an experienced developer.";
 
   // pull together all elements 1
   option1.appendChild(geninput1);
@@ -217,19 +217,55 @@ quiz.addEventListener("click", () => {
         break;
       }
     }
+    var r2 = document.getElementsByName("options1");
+    var level;
+    for (var i = 0; i < r2.length; i++) {
+      if (r2[i].checked) {
+        // insert code to use the checked value
+        level = r2[i].value;
+        break;
+      }
+    }
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredentials) => {
         let rootRef = firebase.database().ref("users");
         var uid = userCredentials.user.uid;
-        var user = { [uid]: { fname: fname, lname: lname, role: value, email: email} };
+        var user = {
+          [uid]: {
+            fname: fname,
+            lname: lname,
+            role: value,
+            email: email,
+            exp: level,
+            saved: {},
+          },
+        };
         return rootRef.update(user);
       })
       .then(() => {
         firebase.auth().onAuthStateChanged(function (user) {
           if (user) {
-            window.location = "./home.html";
+            let uid = user.uid;
+            firebase
+              .database()
+              .ref("users/" + uid)
+              .once("value")
+              .then((snapshot) => {
+                var userInfo = snapshot.val();
+                userRole = userInfo.role;
+                userLevel = userInfo.exp;
+                if (userRole == "Data Science") {
+                  window.location = "./ds_home.html";
+                } else if (userRole == "Cybersecurity") {
+                  window.location = "./cyber_home.html";
+                } else if (userLevel == "fundamental") {
+                  window.location = "./home.html";
+                } else {
+                  window.location = "./non_tech_home.html";
+                }
+              });
           }
         });
       })
@@ -252,7 +288,25 @@ login.addEventListener("click", () => {
     .then(() => {
       firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-          window.location = "./home.html";
+          let uid = user.uid;
+          firebase
+            .database()
+            .ref("users/" + uid)
+            .once("value")
+            .then((snapshot) => {
+              var userInfo = snapshot.val();
+              userRole = userInfo.role;
+              userLevel = userInfo.exp;
+              if (userRole == "Data Science") {
+                window.location = "./ds_home.html";
+              } else if (userRole == "Cybersecurity") {
+                window.location = "./cyber_home.html";
+              } else if (userLevel == "fundamental") {
+                window.location = "./home.html";
+              } else {
+                window.location = "./non_tech_home.html";
+              }
+            });
         }
       });
     })
@@ -264,18 +318,18 @@ login.addEventListener("click", () => {
     });
 });
 
-$('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+$(".carousel.carousel-multi-item.v-2 .carousel-item").each(function () {
   var next = $(this).next();
   if (!next.length) {
-    next = $(this).siblings(':first');
+    next = $(this).siblings(":first");
   }
-  next.children(':first-child').clone().appendTo($(this));
+  next.children(":first-child").clone().appendTo($(this));
 
   for (var i = 0; i < 4; i++) {
     next = next.next();
     if (!next.length) {
-      next = $(this).siblings(':first');
+      next = $(this).siblings(":first");
     }
-    next.children(':first-child').clone().appendTo($(this));
+    next.children(":first-child").clone().appendTo($(this));
   }
 });

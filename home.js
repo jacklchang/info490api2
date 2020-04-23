@@ -53,20 +53,52 @@ firebase.auth().onAuthStateChanged(function (user) {
             console.log(snapshot.val());
             var curUser = snapshot.val();
 
-            var saved = snapshot.val().saved
-            var newCourseKey = firebase.database().ref("users/" + uid).child('saved').push().key;
-            console.log(newCourseKey)
-            saved[newCourseKey] = {courseTitle: cardTitle, img: cardImg, desc: cardDesc, link: courseLink}
-            var userInfo = {saved: saved};
-            console.log(userInfo)
+            var saved = snapshot.val().saved;
+            var newCourseKey = firebase
+              .database()
+              .ref("users/" + uid)
+              .child("saved")
+              .push().key;
+            console.log(newCourseKey);
+            saved[newCourseKey] = {
+              courseTitle: cardTitle,
+              img: cardImg,
+              desc: cardDesc,
+              link: courseLink,
+            };
+            var userInfo = { saved: saved };
+            console.log(userInfo);
             return firebase
-            .database()
-            .ref("users/" + uid).update(userInfo)
-          }).then(() => {
-            buttons[i].textContent = 'Saved'
+              .database()
+              .ref("users/" + uid)
+              .update(userInfo);
+          })
+          .then(() => {
+            buttons[i].textContent = "Saved";
           });
       });
     }
+    let home = document.querySelector(".navbar-brand");
+    home.addEventListener("click", () => {
+      firebase
+        .database()
+        .ref("users/" + uid)
+        .once("value")
+        .then((snapshot) => {
+          var userInfo = snapshot.val();
+          userRole = userInfo.role;
+          userLevel = userInfo.exp;
+          if (userRole == "Data Science") {
+            window.location = "./ds_home.html";
+          } else if (userRole == "Cybersecurity") {
+            window.location = "./cyber_home.html";
+          } else if (userLevel == "fundamental") {
+            window.location = "./home.html";
+          } else {
+            window.location = "./non_tech_home.html";
+          }
+        });
+    });
   } else {
     window.location = "./base.html";
   }

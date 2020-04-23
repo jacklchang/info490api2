@@ -13,34 +13,60 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./assets/css/main.css" />
         <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='./home.css'>
     <link rel='stylesheet' href='./catalog.css'>
 </head>
 
 <body class='bg-dark'>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand text-light" href="home.html" id="logo"><img src='./imgs/logo.png' width='30' height="30"
-                class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='./imgs/logo.png' width='30'
+                    height="30" class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">References</a>
+                        <a class="nav-link text-light" href="./bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="#">References</a>
                     </li>
                 </ul>
 
                 <form class='form-inline'>
-                    <input class='form-control mr-sm-2' type='search' placeholder="Search Encounter" aria-label="Search">
-                    <button class="btn btn-primary my-2 my-sm-0 mr-3" type="submit">Search</button>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
                 </form>
-                <div>
-                    <p id='profile-id'>UserName</p>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -66,79 +92,90 @@
         </div>
         <div class='row text-light justify-content-between'>
             <div class='col-3'>
-                    <div class='bg-secondary p-3'>
-                <p class='font-weight-bold'>
-                    Create Intelligent Bots with the Azure Bot Service
-                </p>
-                <p>
-                    Introduction
-                </p>
-                <p>
-                    <a href='#' class='text-dark text-decoration-none'>Overview of QnA Maker</a>
-                </p>
-                <p>
-                    Exercise - Create a QnA knowledge base
-                </p>
-                <p>
-                    Exercise - Publish a knowledge base
-                </p>
-                <p>
-                    Exercise - Integrate QnA with a bot
-                </p>
-                <p>
-                    Knowledge check
-                </p>
-                <p>
-                    Summary
-                </p>
-            </div>
+                <div class='bg-secondary p-3'>
+                    <p class='font-weight-bold'>
+                        Create Intelligent Bots with the Azure Bot Service
+                    </p>
+                    <p>
+                        Introduction
+                    </p>
+                    <p>
+                        <a href='#' class='text-dark text-decoration-none'>Overview of QnA Maker</a>
+                    </p>
+                    <p>
+                        Exercise - Create a QnA knowledge base
+                    </p>
+                    <p>
+                        Exercise - Publish a knowledge base
+                    </p>
+                    <p>
+                        Exercise - Integrate QnA with a bot
+                    </p>
+                    <p>
+                        Knowledge check
+                    </p>
+                    <p>
+                        Summary
+                    </p>
+                </div>
             </div>
             <!--Content taken from: https://docs.microsoft.com/en-us/learn/modules/build-a-faq-chat-bot-with-qna-maker-and-azure-bot-service/3-exercise-create-qna-knowledge-base-->
             <div class='col-6'>
                 <h3 id='overview'>Overview</h3>
                 <p>Let's create a QnA Maker knowledge base (KB).</p>
-                <p><ol type="1">
-                <li>Go to the <a href="https://www.qnamaker.ai/">QnA Maker portal.</a></li>
-                <li>Select Sign in in the upper-right corner and sign in with your Azure credentials. </li>
-                <li>Unless you already have a knowledge base (KB), the portal will point out that you don't have any.</li>
-                </ol></p>
-                <h3 id='host'>Hosting a knowledge base</h3> <!--this is a page section-->
-                <p> </p>A knowledge base is a searchable collection of questions and answers. 
-                Knowledge bases are hosted in a QnA service, which is created in Azure, 
+                <p>
+                    <ol type="1">
+                        <li>Go to the <a href="https://www.qnamaker.ai/">QnA Maker portal.</a></li>
+                        <li>Select Sign in in the upper-right corner and sign in with your Azure credentials. </li>
+                        <li>Unless you already have a knowledge base (KB), the portal will point out that you don't have
+                            any.</li>
+                    </ol>
+                </p>
+                <h3 id='host'>Hosting a knowledge base</h3>
+                <!--this is a page section-->
+                <p> </p>A knowledge base is a searchable collection of questions and answers.
+                Knowledge bases are hosted in a QnA service, which is created in Azure,
                 and determines the region in which the knowledge base will sit, and its billing and performance.
                 <h3 class='mt-3' id='create'>Creating a knowledge base and QnA serv</h3>
-                <p><ol>
-                    <li>In the menu at the top of the portal, select Create a knowledge base.</li>
-                    <li>Select Create a QnA service. Selecting this button takes you to the Azure portal 
-                        and signs you in with the credentials you used earlier. 
-                        You create the QnA Maker service and the associated Azure app service that will host it in this portal.</li>
-                </ol></p>
+                <p>
+                    <ol>
+                        <li>In the menu at the top of the portal, select Create a knowledge base.</li>
+                        <li>Select Create a QnA service. Selecting this button takes you to the Azure portal
+                            and signs you in with the credentials you used earlier.
+                            You create the QnA Maker service and the associated Azure app service that will host it in
+                            this portal.</li>
+                    </ol>
+                </p>
                 <h3 id='provide'>Provide the QnA Maker service details</h3>
                 <p>Provide these details to create the QnA Maker service:</p>
-                <p><ol type="1">
-                    <li>Enter a globally unique name for your QnA Maker service, such as yourname-qna. 
-                        Make a note of this name as you'll be using it later.</li>
-                    <li>Select your Azure subscription.</li>
-                    <li>Select the F0 pricing tier for the service, which is the free tier.</li>
-                    <li>Select a location for the service, which should be the same region as the bot service, and near your physical location.</li>
-                    <li>Create a resource group called LearnRG.</li>
-                    <li>Select F (three Indexes), the free tier, for the search pricing tier.</li>
-                    <li>For the search location, select the location you used earlier.</li>
-                    <li>Verify that the app name is unique. (If it is, it will be marked with a green check mark.)</li>
-                    <li>Select the location for the website, which should match the location you used earlier.</li>
-                    <li>You won't be using Application Insights for this test, so disable App insights.</li>
-                    <li>Select Create.</li>
-                </ol></p>
+                <p>
+                    <ol type="1">
+                        <li>Enter a globally unique name for your QnA Maker service, such as yourname-qna.
+                            Make a note of this name as you'll be using it later.</li>
+                        <li>Select your Azure subscription.</li>
+                        <li>Select the F0 pricing tier for the service, which is the free tier.</li>
+                        <li>Select a location for the service, which should be the same region as the bot service, and
+                            near your physical location.</li>
+                        <li>Create a resource group called LearnRG.</li>
+                        <li>Select F (three Indexes), the free tier, for the search pricing tier.</li>
+                        <li>For the search location, select the location you used earlier.</li>
+                        <li>Verify that the app name is unique. (If it is, it will be marked with a green check mark.)
+                        </li>
+                        <li>Select the location for the website, which should match the location you used earlier.</li>
+                        <li>You won't be using Application Insights for this test, so disable App insights.</li>
+                        <li>Select Create.</li>
+                    </ol>
+                </p>
                 <p>After a brief deployment process, your resource will be created for the service.</p>
             </div>
             <div class='col-2 pt-3 mb-5'>
                 <div class='bg-secondary'>
-                <nav class="nav flex-column p-3">
-                    <a class="nav-link active bg-dark text-secondary" href="#overview">Overview</a>
-                    <a class="nav-link text-light" href="#host">Hosting a knowledge base</a>
-                    <a class="nav-link text-light" href="#create">Creating a knowledge base and QnA serv</a>
-                    <a class="nav-link text-light" href="#provide">Provide the QnA Maker service details</a>
-                  </nav>
+                    <nav class="nav flex-column p-3">
+                        <a class="nav-link active bg-dark text-secondary" href="#overview">Overview</a>
+                        <a class="nav-link text-light" href="#host">Hosting a knowledge base</a>
+                        <a class="nav-link text-light" href="#create">Creating a knowledge base and QnA serv</a>
+                        <a class="nav-link text-light" href="#provide">Provide the QnA Maker service details</a>
+                    </nav>
                 </div>
             </div>
 
@@ -164,6 +201,8 @@
 
     <!-- </div> -->
 </footer>
+<script src='./home.js'></script>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>

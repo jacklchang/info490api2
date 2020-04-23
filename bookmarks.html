@@ -11,19 +11,20 @@
         content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel='stylesheet' href='./home.css'>
-        <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
-        <link rel='stylesheet' href='./catalog.css'>
+    <!-- <link rel='stylesheet' href='./base.css'> -->
+    <link rel='stylesheet' href='./home.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='./bookmarks.css'>
 </head>
 
 <body class='bg-dark'>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg pt-0">
-            <a class="navbar-brand text-light" href="home.html" id="logo"><img src='./imgs/logo.png' width='30' height="30"
-                class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <a class="navbar-brand text-light" id="logo"><img src='./imgs/logo.png' width='30'
+                    height="30" class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -33,7 +34,8 @@
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./bookmarks.html">Bookmarks<span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-light" href="./bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link text-light" href="#">References</a>
@@ -48,10 +50,10 @@
                 </form>
 
                 <div class="dropdown text-light">
-                    <span class="dropdown-toggle" type="button" id="profile-pic"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
-                </span>
+                    </span>
                     <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
                         <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
                             <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
@@ -61,7 +63,8 @@
                             </div>
                             <p class="card-text mb-2">12% complete</p>
                         </li>
-                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View Profile</small></a></li>
+                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
                         <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
                     </ul>
                 </div>
@@ -69,7 +72,7 @@
         </nav>
     </div>
     <!-- Filter -->
-    <div class='container-fluid px-5 py-3 mt-5'>
+    <!-- <div class='container-fluid px-5 py-3 mt-5'>
         <h3 class='text-light mt-4'>Filter by:</h3>
         <div class='row justify-content-start'>
             <div class="col-auto dropdown">
@@ -119,139 +122,63 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class='container-fluid px-5 py-3'>
-        <h2 class='text-light'>Popular</h2>
-        <h6 class='text-light font-weight-light'>Description</h6>
-        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-            <!--Controls-->
-            <div class="controls-top">
-                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
-                        class="fa fa-chevron-left"></i></a>
-                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                        class="fa fa-chevron-right"></i></a>
-            </div>
-            <!--/.Controls-->
+    <div class='container-fluid px-5 py-3 mt-5 pt-5'>
+        <div id="multi-item-example" class="carousel slide carousel-multi-item px-5 mx-5 mb-5 pb-5"
+            data-ride="carousel">
+            <h2 class='text-center encountertitles'>Saved by You</h2>
 
             <!--Indicators-->
-            <ol class="carousel-indicators mt-5">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
-                <li data-target="#multi-item-example" data-slide-to="2"></li>
-            </ol>
+            <!-- <ol class="carousel-indicators mt-5">
+              <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+              <li data-target="#multi-item-example" data-slide-to="1"></li>
+              <li data-target="#multi-item-example" data-slide-to="2"></li>
+            </ol> -->
             <!--/.Indicators-->
 
             <!--Slides-->
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner text-light" role="listbox">
 
-                <!--First slide-->
-                <div class="carousel-item active">
-
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <a href='./course.html' class='text-decoration-none'>
-                                <img class="card-img-top"
-                                    src="./imgs/course.png"
-                                    alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">Create Intelligent Bots with the Azure Bot Service</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
-                                </div>
-                            </a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!--/.First slide-->
 
                 <!--Second slide-->
                 <div class="carousel-item">
 
                     <div class="row">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
+                        <div class="col-md-4">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
+                                    <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                                    <p class="card-text">Learn how to build distributed applicatinos to change the
+                                        world.</p>
+                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
+                                    <h4 class="card-title font-weight-bold">Data Science</h4>
+                                    <p class="card-text">Apply machine learning using to automate and predict what
+                                        matters to you.</p>
+                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
+                                    <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                                    <p class="card-text">Encounter is built from the group up to provide a
+                                        student-accessible experience
+                                        for
+                                        using Azure.
+                                        All skill levels are welcome.
+                                    </p>
+                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
                                 </div>
                             </div>
                         </div>
@@ -263,50 +190,40 @@
                 <div class="carousel-item">
 
                     <div class="row">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
+                        <div class="col-md-4">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="./imgs/learn1.png" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
+                                    <h4 class="card-title font-weight-bold">Cloud Computing</h4>
+                                    <p class="card-text">Learn how to build distributed applicatinos to change the
+                                        world.</p>
+                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="./imgs/learn2.png" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
+                                    <h4 class="card-title font-weight-bold">Data Science</h4>
+                                    <p class="card-text">Apply machine learning using to automate and predict what
+                                        matters to you.</p>
+                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
+                        <div class="col-md-4 clearfix d-none d-md-block">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="./imgs/learn3.png" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 clearfix d-none d-md-block">
-                            <div class="card">
-                                <img class="card-img-top"
-                                src="./imgs/course.png"
-                                alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">Course Name</h5>
-                                    <p class="card-text text-white">Insert course description here.</p>
+                                    <h4 class="card-title font-weight-bold">No experience necessary</h4>
+                                    <p class="card-text">Encounter is built from the group up to provide a
+                                        student-accessible experience
+                                        for
+                                        using Azure.
+                                        All skill levels are welcome.
+                                    </p>
+                                    <a class="btn btn-outline-light btn-md btn-rounded">Button</a>
                                 </div>
                             </div>
                         </div>
@@ -316,6 +233,15 @@
 
             </div>
             <!--/.Slides-->
+            <!--Controls-->
+            <div class="carousel-indicators controls-top row justify-content-between">
+                <a class="btn-floating col-1 text-light text-left" href="#multi-item-example" data-slide="prev"><i
+                        class="fa fa-chevron-left"></i></a>
+                <a class="btn-floating col-1 text-light text-right" href="#multi-item-example" data-slide="next"><i
+                        class="fa fa-chevron-right"></i></a>
+            </div>
+            <!--/.Controls-->
+
 
         </div>
         <!--/.Carousel Wrapper-->
@@ -325,36 +251,28 @@
         <h6 class='text-light font-weight-light'>Description</h6>
         <div class="card-deck text-left row row-cols-4">
             <div class="card">
-                <img class="card-img-top"
-                src="./imgs/course.png"
-                alt="Card image cap">
+                <img class="card-img-top" src="./imgs/course.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-white">Course Name</h5>
                     <p class="card-text text-white">Insert course description here.</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top"
-                src="./imgs/course.png"
-                alt="Card image cap">
+                <img class="card-img-top" src="./imgs/course.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-white">Course Name</h5>
                     <p class="card-text text-white">Insert course description here.</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top"
-                src="./imgs/course.png"
-                alt="Card image cap">
+                <img class="card-img-top" src="./imgs/course.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-white">Course Name</h5>
                     <p class="card-text text-white">Insert course description here.</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top"
-                src="./imgs/course.png"
-                alt="Card image cap">
+                <img class="card-img-top" src="./imgs/course.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-white">Course Name</h5>
                     <p class="card-text text-white">Insert course description here.</p>
@@ -363,7 +281,7 @@
         </div>
     </div>
 
-    
+
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -374,6 +292,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
     <script src='./home.js'></script>
+    <script src='./bookmarks.js'></script>
 </body>
 <footer class='text-center text-light text-bold pt-3 pb-5 bg-secondary'>
     <div class='container mx-0'>
