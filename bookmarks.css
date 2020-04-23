@@ -5,13 +5,9 @@
     /* background-color: white!important; */
 }
 
-.card {
-    max-width: 33%;
-}
-
 .carousel-indicators {
-    /* padding-bottom: 30vh!important; */
-    padding-bottom: 30%!important;
+    position: absolute;
+    padding-bottom: 25%!important;
     margin: 0;
     pointer-events: none;
 }

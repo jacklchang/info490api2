@@ -11,16 +11,18 @@
         content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel='stylesheet' href='./home.css'>
-    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='../home.css'>
     <link rel='stylesheet' href='./predictflight.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--For the ratings-->
 </head>
 
 <body class='bg-dark'>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg pt-0">
-            <a class="navbar-brand text-light" id="logo"><img src='./imgs/logo.png' width='30'
-                    height="30" class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <a class="navbar-brand text-light" id="logo"><img src='../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,11 +31,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
+                        <a class="nav-link text-light" href="../catalog.html">Catalog<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./bookmarks.html">Saved Courses<span
+                        <a class="nav-link text-light" href="../bookmarks.html">Saved Courses<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mx-2">
@@ -51,18 +53,18 @@
                 <div class="dropdown text-light">
                     <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
+                        <img src="../imgs/microsoft_user.jpeg" id="profile-pic">
                     </span>
                     <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
                         <li class="dropdown-item text-center text-light mb-3" id='profile-id'>
-                            <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <img src="../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
                             <div class="progress mb-2">
                                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
                                     aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <p class="card-text mb-2">12% complete</p>
                         </li>
-                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View
+                        <li class="dropdown-item"><a href='../settings.html' class='text-light'><small>View
                                     Profile</small></a></li>
                         <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
                     </ul>
@@ -71,70 +73,84 @@
         </nav>
     </div>
     <!--Content -->
-    <div class='container px-0 mt-5'>
+    <div class='container px-0 mt-5 pl-5'>
         <div class='mt-5 row text-light align-items-center justify-content-start'>
-            <a href='./catalog.html' class='col-1 btn btn-outline-light mt-5'>
-                Catalog
+            <a href='../catalog.html' class='col-2 btn btn-outline-light mt-5 catalog'>
+                Back to Catalog
             </a>
-            <div class='col-1 text-center mt-5'>
-                >
-            </div>
-            <a href='#' class='col-4 btn btn-outline-light mt-5'>
-                Create Intelligent Bots with the Azure Bot Service
-            </a>
+
         </div>
     </div>
-    <div class='container px-5 mx-auto pt-5'>
-        <div class='text-light'>
-            <h3 class='text-light mt-4'>Create Intelligent Bots with the Azure Bot Service</h3>
+    <div class='container px-5 mx-auto'>
+        <div class='text-light course-info'>
+            <h3 class='text-light mt-4'>Predict flight delays by creating a machine learning model in Python</h3>
+            <p>51 minutes | Module | 6 Units</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span>4.7 (1,325)</span>
             <h5 class='text-light my-2 font-weight-lighter'>Overview</h5>
-            <p class='mt-4'>One way to improve customer satisfaction is to help customers quickly locate answers to
-                their questions. The
-                information they're looking for might be in a frequently asked questions (FAQ) list, support
-                documentation,
-                or product manuals. </p>
-            <p>Search pages can help, but many organizations look for ways to interact more personally
-                with customers while still using automation.
-            </p>
-            <p> The QnA Maker service answers your users' natural language
-                questions by matching them with the best possible answers from your knowledge base (KB). To find the
-                information they need, customers can have an interactive and natural conversation with the automated
-                service. You create a QnA Maker KB by using a web portal. In the portal, you can create, manage, train,
-                and
-                publish your service without any developer experience. After the service is published to an endpoint, a
-                client application like a chatbot can use the service to process a conversation with a user to determine
-                the
-                question asked and respond with the best answer.</p>
+            <p class='mt-2'>Import airline arrival data into a Jupyter notebook and use Pandas to clean it. Then, build
+                a machine learning model with Scikit-Learn and use Matplotlib to visualize output.</p>
+            <p>In this module, you will:</p>
+            <ul>
+                <li>Create an Azure Notebook and import flight data
+                </li>
+                <li>Use Pandas to clean and prepare data
+                </li>
+                <li>Use Scikit-learn to build a machine-learning model
+                </li>
+                <li>Use Matplotlib to visualize the output
+                </li>
+            </ul>
+            <button type="button" class="btn btn-outline-light mt-4">
+                <div class="pt-2 pb-2 pl-4 pr-4">
+                    Get Started
+                </div>
+            </button>
         </div>
-        <div class='text-light py-5 mt-3 mb-4'>
-            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 mb-3 text-left" id="intro">
-                <img src="./imgs/award.png" class="coursepics">
-                Module 1: Introduction
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 mb-3 text-left" href='./unit.html'>
-                <img src="./imgs/play-button.png" class="coursepics">
-                Module 2: Overview of QnA Maker
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 mb-3 text-left">
-                <img src="./imgs/play-button.png" class="coursepics">
-                Module 3: Exercise - Create a QnA knowledge base
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 mb-3 text-left">
-                <img src="./imgs/play-button.png" class="coursepics">
-                Module 4: Exercise - Publish a knowledge base
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 mb-3 text-left">
-                <img src="./imgs/play-button.png" class="coursepics">
-                Module 5: Exercise - Integrate QnA with a bot
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 mb-3 text-left">
-                <img src="./imgs/play-button.png" class="coursepics">
-                Module 6: Knowledge check
-            </button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block pt-3 pb-3 mb-3 text-left">
-                <img src="./imgs/play-button.png" class="coursepics">
-                Module 7: Summary
-            </button>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="pt-5">Course Sections</h1>
+                    <p class="text-light pt-5">Introduction</p>
+                    <p class="text-light">Exercise - Create an Azure Notebook and Import Data</p>
+                    <p class="text-light">Exercise - Clean and prepare data</p>
+                    <p class="text-light">Exercise - Build Machine Learning Model</p>
+                    <p class="text-light">Exercise - Visualize Output of Model</p>
+                    <p class="text-light">Summary</p>
+                    <button type="button" class="btn btn-outline-light mt-4 mb-5">
+                        <div class="pt-2 pb-2 pl-4 pr-4">
+                            Get Started
+                        </div>
+                    </button>
+                </div>
+                <div class="col">
+                    <h1 class="pt-5">Related to this course</h1>
+                    <div class="card-group text-left">
+                        <div class="card mr-4 p-3 pt-3">
+                            <div class='card-header'>
+                                <p class="text-light">Predict flight delays by creating a machine learning model in
+                                    Python</p>
+                            </div>
+                            <a class='btn btn-light mt-2' role='button' href='./dscourses/predictflight.html'>See
+                                more</a>
+                            <button class='btn btn-primary mt-2 mb-3 save' role='button'>Save for later</button>
+                        </div>
+                        <div class="card p-3 pt-3">
+                            <div class='card-header'>
+                                <p class="text-light">Introduction to Azure Machine Learning</p>
+                            </div>
+                            <a class='btn btn-light mt-5' role='button'
+                                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-machine-learning-service/?fbclid=IwAR3iFNTSkC4TLh3gDuVyzhMJYmqkQ7f1p2ql5X1wHLTj0GPTGbJTrwDxZCc'>
+                                See More</a>
+                            <button class='btn btn-primary mt-2 mb-3 save' role='button'>Save for later</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>

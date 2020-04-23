@@ -35,11 +35,17 @@ p, h1, h2, h3, h4, h5, a {
 }
 
 .card {
-    display:flex;
     margin-top: 3vh;
     position: inline;
     opacity: 0.5 !important;
     background-color: #000000;
+}
+
+.card-group {
+    margin-bottom: 5rem;
+    padding: 0;
+    margin-left: 0;
+    margin-right:0;
 }
 
 .card-text {
@@ -63,4 +69,26 @@ p, h1, h2, h3, h4, h5, a {
     width: 3rem; 
     height: auto;
     margin-right: 2rem;
+}
+
+.checked {
+    color: orange;
+  }
+
+.catalog {
+    background: #0D6C94;
+    mix-blend-mode: normal;
+    border-radius: 20px;
+
+}
+
+.course-info {
+    background: linear-gradient(77.23deg, #142135 8.08%, #71C2CC 172.8%);
+    border-radius: 10px;
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+h1 {
+    color: #71C2CC;
 }
