@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Microsoft Encounter</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='./base.css'>
+    <link rel='stylesheet' href='./home.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid pb-5">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" href="#" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./bookmarks.html">Bookmarks<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="#">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item" id='settings'><a href='./settings.html'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container home-banner pt-5">
+        <div class="row">
+            <div class="col-sm welcoming">
+                <h1 class="display-4 text-light mt-5" id="profile-name">Hello, </h1>
+                <p class="lead text-light mt-5">Welcome back to Microsoft Encounter</p>
+                <h5 class="card-title text-light">Jump back in...</h5>
+                <p class="card-text mb-3 mt-3 text-light">Lesson Name: Create an Azure Account</p>
+                <div class="progress mt-4">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 12%"
+                        aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="card-text text-light mb-4">12% complete</p>
+                <button class='btn btn-outline-light px-4 py-3' id='continue'>Continue: (Next Section Name)</button>
+            </div>
+            <div class="col-sm welcome pt-5">
+            </div>
+        </div>
+    </div>
+
+
+        <div class='p-5 mx-5 text-light'>
+            <h2 class="text-white text-center encountertitles mb-4">Based on Your Preferences</h2>
+            <div class="card-deck text-left mx-5">
+                <div class="card mx-3 p-2 pt-3">
+                    <div class='card-header'>
+                        <h3>Security, responsibility, and trust in Azure</h3>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/intro-to-security-in-azure.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">Discuss the basic concepts for protecting your infrastructure and data when you work in the cloud. Understand what responsibilities are yours and what Azure takes care of for you.
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/?fbclid=IwAR2WiQlEJOdjIdwnNVTFt6QvwIbX852_fbOxsTBVBYash0PptuLTsJyKZHU'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+                <div class="card mx-3 p-2 pt-3">
+                    <div class='card-header'>
+                        <h3>Secure your Azure SQL Database</h3>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/secure-your-azure-sql-database.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">Secure your Azure SQL Database to keep your data secure and diagnose potential security concerns as they happen.
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/secure-your-azure-sql-database/?fbclid=IwAR1sg3bhKFZ-zkaKTPtdZ0978ii1_2Mrdhon6mSp-eViNA1-Swyl1d2F774'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+                <div class="card mx-3 p-2 pt-3">
+                    <div class='card-header'>
+                        <h3>Introduce the foundation pillars of DevOps: Culture and Lean Product</h3>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/introduce-foundation-pillars-devops-culture-learn-product.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. Discover the first two foundation pillars of DevOps: Culture and Lean Product.
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/introduce-foundation-pillars-devops/?fbclid=IwAR2B72prCu-WJi3weiiap2nBlcxKPn8fU2r_mpLukIxYAtD--4uRFl8mA5w'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+                <div class="card mx-3 p-2 pt-3">
+                    <div class='card-header'>
+                        <h3>How to build a simple dashboard</h3>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/build-simple-dashboard.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">Power BI helps business users and developers alike to easily
+                            analyze, visualize, and collaborate on data. This module will teach you how to do all of
+                            that
+                            without effecting your underlying dataset.
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/build-simple-dashboard/?fbclid=IwAR2UOHymajSZIe9gpwsyIzzur0NWvZ8AeMQjhuiTRdqZObarG9RTS3ax_zY'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class='mt-5 pt-3 text-white text-center encountertitles mb-4'>Encounter Something New</h3>
+            <div class="card-deck text-left mx-5">
+                <div class="card mx-3 p-2 pt-3 explore">
+                    <div class='card-header'>
+                        <h4>Publish a web app to Azure with Visual Studio</h4>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/publish-azure-web-app-with-visual-studio.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">Use the publishing features of Visual Studio 2017 to deploy and
+                            manage an ASP.NET Core web application hosted on Azure.
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/publish-azure-web-app-with-visual-studio/?fbclid=IwAR2ginbxGUR6UHhXMu0iYICE-XjCN9Sx3nm6T_2tb6ybUOnym2-xQfiNlzM'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+                <div class="card mx-3 p-2 pt-3 explore">
+                    <div class='card-header'>
+                        <h4>Capture page load times in Azure web app</h4>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/capture-page-load-times-application-insights.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">Application Insights is an Azure service that you can use to
+                            monitor
+                            the behavior and performance of a web application. If you run a web app in Azure, you can
+                            take
+                            advantage of several benefits provided by ...
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/capture-page-load-times-application-insights/?fbclid=IwAR1hAoWBPdO5Q_kHWE44uue6jn7CgDhHTKTg-hTF2heui43TKV0w5bLB2ws'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+                <div class="card mx-3 p-2 pt-3 explore">
+                    <div class='card-header'>
+                        <h4>How to build an app solution</h4>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/build-app-solution.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">Power Apps allows businesses to create custom solutions for
+                            everyday problems. In this module, you will learn how to build and customize an app from
+                            scratch.
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/build-app-solution/?fbclid=IwAR0cj960LAI_lX4oIHlLMbLcqUpn2hgW755tANzRYvVsWTo0T_cZPPnCx1s'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+                <div class="card mx-3 p-2 pt-3 explore">
+                    <div class='card-header'>
+                        <h4>Introduction to Azure Machine Learning</h4>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/data-ai/intro-to-azure-machine-learning-service-badge.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">Introduction to Azure Machine Learning
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-machine-learning-service/?fbclid=IwAR0grsSJCpghuvsJ8CrVRNYHN61QfuLx7dIydvrGJYTDGng79uslrDAn38w'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+                <div class="card mx-3 p-2 pt-3 explore">
+                    <div class='card-header'>
+                        <h4>Introduce the foundation pillars of DevOps</h4>
+                    </div>
+                    <img class="card-img my-3 align-self-center"
+                        src="https://docs.microsoft.com/en-us/learn/achievements/introduce-foundation-pillars-devops-culture-learn-product.svg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text text-white">DevOps is the union of people, process, and products to enable
+                            continuous delivery of value to our end users. Discover the first two foundation pillars of
+                            DevOps: Culture and Lean Product.
+                        </p>
+                    </div>
+                    <div class='card-footer justify-content-around row mx-1 mb-2'>
+                        <a class='btn btn-light col mr-2 mt-2' role='button'
+                            href='https://docs.microsoft.com/en-us/learn/modules/introduce-foundation-pillars-devops/?fbclid=IwAR1cvuSTFn4sOTdb_GO_c4gAjmR63cCy4dKJMCeGzcQQX25A5OVPXlpAtYE'>Get
+                            Started</a>
+                        <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class='row mt-3 pr-2 mr-5'>
+                <a href='./catalog.html' class='col align-self-end text-white' id='all-courses'>See more courses ></a>
+            </div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+</body>
+
+<footer id="sticky-footer" class="py-4 bg-light">
+    <div class="container text-center">
+        <div class='row'>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+                <h4 class="text-dark">Contact them</h4>
+            </a>
+            <p class='col font-weight-bold text-dark'>Catalog</p>
+            <p class='col font-weight-bold text-dark'>References</p>
+            <p class='col font-weight-bold text-dark'>Your Profile</p>
+        </div>
+        <p class='text-center text-dark'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+
+<script src='./home.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
