@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Import Data</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../home.css'>
+    <link rel='stylesheet' href='../catalog.css'>
+    <link rel='stylesheet' href='../unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item"><a href='../settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Content -->
+    <!--Content taken from: https://docs.microsoft.com/en-us/learn/modules/build-a-faq-chat-bot-with-qna-maker-and-azure-bot-service/3-exercise-create-qna-knowledge-base-->
+    <div class='container px-0 mt-5 pl-5'>
+        <div class="row">
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='./impdata.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        <i class="fas fa-angle-left"></i> Previous
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='../catalog.html' class='btn btn-outline-light mt-5 catalog pl-3 pr-3'>
+                        Course Sections <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='./build.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        Next <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row text-light justify-content-between">
+                    <div class='col'>
+                        <h3 id='overview'>Predict flight delays by creating a machine learning model in Python</h3>
+                        <div class="text-light">
+                            <p>Before you can prepare a dataset, you need to understand its content and structure. In
+                                the previous lab, you imported a dataset containing on-time arrival information for a
+                                major U.S. airline. That data included 26 columns and thousands of rows, with each row
+                                representing one flight and containing information such as the flight's origin,
+                                destination, and scheduled departure time. You also loaded the data into a Jupyter
+                                notebook and used a simple Python script to create a Pandas DataFrame from it.
+                            </p>
+                            <p>A DataFrame is a two-dimensional labeled data structure. The columns in a DataFrame can
+                                be of different types, just like columns in a spreadsheet or database table. It is the
+                                most commonly used object in Pandas. In this exercise, you will examine the DataFrame —
+                                and the data inside it — more closely.
+                            </p>
+                            <ol>
+                                <li>Switch back to the Azure notebook that you created in the previous section. If you
+                                    closed the notebook, you can sign back into the Microsoft Azure Notebooks portal ,
+                                    open your notebook and use the Cell -> Run All to rerun the all of the cells in the
+                                    notebook after opening it.
+                                </li>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/2-load-dataset.png">
+                                <li>The code that you added to the notebook in the previous lab creates a DataFrame from
+                                    flightdata.csv and calls DataFrame.head on it to display the first five rows. One of
+                                    the first things you typically want to know about a dataset is how many rows it
+                                    contains. To get a count, type the following statement into an empty cell at the end
+                                    of the notebook and run it:
+                                </li>
+                                <p>df.shape</p>
+                                <p>Confirm that the DataFrame contains 11,231 rows and 26 columns:
+                                </p>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/2-shape-output.png">
+
+                                <li>Now take a moment to examine the 26 columns in the dataset. They contain important
+                                    information such as the date that the flight took place (YEAR, MONTH, and
+                                    DAY_OF_MONTH), the origin and destination (ORIGIN and DEST), the scheduled departure
+                                    and arrival times (CRS_DEP_TIME and CRS_ARR_TIME), the difference between the
+                                    scheduled arrival time and the actual arrival time in minutes (ARR_DELAY), and
+                                    whether the flight was late by 15 minutes or more (ARR_DEL15).
+                                </li>
+                                <p>Here is a complete list of the columns in the dataset. Times are expressed in 24-hour
+                                    military time. For example, 1130 equals 11:30 a.m. and 1500 equals 3:00 p.m.
+                                </p>>
+                                <p>The dataset includes a roughly even distribution of dates throughout the year, which
+                                    is important because a flight out of Minneapolis is less likely to be delayed due to
+                                    winter storms in July than it is in January. But this dataset is far from being
+                                    "clean" and ready to use. Let's write some Pandas code to clean it up.
+                                </p>
+                                <p>One of the most important aspects of preparing a dataset for use in machine learning
+                                    is selecting the "feature" columns that are relevant to the outcome you are trying
+                                    to predict while filtering out columns that do not affect the outcome, could bias it
+                                    in a negative way, or might produce multicollinearity. Another important task is to
+                                    eliminate missing values, either by deleting the rows or columns containing them or
+                                    replacing them with meaningful values. In this exercise, you will eliminate
+                                    extraneous columns and replace missing values in the remaining columns.
+                                </p>
+                            </ol>
+                            <ol>
+                                <li>One of the first things data scientists typically look for in a dataset is missing
+                                    values. There's an easy way to check for missing values in Pandas. To demonstrate,
+                                    execute the following code in a cell at the end of the notebook:
+                                </li>
+                                <p>df.isnull().values.any()
+                                </p>
+                                <p>Confirm that the output is "True," which indicates that there is at least one missing
+                                    value somewhere in the dataset.
+                                </p>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/2-check-for-missing-values.png">
+                                <li>The next step is to find out where the missing values are. To do so, execute the
+                                    following code:
+                                </li>
+                                <p>df.isnull().sum()
+                                </p>
+                                <li>Curiously, the 26th column ("Unnamed: 25") contains 11,231 missing values, which
+                                    equals the number of rows in the dataset. This column was mistakenly created because
+                                    the CSV file that you imported contains a comma at the end of each line. To
+                                    eliminate that column, add the following code to the notebook and execute it:
+                                </li>
+                                <p>df = df.drop('Unnamed: 25', axis=1)
+                                    df.isnull().sum()</p>
+                                <li>The DataFrame still contains a lot of missing values, but some of them aren't useful
+                                    because the columns containing them are not relevant to the model that you are
+                                    building. The goal of that model is to predict whether a flight you are considering
+                                    booking is likely to arrive on time. If you know that the flight is likely to be
+                                    late, you might choose to book another flight.
+                                </li>
+                                <p>The next step, therefore, is to filter the dataset to eliminate columns that aren't
+                                    relevant to a predictive model. For example, the aircraft's tail number probably has
+                                    little bearing on whether a flight will arrive on time, and at the time you book a
+                                    ticket, you have no way of knowing whether a flight will be cancelled, diverted, or
+                                    delayed. By contrast, the scheduled departure time could have a lot to do with
+                                    on-time arrivals. Because of the hub-and-spoke system used by most airlines, morning
+                                    flights tend to be on time more often than afternoon or evening flights. And at some
+                                    major airports, traffic stacks up during the day, increasing the likelihood that
+                                    later flights will be delayed.
+                                </p>
+                                <p>Pandas provides an easy way to filter out columns you don't want. Execute the
+                                    following code in a new cell at the end of the notebook:
+                                </p>
+                                <p>df = df[["MONTH", "DAY_OF_MONTH", "DAY_OF_WEEK", "ORIGIN", "DEST", "CRS_DEP_TIME",
+                                    "ARR_DEL15"]]
+                                    df.isnull().sum()</p>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/2-reduced-columns.png">
+                                <li>The only column that now contains missing values is the ARR_DEL15 column, which uses
+                                    0s to identify flights that arrived on time and 1s for flights that didn't. Use the
+                                    following code to show the first five rows with missing values:
+                                </li>
+                                <p>df[df.isnull().values.any(axis=1)].head()
+                                </p>
+                                <p>Pandas represents missing values with NaN, which stands for Not a Number. The output
+                                    shows that these rows are indeed missing values in the ARR_DEL15 column:
+                                </p>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/2-rows-with-missing-values.png">
+                                <li>The reason these rows are missing ARR_DEL15 values is that they all correspond to
+                                    flights that were canceled or diverted. You could call dropna on the DataFrame to
+                                    remove these rows. But since a flight that is canceled or diverted to another
+                                    airport could be considered "late," let's use the fillna method to replace the
+                                    missing values with 1s.
+                                </li>
+                                <p>Use the following code to replace missing values in the ARR_DEL15 column with 1s and
+                                    display rows 177 through 184:
+                                </p>
+                                <p>df = df.fillna({'ARR_DEL15': 1})
+                                    df.iloc[177:185]</p>
+                                <p>Confirm that the NaNs in rows 177, 179, and 184 were replaced with 1s indicating that
+                                    the flights arrived late:
+                                </p>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/2-missing-values-filled.png">
+                                <p>The dataset is now "clean" in the sense that missing values have been replaced and
+                                    the list of columns has been narrowed to those most relevant to the model. But
+                                    you're not finished yet. There is more to do to prepare the dataset for use in
+                                    machine learning.
+                                </p>
+                                <p>The CRS_DEP_TIME column of the dataset you are using represents scheduled departure
+                                    times. The granularity of the numbers in this column — it contains more than 500
+                                    unique values — could have a negative impact on accuracy in a machine-learning
+                                    model. This can be resolved using a technique called binning or quantization. What
+                                    if you divided each number in this column by 100 and rounded down to the nearest
+                                    integer? 1030 would become 10, 1925 would become 19, and so on, and you would be
+                                    left with a maximum of 24 discrete values in this column. Intuitively, it makes
+                                    sense, because it probably doesn't matter much whether a flight leaves at 10:30 a.m.
+                                    or 10:40 a.m. It matters a great deal whether it leaves at 10:30 a.m. or 5:30 p.m.
+                                </p>
+                                <p>In addition, the dataset's ORIGIN and DEST columns contain airport codes that
+                                    represent categorical machine-learning values. These columns need to be converted
+                                    into discrete columns containing indicator variables, sometimes known as "dummy"
+                                    variables. In other words, the ORIGIN column, which contains five airport codes,
+                                    needs to be converted into five columns, one per airport, with each column
+                                    containing 1s and 0s indicating whether a flight originated at the airport that the
+                                    column represents. The DEST column needs to be handled in a similar manner.
+                                </p>
+                            </ol>
+                            <ol>
+                                <p>In this exercise, you will "bin" the departure times in the CRS_DEP_TIME column and
+                                    use Pandas' get_dummies method to create indicator columns from the ORIGIN and DEST
+                                    columns.
+                                </p>
+                                <li>Use the following command to display the first five rows of the DataFrame:
+                                </li>
+                                <p>df.head()
+                                </p>
+                                <p>Observe that the CRS_DEP_TIME column contains values from 0 to 2359 representing
+                                    military times.
+                                </p>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/2-unbinned-departure-times.png">
+                                <li>Use the following statements to bin the departure times:
+                                </li>
+                                <p>import math
+
+                                    for index, row in df.iterrows():
+                                    df.loc[index, 'CRS_DEP_TIME'] = math.floor(row['CRS_DEP_TIME'] / 100)
+                                    df.head()</p>
+                                <p>Confirm that the numbers in the CRS_DEP_TIME column now fall in the range 0 to 23:
+                                </p>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/2-binned-departure-times.png">
+                                <li>Now use the following statements to generate indicator columns from the ORIGIN and
+                                    DEST columns, while dropping the ORIGIN and DEST columns themselves:
+                                </li>
+                                <p>df = pd.get_dummies(df, columns=['ORIGIN', 'DEST'])
+                                    df.head()</p>
+                                <p>Examine the resulting DataFrame and observe that the ORIGIN and DEST columns were
+                                    replaced with columns corresponding to the airport codes present in the original
+                                    columns. The new columns have 1s and 0s indicating whether a given flight originated
+                                    at or was destined for the corresponding airport.
+                                </p>
+                                <li>Use the File -> Save and Checkpoint command to save the notebook.
+                                </li>
+                                <p>The dataset looks very different than it did at the start, but it is now optimized for use in machine learning.
+                                </p>
+                            </ol>
+                        </div>
+
+                        <div class='text-light align-items-center justify-content-start'>
+                            <p>Next unit: Exercise - Build Machine Learning Model</p>
+                            <a href='./build.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                                Next <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col col-lg-3 pt-5'>
+                <div id="navigation">
+                    <nav class="nav flex-column p-3">
+                        <a class="nav-link active bg-dark text-secondary" href="#overview">Overview</a>
+                        <a class="nav-link text-light" href="#host">Hosting a knowledge base</a>
+                        <a class="nav-link text-light" href="#create">Creating a knowledge base and QnA serv</a>
+                        <a class="nav-link text-light" href="#provide">Provide the QnA Maker service details</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<footer class='text-center text-light text-bold pt-3 pb-5 mt-3 bg-secondary'>
+    <div class='container mx-0'>
+        <div class='row'>
+            <p class='col font-weight-bold'>Catalog</p>
+            <p class='col font-weight-bold'>References</p>
+            <p class='col font-weight-bold'>Your Profile</p>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col font-weight-bold' id='contact-link'>
+                <p>Contact Us</p>
+            </a>
+            <p class='col font-weight-bold'>More from Microsoft</p>
+        </div>
+    </div>
+    <p class='text-center'>This project is part of the Informatics 2020 Capstone.</p>
+    <!-- <div> -->
+
+    <!-- </div> -->
+</footer>
+<script src='./home.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
