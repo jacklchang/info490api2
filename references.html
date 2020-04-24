@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Microsoft Encounter</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='./base.css'>
+    <link rel='stylesheet' href='./home.css'>
+    <link rel='stylesheet' href='./references.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid pb-5">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" href="#" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="#">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item" id='settings'><a href='./settings.html'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="text-light">Learn meets Encounter</h1>
+            <p class="text-light">This page is background information on how we re-designed Microsoft Learn to be
+                tailored towards University students.
+            </p>
+        </div>
+        <p class="text-light"><a href="https://docs.microsoft.com/en-us/learn" class="text-light"><u>Microsoft
+                    Learn</u></a> is a free, online training platform that provides interactive learning
+            for Microsoft products. Their goal is to help you become proficient on our technologies with fun, guided,
+            hands-on, interactive content that's specific to your role and goals.
+        </p>
+        <p class="text-light">Content for Personas Links here
+            
+            Data Science
+            https://docs.microsoft.com/en-us/learn/modules/predict-flight-delays-with-python/
+            https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-machine-learning-service/
+            https://docs.microsoft.com/en-us/learn/modules/use-automated-machine-learning/
+            https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure/
+
+            CyberSecurity
+            https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure/
+            https://docs.microsoft.com/en-us/learn/modules/secure-your-azure-sql-database/
+            https://docs.microsoft.com/en-us/learn/modules/introduce-foundation-pillars-devops/
+            https://docs.microsoft.com/en-us/learn/modules/intro-to-governance/
+
+            NonTechnical major - GIS Student
+            https://docs.microsoft.com/en-us/learn/modules/publish-azure-web-app-with-visual-studio/
+            https://docs.microsoft.com/en-us/learn/modules/capture-page-load-times-application-insights/
+            https://docs.microsoft.com/en-us/learn/modules/build-app-solution/
+            https://docs.microsoft.com/en-us/learn/modules/intro-model-driven-apps-common-data-service/
+
+            Completely Non Technical
+            https://docs.microsoft.com/en-us/learn/modules/intro-to-python/
+            https://docs.microsoft.com/en-us/learn/modules/intro-to-git/
+            https://docs.microsoft.com/en-us/learn/modules/build-simple-dashboard/
+            https://docs.microsoft.com/en-us/learn/modules/python-object-oriented-programming/
+
+            Software Engineer
+            https://docs.microsoft.com/en-us/learn/modules/assess-your-development-process/
+            https://docs.microsoft.com/en-us/learn/modules/automate-azure-tasks-with-powershell/
+            https://docs.microsoft.com/en-us/learn/modules/execute-azure-function-with-triggers/
+            https://docs.microsoft.com/en-us/learn/modules/intro-to-containersc
+
+            Technology Manager
+            https://docs.microsoft.com/en-us/learn/modules/manage-delivery-plans/
+            https://docs.microsoft.com/en-us/learn/modules/implement-code-workflow/
+            https://docs.microsoft.com/en-us/learn/modules/design-for-efficiency-and-operations-in-azure/
+            https://docs.microsoft.com/en-us/learn/modules/design-for-performance-and-scalability-in-azure/</p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+</body>
+
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+        <div class='row'>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+                <p class="text-light font-weight-bold">Contact them</p>
+            </a>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'>Your Profile</p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+
+<script src='./home.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
