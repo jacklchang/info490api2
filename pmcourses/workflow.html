@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Implement a code workflow in your build pipeline by using Git and GitHub
+    </title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='../home.css'>
+    <link rel='stylesheet' href='../dscourses/predictflight.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--For the ratings-->
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="#">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3" id='profile-id'>
+                            <img src="../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item"><a href='../settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Content -->
+    <div class='container px-0 mt-5 pl-5'>
+        <div class='mt-5 row text-light align-items-center justify-content-start'>
+            <a href='../catalog.html' class='col-2 btn btn-outline-light mt-5 catalog'>
+                Back to Catalog
+            </a>
+        </div>
+    </div>
+    <div class='container px-5 mx-auto'>
+        <div class='text-light course-info'>
+            <h3 class='text-light mt-4'>Implement a code workflow in your build pipeline by using Git and GitHub
+            </h3>
+            <p>1 hr 27 Minutes | Module | 10 Units</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span>4.7 (1,286)</span>
+            <h5 class='text-light my-2 font-weight-lighter'>Overview</h5>
+            <p class='mt-2'>Collaborate with others and merge only the highest quality code.
+            </p>
+            <p>In this module, you will:</p>
+            <ul>
+                <li>Collaborate with others by choosing an appropriate branching and merging strategy.
+                </li>
+                <li>Add a badge to your GitHub repository to show the status of the latest build.
+                </li>
+                <li>Add a dashboard widget to help visualize your build history.
+                </li>
+                <li>Set up a rule on your GitHub repository to require a review.</li>
+            </ul>
+            <button type="button" class="btn btn-outline-light mt-4">
+                <div class="pt-2 pb-2 pl-4 pr-4">
+                    Get Started
+                </div>
+            </button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="pt-5">Course Sections</h1>
+                    <p class="text-light pt-3">Introduction</p>
+                    <p class="text-light">Choose a code flow strategy</p>
+                    <p class="text-light">Exercise - Set up your Azure DevOps environment</p>
+                    <p class="text-light">Exercise - Create a pull request</p>
+                    <p class="text-light">Exercise - Push a change through the pipeline</p>
+                    <p class="text-light">Exercise - Add a build badge</p>
+                    <p class="text-light">Exercise - Track your build history</p>
+                    <p class="text-light">Exercise - Add a rule to require a review</p>
+                    <p class="text-light">Exercise - Clean up your Azure DevOps environment</p>
+                    <p class="text-light">Summary</p>
+                    <button type="button" class="btn btn-outline-light mt-4 mb-5">
+                        <div class="pt-2 pb-2 pl-4 pr-4">
+                            Get Started
+                        </div>
+                    </button>
+                </div>
+                <div class="col">
+                    <h1 class="pt-5 mb-4">Related to this course</h1>
+                    <div class="container">
+                        <div class="row mb-3 related p-4">
+                            <p class="text-light">Predict flight delays by creating a machine learning model in
+                                Python</p>
+                            <div>
+                                <a class='btn btn-light mr-3' role='button' href='../dscourses/predictflight.html'>See
+                                    more</a>
+                                <button class='btn btn-primary save' role='button'>Save for later</button>
+                            </div>
+                        </div>
+                        <div class="row related p-4">
+                            <p class="text-light mr-5">Introduction to Azure Machine Learning</p>
+                            <div>
+                                <a class='btn btn-light mr-3' role='button' href='../dscourses/introazure.html'>
+                                    See More</a>
+                                <button class='btn btn-primary save' role='button'>Save for later</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+    <script src='../home.js'></script>
+
+</body>
+<footer class='text-center text-light text-bold pt-3 pb-5 bg-secondary'>
+    <div class='container mx-0'>
+        <div class='row'>
+            <p class='col font-weight-bold'>Catalog</p>
+            <p class='col font-weight-bold'>References</p>
+            <p class='col font-weight-bold'>Your Profile</p>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col font-weight-bold' id='contact-link'>
+                <p>Contact Us</p>
+            </a>
+            <p class='col font-weight-bold'>More from Microsoft</p>
+        </div>
+    </div>
+    <p class='text-center'>This project is part of the Informatics 2020 Capstone.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
