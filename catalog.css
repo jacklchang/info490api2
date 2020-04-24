@@ -49,13 +49,18 @@ table {
     display:flex;
     margin-top: 3vh;
     position: inline;
-    opacity: 0.5 !important;
+    opacity: 1 !important;
     background-color: #000000;
+    text-decoration: none;
+    border: 1px solid white;
 }
+
+/* .card:hover, a.text-light:hover {
+    color: #707070!important;
+} */
 
 .card-text {
     opacity: 1 !important;
-    color: #ffffff;
 }
 
 .card-img {
@@ -69,9 +74,4 @@ table {
 
 #all-courses {
     text-align: right;
-}
-
-a.card {
-    text-decoration: none;
-    border: 1px solid white;
 }
