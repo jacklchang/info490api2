@@ -262,6 +262,10 @@ quiz.addEventListener("click", () => {
                   window.location = "./cyber_home.html";
                 } else if (userLevel == "fundamental") {
                   window.location = "./home.html";
+                } else if (userRole == 'Software Developer') {
+                  window.location = './swe_home.html'
+                } else if (userRole == 'Product/Project Manager') {
+                  window.location = './pm_home.html';
                 } else {
                   window.location = "./non_tech_home.html";
                 }
@@ -303,6 +307,10 @@ login.addEventListener("click", () => {
                 window.location = "./cyber_home.html";
               } else if (userLevel == "fundamental") {
                 window.location = "./home.html";
+              } else if (userRole == 'Software Developer') {
+                window.location = './swe_home.html'
+              } else if (userRole == 'Product/Project Manager') {
+                window.location = './pm_home.html';
               } else {
                 window.location = "./non_tech_home.html";
               }

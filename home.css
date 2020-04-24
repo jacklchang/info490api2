@@ -36,8 +36,12 @@ a {
   background-color: #505050 !important;
 }
 
-.progress {
+.home-banner .progress {
   max-width: 60%;
+}
+
+nav .progress {
+  max-width: 100%;
 }
 
 .bg-dark,
@@ -88,11 +92,15 @@ a {
 }
 
 .explore .card-header {
-  min-height: 8rem;
+  min-height: 7rem;
 }
 
 .card-header {
-  min-height: 6rem;
+  min-height: 5rem;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
 }
 
 .card {

@@ -21,7 +21,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         courses = userInfo.saved;
         courseRef = Object.keys(courses);
         // select carousel
-        let carddeck = document.querySelector(".row-cols-3");
+        let carddeck = document.querySelector(".row-cols-4");
         // create only one set of cards for short course list
         for (let i = 0; i < courseRef.length; i++) {
           card = makecard(courses[courseRef[i]])
@@ -153,14 +153,14 @@ makecard = (course) => {
   );
 
   let courseLink = document.createElement("a");
-  courseLink.classList.add("btn", "btn-light", "col-5", "mr-2", "mt-2");
+  courseLink.classList.add("btn", "btn-light", "col-5", "mr-2");
   courseLink.role = "button";
   courseLink.textContent = "Get Started";
   courseLink.href = course.link;
   footer.appendChild(courseLink);
 
   let remove = document.createElement("button");
-  remove.classList.add("btn", "btn-primary", "col-5", "ml-2", "mt-2", "remove");
+  remove.classList.add("btn", "btn-primary", "col-5", "ml-2", "remove");
   remove.role = "button";
   remove.textContent = "Remove";
   footer.appendChild(remove);
