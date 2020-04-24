@@ -2,6 +2,10 @@ p, h1, h2, h3, h4, h5, a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+table {
+    font-size: ;
+}
+
 #nav-button, #desc-button {
     /* border: 2px solid #0029ff; */
     /* background-color: #0029ff!important; */
