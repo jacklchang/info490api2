@@ -76,7 +76,6 @@ p, h1, h2, h3, h4, h5, a {
 }
 
 .card, .card .card-header {
-    border: 0px solid;
     background-color: transparent;
     opacity: 1 !important;
 }
@@ -120,13 +119,13 @@ p, h1, h2, h3, h4, h5, a {
 .carousel .card {
     border: 1px solid;
     border-color: #d5d5d5;
-    height: 27rem;
-    /* background-color: white!important; */
+    /* height: 27rem; */
+    background-color: black!important;
 }
 
-.carousel .col-md-4 .card-body {
+/* .carousel .col-md-4 .card-body {
     background-color: #4f4f4f!important;
-}
+} */
 
 .card-img-top {
     width: 100%;
@@ -134,20 +133,20 @@ p, h1, h2, h3, h4, h5, a {
     overflow: hidden;
 }
 
-.carousel .btn {
+/* .carousel .btn {
     position: absolute;
     left: 50%;
     width: 100px;
     margin-left: -50px;
     bottom:1rem;
-}
+} */
 
-.carousel .btn:hover {
+/* .carousel .btn:hover {
     color: #4f4f4f!important;
-}
+} */
 
 .carousel-indicators {
-    padding-bottom: 25vh!important;
+    padding-bottom: 30vh!important;
     margin: 0;
 }
 
