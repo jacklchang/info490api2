@@ -239,7 +239,7 @@ quiz.addEventListener("click", () => {
             role: value,
             email: email,
             exp: level,
-            saved: {},
+            saved: {key: 0},
           },
         };
         return rootRef.update(user);

@@ -25,28 +25,32 @@ firebase.auth().onAuthStateChanged(function (user) {
         $("#profile-id").append("Welcome back " + name_val + "!");
         $("#profile-name").append(name_val);
       });
-      let buttons = document.querySelectorAll(".card button.save");
+    let buttons = document.querySelectorAll(".card button.save");
 
-    firebase.database().ref('users/' + uid + '/saved').once('value').then((snapshot) => {
-      // console.log(snapshot.val())
-      let courses = snapshot.val();
-      let courseRef = Object.keys(courses)
-      titles = courseRef.map(d => {
-        return courses[d].courseTitle
-      })
-      console.log(titles)
-      for (let i = 0; i < buttons.length; i++) {
-        let cardContent = buttons[i].parentElement.parentElement.children;
-        let cardHeader = cardContent[0].children;
-        let cardTitle = cardHeader[0].textContent;
-        if (titles.includes(cardTitle)) {
-          buttons[i].classList.remove('save');
-          buttons[i].textContent = 'Saved';
-          buttons = document.querySelectorAll(".card button.save");
+    firebase
+      .database()
+      .ref("users/" + uid + "/saved")
+      .once("value")
+      .then((snapshot) => {
+        // console.log(snapshot.val())
+        let courses = snapshot.val();
+        let courseRef = Object.keys(courses);
+        titles = courseRef.map((d) => {
+          return courses[d].courseTitle;
+        });
+        console.log(titles);
+        for (let i = 0; i < buttons.length; i++) {
+          let cardContent = buttons[i].parentElement.parentElement.children;
+          let cardHeader = cardContent[0].children;
+          let cardTitle = cardHeader[0].textContent;
+          if (titles.includes(cardTitle)) {
+            buttons[i].classList.remove("save");
+            buttons[i].textContent = "Saved";
+            buttons = document.querySelectorAll(".card button.save");
+          }
         }
-      }
-    })
-      // console.log(buttons)
+      });
+    // console.log(buttons)
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].addEventListener("click", () => {
         let cardContent = buttons[i].parentElement.parentElement.children;
@@ -73,6 +77,26 @@ firebase.auth().onAuthStateChanged(function (user) {
             var curUser = snapshot.val();
 
             var saved = snapshot.val().saved;
+            if (saved.key == 0) {
+              var newCourseKey = firebase
+                .database()
+                .ref("users/" + uid)
+                .child("saved")
+                .push().key;
+              console.log(newCourseKey);
+              let newSave = {[newCourseKey]: {
+                courseTitle: cardTitle,
+                img: cardImg,
+                desc: cardDesc,
+                link: courseLink,
+              }};
+              // var userInfo = { saved: newSave };
+              console.log(userInfo);
+              return firebase
+                .database()
+                .ref("users/" + uid + '/saved')
+                .set(newSave);
+            }
             var newCourseKey = firebase
               .database()
               .ref("users/" + uid)
