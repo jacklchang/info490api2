@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Unit</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../home.css'>
+    <link rel='stylesheet' href='../catalog.css'>
+    <link rel='stylesheet' href='../unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="#">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item"><a href='../settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Content -->
+    <!--Content taken from: https://docs.microsoft.com/en-us/learn/modules/build-a-faq-chat-bot-with-qna-maker-and-azure-bot-service/3-exercise-create-qna-knowledge-base-->
+    <div class='container px-0 mt-5 pl-5'>
+        <div class="row">
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='../catalog.html' class='btn btn-outline-light mt-5 catalog pl-3 pr-3'>
+                        Course Sections <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='../catalog.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        Next <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row text-light justify-content-between">
+                    <div class='col'>
+                        <h3 id='overview'>What is version control?
+                        </h3>
+                        <div class="text-light">
+                            <p>A version-control system (VCS) is a program (or set of programs) that tracks changes to a
+                                collection of files. One goal is to easily recall earlier versions of individual files
+                                or the entire project. Another is to allow several team members to work on a project,
+                                even on the same files, at the same time without impacting each other.
+                            </p>
+                        </div>
+                        <p>Another name for version-control systems is software configuration management (SCM) systems.
+                            The two terms are often used interchangeably — in fact, Git's official documentation is
+                            located at git-scm.com. Technically, version control is just one of the practices involved
+                            in SCM, while a VCS can be used for projects other than software including books and online
+                            tutorials.
+                        </p>
+                        <p>With a version-control system, you can:
+                        </p>
+                        <ul class="text-light">
+                            <li>See all the changes made to your project, when the changes were made, and who made them.
+                            </li>
+                            <li>Include a message with every change explaining the reasoning behind it.
+                            </li>
+                            <li>Retrieve past versions of the entire project or individual files.
+                            </li>
+                            <li>Create branches, where changes can be made experimentally. This feature allows several
+                                different sets of changes (for example, features or bug fixes) to be worked on at the
+                                same time, possibly by different people, without impacting the master branch. Later, you
+                                can merge the changes you want to keep back into master.
+                            </li>
+                            <li>Attach a tag to a version — for example, to mark a new release.
+                            </li>
+                        </ul>
+                        <p>Git is a fast, versatile, highly scalable, free, open-source version-control system. Its
+                            primary author is Linus Torvalds, the creator of Linux.
+                        </p>
+                        <h3 class='mt-3' id='create'>Distributed version control</h3>
+                        <p>Earlier VCSs, such as CVS, Subversion (SVN), and Perforce, used a centralized server to store
+                            a project's history. This centralization meant that one server was also a single point of
+                            failure.
+                        </p>
+                        <p>Git is distributed, which means that a project's complete history is stored on the client as
+                            well as the server. You can edit files without a network connection, check them in locally,
+                            and sync with the server when a connection becomes available. If a server goes down, you
+                            still have a local copy of the project. Technically, you don't even have to have a server.
+                            Changes could be passed around in e-mail or shared using removable media, but no one uses
+                            Git this way in practice.
+                        </p>
+                        <div class='text-light align-items-center justify-content-start pt-4'>
+                            <p>Up next: Exercise - Try out Git</p>
+                            <a href='../catalog.html' class='btn btn-outline-light catalog pl-4 pr-4'>
+                                Next <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <h3 class='mt-3' id='provide'>Git Terminology</h3>
+                        <p>To understand Git, you have to understand the terminology. Here is a short list of terms that
+                            Git users frequently use. Don't sweat the details for now; all of these terms will become
+                            familiar as you work your way through the exercises in this module.
+                        </p>
+                        <p>
+                            <ul class="text-light">
+                                <li>Working tree: The set of nested directories and files that contain the project being
+                                    worked on.
+                                </li>
+                                <li>Repository (repo): The directory, located at the top level of a working tree, where
+                                    Git keeps all of the history and metadata for a project. Repositories are almost
+                                    always referred to as repos. A bare repository is one that is not part of a working
+                                    tree; it is used for sharing or backup. A bare repo is usually a directory with a
+                                    name ending in .git — for example, project.git.
+                                </li>
+                                <li>Hash: A number produced by a hash function that represents the contents of a file or
+                                    other object to a fixed number of digits. Git uses hashes that are 160 bits long.
+                                    One advantage to using hashes is that Git can tell whether a file has changed by
+                                    hashing its contents and comparing the result to the previous hash. If the file's
+                                    time-and-date stamp has changed but the file's contents have not, Git will know the
+                                    hash has not changed.
+                                </li>
+                                <li>Object: A Git repo contains four types of "objects," each uniquely identified by an
+                                    SHA-1 hash. A blob object contains an ordinary file. A tree object represents a
+                                    directory; it contains names, hashes, and permissions. A commit object represents a
+                                    specific version of the working tree. A tag is a name attached to a commit.
+                                </li>
+                                <li>Commit: When used as a verb, "commit" means to make a commit object. This action
+                                    takes its name from commits to a database. It means you are committing the changes
+                                    you have made so others can eventually see them, too.
+                                </li>
+                                <li>Branch: A named series of linked commits. The most recent commit on a branch is
+                                    called the head. The default branch, which is created when you initialize a
+                                    repository, is called "master." The head of the current branch is called HEAD.
+                                    Branches are an incredibly useful feature of Git because they allow developers to
+                                    work independently (or together) in branches and later merge their changes into
+                                    master.
+                                </li>
+                                <li>Remote: A named reference to another Git repository. When you create a repo, Git
+                                    creates a remote named "origin" that is the default remote for push and pull
+                                    operations.
+                                </li>
+                                <li>Commands, subcommands, and options: Git operations are performed using commands such
+                                    as git push and git pull. git is the command, and push or pull is the subcommand.
+                                    The subcommand specifies the operation you want Git to perform. Commands are
+                                    frequently accompanied by options, which use hyphens (-) or double hyphens (--). For
+                                    example, git reset --hard.
+                                </li>
+                            </ul>
+                        </p>
+                        <p>These terms and others such as "push" and "pull" will make more sense shortly. But you have
+                            to start somewhere, and you might find it helpful to come back and review this glossary
+                            terms after you have completed this module.
+                        </p>
+                        <h3 class='mt-3' id='command'>The Git command line
+                        </h3>
+                        <p>There are several different GUIs available for Git, such as GitHub Desktop. Many program
+                            editors such as Microsoft's Visual Studio Code also have an interface to Git. They all work
+                            differently and have different limitations. None of them implement all of Git's
+                            functionality.
+                        </p>
+                        <p>The exercises in this module use the Git command line — specifically, Git commands executed
+                            in Azure's Cloud Shell. However, Git's command-line interface works the same no matter what
+                            operating system you're using. Plus, the command line lets you tap into all of Git's
+                            functionality. Developers who see Git only through a GUI sometimes find themselves
+                            confronted with error messages they can't resolve, and have to resort to the command line to
+                            get going again.
+
+                        </p>
+                        <p>The next step is to try out Git for yourself!
+                        </p>
+                        <div class='text-light align-items-center justify-content-start pt-4'>
+                            <p>Up next: Exercise - Try out Git</p>
+                            <a href='../catalog.html' class='btn btn-outline-light catalog pl-4 pr-4'>
+                                Next <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col col-lg-3 pt-5'>
+                <div id="navigation">
+                    <nav class="nav flex-column p-3">
+                        <a class="nav-link active bg-dark text-secondary" href="#overview">Overview</a>
+                        <a class="nav-link text-light" href="#host">Hosting a knowledge base</a>
+                        <a class="nav-link text-light" href="#create">Creating a knowledge base and QnA serv</a>
+                        <a class="nav-link text-light" href="#provide">Provide the QnA Maker service details</a>
+                        <a class="nav-link text-light" href="command">The Git command line</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<footer class='text-center text-light text-bold pt-3 pb-5 mt-3 bg-secondary'>
+    <div class='container mx-0'>
+        <div class='row'>
+            <p class='col font-weight-bold'>Catalog</p>
+            <p class='col font-weight-bold'>References</p>
+            <p class='col font-weight-bold'>Your Profile</p>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col font-weight-bold' id='contact-link'>
+                <p>Contact Us</p>
+            </a>
+            <p class='col font-weight-bold'>More from Microsoft</p>
+        </div>
+    </div>
+    <p class='text-center'>This project is part of the Informatics 2020 Capstone.</p>
+    <!-- <div> -->
+
+    <!-- </div> -->
+</footer>
+<script src='../home.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>

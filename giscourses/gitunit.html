@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Introduce the foundation pillars of DevOps: Culture and Lean Product</title>
+    <title>Unit</title>
     <meta name="author" content="A-PI CapstoneAD2020">
     <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
     <meta name="keywords"
         content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
     <link rel='stylesheet' href='../home.css'>
-    <link rel='stylesheet' href='../dscourses/predictflight.css'>
+    <link rel='stylesheet' href='../catalog.css'>
+    <link rel='stylesheet' href='../unit.css'>
     <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--For the ratings-->
 </head>
 
 <body class='bg-dark'>
@@ -56,7 +57,7 @@
                         <img src="../imgs/microsoft_user.jpeg" id="profile-pic">
                     </span>
                     <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
-                        <li class="dropdown-item text-center text-light mb-3" id='profile-id'>
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
                             <img src="../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
                             <div class="progress mb-2">
                                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
@@ -73,104 +74,89 @@
         </nav>
     </div>
     <!--Content -->
+    <!--Content taken from: https://docs.microsoft.com/en-us/learn/modules/build-a-faq-chat-bot-with-qna-maker-and-azure-bot-service/3-exercise-create-qna-knowledge-base-->
     <div class='container px-0 mt-5 pl-5'>
-        <div class='mt-5 row text-light align-items-center justify-content-start'>
-            <a href='../catalog.html' class='col-2 btn btn-outline-light mt-5 catalog'>
-                Back to Catalog
-            </a>
-
-        </div>
-    </div>
-    <div class='container px-5 mx-auto'>
-        <div class='text-light course-info'>
-            <h3 class='text-light mt-4'>Introduce the foundation pillars of DevOps: Culture and Lean Product
-            </h3>
-            <p>25 minutes | Module | 6 Units</p>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span>4.7 (28,396)</span>
-            <h5 class='text-light my-2 font-weight-lighter'>Overview</h5>
-            <p class='mt-2'>DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. Discover the first two foundation pillars of DevOps: Culture and Lean Product.
-            </p>
-            <p>In this module, you will:</p>
-            <ul>
-                <li>List the 4 pillars and 8 capabilities of DevOps.
-                </li>
-                <li>List the benefits of DevOps.
-                </li>
-                <li>Describe the 12 examples of a DevOps mindset within the DevOps Culture.
-                </li>
-                <li>Explain the importance of Lean Product Management.
-                </li>
-                <li>Describe the 6 principles of Lean Product Management.
-                </li>
-            </ul>
-            <button type="button" class="btn btn-outline-light mt-4">
-                <div class="pt-2 pb-2 pl-4 pr-4">
-                    Get Started
+        <div class="row">
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='../catalog.html' class='btn btn-outline-light mt-5 catalog pl-3 pr-3'>
+                        Course Sections <i class="fas fa-caret-down"></i>
+                    </a>
                 </div>
-            </button>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="pt-5">Course Sections</h1>
-                    <p class="text-light pt-3">Introduction</p>
-                    <p class="text-light">Discover DevOps</p>
-                    <p class="text-light">Explore the first foundation pillar of DevOps, Culture</p>
-                    <p class="text-light">Explore the second foundation pillar of DevOps, Lean Product</p>
-                    <p class="text-light">Knowledge check</p>
-                    <p class="text-light">Summary</p>
-                    <button type="button" class="btn btn-outline-light mt-4 mb-5">
-                        <div class="pt-2 pb-2 pl-4 pr-4">
-                            Get Started
-                        </div>
-                    </button>
+            </div>
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='./versioncontrol.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        Next <i class="fas fa-angle-right"></i>
+                    </a>
                 </div>
-                <div class="col">
-                    <h1 class="pt-5 mb-4">Related to this course</h1>
-                    <div class="container">
-                        <div class="row mb-3 related p-4">
-                            <p class="text-light">Predict flight delays by creating a machine learning model in
-                                Python</p>
-                            <div>
-                                <a class='btn btn-light mr-3' role='button'
-                                    href='../dscourses//predictflight.html'>See
-                                    more</a>
-                                <button class='btn btn-primary save' role='button'>Save for later</button>
-                            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row text-light justify-content-between">
+                    <div class='col'>
+                        <h3 id='overview'>Introduction</h3>
+                        <div class="text-light">
+                            <p>Imagine you're a new software developer at a firm that writes avionics software for
+                                commercial airliners. Quality control is critical, and developers work in small teams
+                                using Git for version control. You've heard of version control, but you've never used
+                                Git, so you're eager to catch up!
+                            </p>
                         </div>
-                        <div class="row related p-4">
-                            <p class="text-light mr-5">Introduction to Azure Machine Learning</p>
-                            <div>
-                                <a class='btn btn-light mr-3' role='button'
-                                    href='../dscourses//introazure.html'>
-                                    See More</a>
-                                <button class='btn btn-primary save' role='button'>Save for later</button>
-                            </div>
+                        <p>You decide to build a website that lets you and your friends share pictures of your cats so
+                            you can learn Git in a fun environment before bringing that knowledge to work. You set out
+                            to build the site using Git to keep track of changes and keep all the source-code files
+                            backed up in case the server goes down.
+                        </p>
+                        <p>In this module, you will get an intro to version control, Git, and how you can use Git on
+                            your own to recover from simple mistakes. Git can seem a little cryptic at first and even be
+                            frustrating at times, but if you learn it step by step, you will find that there's a reason
+                            it is quickly becoming the world's most popular version-control system — not just for
+                            software developers, but for teams who write documentation and produce other collaborative
+                            works as well.
+                        </p>
+                        <h3 class='mt-3' id='create'>Learning Objectives</h3>
+                        <p>
+                            <ul class="text-light">
+                                <li>Learn what version control is
+                                </li>
+                                <li>Understand distributed version control systems, like Git
+                                </li>
+                                <li>Create a new Git project and configure it
+                                </li>
+                                <li>Make and track changes to code using Git
+                                </li>
+                                <li>Use Git to recover from simple mistakes
+                                </li>
+                            </ul>
+                        </p>
+                        <div class='text-light align-items-center justify-content-start pt-4'>
+                            <p>Up next: What is version control?</p>
+                            <a href='./versioncontrol.html' class='btn btn-outline-light catalog pl-4 pr-4'>
+                                Next <i class="fas fa-angle-right"></i>
+                            </a>
                         </div>
                     </div>
+                </div>
+            </div>
 
+            <div class='col col-lg-3 pt-5'>
+                <div id="navigation">
+                    <nav class="nav flex-column p-3">
+                        <a class="nav-link active bg-dark text-secondary" href="#overview">Overview</a>
+                        <a class="nav-link text-light" href="#host">Hosting a knowledge base</a>
+                        <a class="nav-link text-light" href="#create">Creating a knowledge base and QnA serv</a>
+                        <a class="nav-link text-light" href="#provide">Provide the QnA Maker service details</a>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
-    <script src='./home.js'></script>
-
 </body>
-<footer class='text-center text-light text-bold pt-3 pb-5 bg-secondary'>
+
+
+<footer class='text-center text-light text-bold pt-3 pb-5 mt-3 bg-secondary'>
     <div class='container mx-0'>
         <div class='row'>
             <p class='col font-weight-bold'>Catalog</p>
@@ -183,7 +169,12 @@
         </div>
     </div>
     <p class='text-center'>This project is part of the Informatics 2020 Capstone.</p>
+    <!-- <div> -->
+
+    <!-- </div> -->
 </footer>
+<script src='../home.js'></script>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
