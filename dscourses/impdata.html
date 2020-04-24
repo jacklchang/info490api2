@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Catalog</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../home.css'>
+    <link rel='stylesheet' href='../catalog.css'>
+    <link rel='stylesheet' href='../unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item"><a href='../settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Content -->
+    <!--Content taken from: https://docs.microsoft.com/en-us/learn/modules/build-a-faq-chat-bot-with-qna-maker-and-azure-bot-service/3-exercise-create-qna-knowledge-base-->
+    <div class='container px-0 mt-5 pl-5'>
+        <div class="row">
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='./pfintro.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        <i class="fas fa-angle-left"></i> Previous
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='../catalog.html' class='btn btn-outline-light mt-5 catalog pl-3 pr-3'>
+                        Course Sections <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class='text-light align-items-center justify-content-start'>
+                    <a href='./impdata.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        Next <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row text-light justify-content-between">
+                    <div class='col'>
+                        <h3 id='overview'>Predict flight delays by creating a machine learning model in Python</h3>
+                        <div class="text-light">
+                            <p>The first order of business is to create a new Azure notebook. Azure notebooks are
+                                contained in projects, whose primary purpose is to group related notebooks. In this
+                                unit, you'll create a new project and then create a notebook inside it.
+                            </p>
+                            <ol>
+                                <li>Navigate to https://notebooks.azure.com in your browser
+                                </li>
+                                <li>Sign in using your Microsoft account.
+                                </li>
+                                <li>Click "My Projects" in the menu at the top of the page.
+                                </li>
+                                <li>Click the "+ New Project" button at the top of the "My Projects" page.
+                                </li>
+                                <li>Create a new project named "ML Notebooks" or something similar. You may uncheck the
+                                    "Public" box if you'd like, but making the project public allows the notebooks in it
+                                    to be shared with others through links, social media, or e-mail. If you're unsure
+                                    which to choose, you can easily change a project to public or private later on.
+                                </li>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/1-add-project.png">
+                                <li>Click + New and select Notebook from the menu to add a notebook to the project.
+                                </li>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/1-add-notebook-1.png">
+                                <li>Give the notebook a name such as "On-Time Flight Arrivals.ipynb," and select Python
+                                    3.6 as the language. This will create a notebook with a Python 3.6 kernel for
+                                    executing Python code. One of the strengths of Azure notebooks is that you can use
+                                    different languages by choosing different kernels.
+                                </li>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/1-add-notebook-2.png">
+                                <p>If you're curious, the .ipynb file-name extension stands for "IPython notebook."
+                                    Jupyter notebooks were originally known as IPython (Interactive Python) notebooks,
+                                    and they only supported Python as a programming language. The name Jupyter is a
+                                    combination of Julia, Python, and R — the core programming languages that Jupyter
+                                    supports.
+                                </p>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/1-open-notebook.png">
+                                <p>You can create additional projects and notebooks as you work with Azure Notebooks.
+                                    You can create notebooks from scratch, or you can upload existing notebooks.
+                                </p>
+                            </ol>>
+                            <p>Jupyter notebooks are highly interactive, and since they can include executable code,
+                                they provide the perfect platform for manipulating data and building predictive models
+                                from it.
+                            </p>
+                            <ol>
+                                <li>Enter the following command into the first cell of the notebook:
+                                </li>
+                                <p>!curl https://topcs.blob.core.windows.net/public/FlightData.csv -o flightdata.csv</p>
+                                <li>Click the Run button to execute the curl command.
+                                </li>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/1-import-dataset.png0">
+                                <li>In the notebook's second cell, enter the following Python code to load
+                                    flightdata.csv, create a Pandas DataFrame from it, and display the first five rows.
+                                </li>
+                                <p>import pandas as pd
+
+                                    df = pd.read_csv('flightdata.csv')
+                                    df.head()</p>
+                                <li>Click the Run button to execute the code. Confirm that the output resembles the
+                                    output below.
+                                </li>
+                                <img
+                                    src="https://docs.microsoft.com/en-us/learn/student-evangelism/predict-flight-delays-with-python/media/1-load-dataset.png">
+                                <p>The DataFrame that you created contains on-time arrival information for a major U.S.
+                                    airline. It has more than 11,000 rows and 26 columns. (The output says "5 rows"
+                                    because DataFrame's head function only returns the first five rows.) Each row
+                                    represents one flight and contains information such as the origin, the destination,
+                                    the scheduled departure time, and whether the flight arrived on time or late. We'll
+                                    look at the data more closely a bit later in this module.
+                                </p>
+                                <li>Use the File -> Save and Checkpoint command to save the notebook.
+                                </li>
+                                <p>Use the horizontal scroll bar to scroll left and right and view all the columns in
+                                    the dataset. How many columns does the dataset contain? Can you guess what each
+                                    column represents from the column names?
+                                </p>
+                            </ol>
+                        </div>
+                      
+                        <div class='text-light align-items-center justify-content-start'>
+                            <p>Next unit: Exercise - Clean and prepare data</p>
+                            <a href='../catalog.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                                Next <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col col-lg-3 pt-5'>
+                <div id="navigation">
+                    <nav class="nav flex-column p-3">
+                        <a class="nav-link active bg-dark text-secondary" href="#overview">Overview</a>
+                        <a class="nav-link text-light" href="#host">Hosting a knowledge base</a>
+                        <a class="nav-link text-light" href="#create">Creating a knowledge base and QnA serv</a>
+                        <a class="nav-link text-light" href="#provide">Provide the QnA Maker service details</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<footer class='text-center text-light text-bold pt-3 pb-5 mt-3 bg-secondary'>
+    <div class='container mx-0'>
+        <div class='row'>
+            <p class='col font-weight-bold'>Catalog</p>
+            <p class='col font-weight-bold'>References</p>
+            <p class='col font-weight-bold'>Your Profile</p>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col font-weight-bold' id='contact-link'>
+                <p>Contact Us</p>
+            </a>
+            <p class='col font-weight-bold'>More from Microsoft</p>
+        </div>
+    </div>
+    <p class='text-center'>This project is part of the Informatics 2020 Capstone.</p>
+    <!-- <div> -->
+
+    <!-- </div> -->
+</footer>
+<script src='./home.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
