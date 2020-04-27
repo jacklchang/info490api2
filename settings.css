@@ -146,10 +146,15 @@ p, h1, h2, h3, h4, h5, a {
 } */
 
 .carousel-indicators {
-    padding-bottom: 30vh!important;
+    position: absolute;
+    padding-bottom: 35vh!important;
     margin: 0;
+    pointer-events: none;
 }
 
+.carousel-indicators a {
+    pointer-events: all;
+}
 
 .encountertitles {
     color: #71C2CC;

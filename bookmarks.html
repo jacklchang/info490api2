@@ -20,7 +20,7 @@
 <body class='bg-dark'>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg pt-0">
-            <a class="navbar-brand text-light" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+            <a class="navbar-brand text-light" href="#" id="logo"><img src='./imgs/logo.png' width='30' height="30"
                     class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +63,7 @@
                             </div>
                             <p class="card-text mb-2">12% complete</p>
                         </li>
-                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View
+                        <li class="dropdown-item" id='settings'><a href='./settings.html'><small>View
                                     Profile</small></a></li>
                         <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
                     </ul>
@@ -71,9 +71,86 @@
             </div>
         </nav>
     </div>
-
-    <div class='container-fluid px-5 py-3 mt-5 pt-5 saved-cards'>
+    <div class='container-fluid px-5 py-5 mt-5'>
         <h2 class='text-center encountertitles'>Saved by You</h2>
+        <div class='row mt-5 px-5 justify-content-around'>
+            <div class='col-6 text-light'>
+                <p class='text-center encountertitles mx-auto'>Subjects</p>
+                <div class='p-3 bg-secondary rounded mx-auto'>
+                    <table class='mx-auto text-center'>
+                        <tbody>
+                            <tr class='my-3'>
+                                <td class='font-weight-bold px-5'>Popular</td>
+                                <td class='px-5'>Security</td>
+                                <td class='px-5'>App Development</td>
+                            </tr>
+                            <tr class='my-3'>
+                                <td class='px-5'>Azure</td>
+                                <td class='btn btn-outline-light px-5'>Cloud Computing</td>
+                                <td class='px-5'>Analytics</td>
+                            </tr>
+                            <tr class='my-3'>
+                                <td class='px-5'>Machine Learning</td>
+                                <td class='px-5'>DevOps</td>
+                                <td class='px-5'>Code Design</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class='col-6 text-light'>
+                <p class='text-center encountertitles mx-auto'>Languages</p>
+                <div class='p-3 bg-secondary rounded'>
+                    <table class='mx-auto text-center'>
+                        <tbody>
+                            <tr class='my-3'>
+                                <td class='pr-5'>Python</td>
+                                <td class='px-5'>C#</td>
+                                <td class='pl-5'>C++</td>
+                            </tr>
+                            <tr class='my-3'>
+                                <td class='pr-5'>Java</td>
+                                <td class='btn btn-outline-light px-5'>Kotlin</td>
+                                <td class='pl-5'>SQL</td>
+                            </tr>
+                            <tr class='my-3'>
+                                <td class='pr-5'>Swift</td>
+                                <td class='px-5'>Bash</td>
+                                <td class='pl-5'>.NET</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class='row mt-5 px-5 justify-content-around'>
+            <div class='col-6 text-light'>
+                <p class='text-center encountertitles mx-auto'>Skill Level</p>
+                <div class='p-3 bg-secondary rounded'>
+                    <table class='mx-auto'>
+                        <tbody>
+                            <tr class='my-3'>
+                                <td class='pr-5'>Fundamental</td>
+                                <td class='btn btn-outline-light px-5'>Intermediate</td>
+                                <td class='pl-5'>Advanced</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class='col-6 my-auto text-light row align-content-center justify-content-center'>
+                <div class='col-auto mx-5'>
+                    Recommendations
+                </div>
+                <div class='col-auto mx-5'>
+                    Reset Filters
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='container-fluid px-5 py-3 mt-3 saved-cards'>
+        <h3 class='encountertitles px-5 mx-3'>Courses:</h3>
         <div class='card-deck row row-cols-4 text-left px-5 mx-5 my-4'>
 
         </div>
@@ -124,24 +201,17 @@
     <script src='./home.js'></script>
     <script src='./bookmarks.js'></script>
 </body>
-<footer class='text-center text-light text-bold pt-3 pb-5 bg-secondary'>
-    <div class='container mx-0'>
-        <div class='row justify-content-start'>
-            <p class='col-auto font-weight-bold'>Catalog</p>
-            <p class='col-auto font-weight-bold'>References</p>
-            <p class='col-auto font-weight-bold'>Your Profile</p>
-            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light col-auto font-weight-bold'
-                id='contact-link'>
-                <p>Contact Us</p>
-            </a>
-            <p class='col-auto font-weight-bold'>More from Microsoft</p>
-        </div>
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+      <div class='row'>
+        <p class="col font-weight-bold text-light">Contact Us</p>
+        <p class='col font-weight-bold text-light'>Catalog</p>
+        <p class='col font-weight-bold text-light'>References</p>
+        <p class='col font-weight-bold text-light'><a href='settings.html' class='text-light' style='text-decoration: none;'>Your Profile</a></p>
+      </div>
+      <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
     </div>
-    <p class='text-center mt-2'>This project is part of the Informatics 2020 Capstone.</p>
-    <!-- <div> -->
-
-    <!-- </div> -->
-</footer>
+  </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>

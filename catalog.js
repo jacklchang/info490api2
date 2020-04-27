@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(function (user) {
       .then((snapshot) => {
         var users = snapshot.val();
         name_val = users[uid].fname;
-        $("#profile-name").append(name_val);
+        $("#profile-id").append("Welcome back " + name_val + "!");
       });
     let buttons = document.querySelectorAll(".card button.save");
 
