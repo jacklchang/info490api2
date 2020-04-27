@@ -1,0 +1,36 @@
+.catalog {
+    background: #0D6C94;
+    mix-blend-mode: normal;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+#overview {
+    color: #71C2CC;
+}
+
+#host {
+    color: #71C2CC;
+}
+
+#provide {
+    color: #71C2CC;
+}
+
+#create {
+    color: #71C2CC;
+}
+
+#navigation {
+    background: linear-gradient(92.08deg, #04293D 0.88%, #467886 118.8%) !important;;
+}
+
+.CodeMirror {
+    height: inherit!important;
+}
+
+.dropdown {
+    padding-top: 0;
+    padding-right: 0;
+    margin-right: 0;
+}
