@@ -28,3 +28,9 @@
 .CodeMirror {
     height: inherit!important;
 }
+
+.dropdown {
+    padding-top: 0;
+    padding-right: 0;
+    margin-right: 0;
+}
