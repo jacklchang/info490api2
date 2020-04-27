@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>A-PI</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='./index.css'>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg mt-2">
+            <a class="navbar-brand text-light" href="./base.html" id="logo"><img src='./imgs/logo.png' width='30'
+                    height="30" class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./references.html">References</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./about.html">About</a>
+                    </li>
+                </ul>
+
+                <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='login-btn' data-toggle='modal'
+                    data-target='#login-window'><span>Log In</span></a>
+                <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='signup-btn' data-toggle="modal"
+                    data-target="#signup-window"><span>Sign Up</span></a>
+            </div>
+        </nav>
+
+
+
+        <div class="modal fade" id="login-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-light" id="exampleModalLabel">Welcome back!</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group text-light">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    placeholder="Email">
+                            </div>
+                            <div class="form-group text-light">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder='Password'>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id='login'>Take Me to Encounter!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="signup-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Welcome to Encounter!</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class='container'>
+                            <div class="form-group row">
+                                <div class='col'>
+                                    <label for="First Name">First Name</label>
+                                    <input type="text" class="form-control" id="fname" aria-describedby="nameHelp"
+                                        placeholder="First Name">
+                                </div>
+                                <div class='col'>
+                                    <label for="Last Name">Last Name</label>
+                                    <input type="text" class="form-control" id="lname" aria-describedby="nameHelp"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email Address</label>
+                                <input type="email" class="form-control" id="nemail" aria-describedby="emailHelp"
+                                    placeholder="Email">
+                                <small id="emailHelp" class="form-text text-light">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="npassword" placeholder='Password'>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id='next'>Continue Signup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-light text-center mt-lg-3">Microsoft Encounter</h1>
+            <p class="lead text-light text-center mt-4">Code today, Build tomorrow</p>
+            <div class='row justify-content-center'>
+                <div class="card border-light mb-3" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-light text-center">Problem Context</h5>
+                        <p class="card-text text-light">Our sponsors, Microsoft Learn, want us to look at their
+                            platform
+                            from a technical and non-technical students perspective.
+                            By filling this content-gap, we will be able to connect students to these Microsoft
+                            resources and provide them with the skills to become adept users,
+                            thereby turning them into lifelong customers.</p>
+                        <div class='row text-center'>
+                            <div class='col'>
+                                <a class="btn btn-outline-light my-2 my-sm-0 mx-auto" type="submit" id='desc-button'
+                                    href='./base.html'><span>Learn with
+                                        Encounter</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='container-fluid' id="capstoneteam">
+        <div class='row justify-content-center'>
+            <div class='col text-dark'>
+                <h1 class="text-center my-5 text-dark">About the Team</h1>
+                <p class="pl-5">We are team of 4 students at the University of Washington Information School, building
+                    this as
+                    our senior
+                    capstone project.
+                </p>
+                <p class="pl-5 mb-5">
+                    Our sponsors, Microsoft Learn, want us to look at their
+                    platform from a technical and non-technical students perspective.
+                    By filling this content-gap, we will be able to connect students to these Microsoft
+                    resources and provide them with the skills to become adept users,
+                    thereby turning them into lifelong customers.
+                </p>
+            </div>
+            <div class='col my-5'>
+                <img src="./imgs/teampic.png" id="team-pic" class='my-4'>
+            </div>
+        </div>
+    </div>
+    <div class='container mt-5 px-4 wrapper' id='body'>
+        <div class='row justify-content-between my-5 mx-5'>
+            <div class='col-auto col-md-7'>
+                <h2 class='text-light'>Cloud Computing</h1>
+                    <p class='text-light'>Learn how to build distributed applications to change the world. Encounter
+                        provides</p>
+            </div>
+            <div class='col-auto col-md-4'>
+                <img src='./imgs/learn1.png' class='img-fluid'>
+            </div>
+        </div>
+        <div class='row justify-content-between my-5 mx-5'>
+            <div class='col-auto col-md-7'>
+                <h2 class='text-light'>Data Science</h1>
+                    <p class='text-light'>Apply machine learning using to automate and predict what matters to you.
+                    </p>
+            </div>
+            <div class='col-auto col-md-4'>
+                <img src='./imgs/learn2.png' class='img-fluid'>
+            </div>
+        </div>
+        <div class='row justify-content-between my-5 mx-5'>
+            <div class='col-auto col-md-7'>
+                <h2 class='text-light'>No experience necessary</h1>
+                    <p class='text-light'>Encounter is built from the ground up to provide a student-accessible
+                        experience for using Azure. All skill levels are welcome.</p>
+            </div>
+            <div class='col-auto col-md-4'>
+                <img src='./imgs/learn3.png' class='img-fluid'>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer id="sticky-footer" class="py-4 bg-light">
+        <div class="container text-center">
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+                <h4 class="text-dark">Contact Us</h4>
+            </a>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
