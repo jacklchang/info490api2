@@ -22,7 +22,7 @@
   <div class="container-fluid">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg pt-0">
-      <a class="navbar-brand text-light" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+      <a class="navbar-brand text-light" href="#" id="logo"><img src='./imgs/logo.png' width='30' height="30"
           class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +63,8 @@
               </div>
               <p class="card-text mb-2">12% complete</p>
             </li>
-            <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View Profile</small></a></li>
+            <li class="dropdown-item" id='settings'><a href='./settings.html'><small>View
+                  Profile</small></a></li>
             <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
           </ul>
         </div>
@@ -98,55 +99,37 @@
 
     </div>
   </div>
-  <div class="container">
+  <div class="container p-4 bg-secondary" style="border: 1px solid white; border-radius: 0.5rem;">
     <div class="row">
-      <div class="col pr-4">
+      <div class="col">
         <h3>Personal Information</h3>
-        <div class="card-body p-0 mt-3">
+        <form class='container px-0 mt-3'>
           <label class="text-light">General Information</label>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="First Name" aria-label="First name"
-              aria-describedby="basic-addon2" id='fname'>
-            <div class="input-group-append">
-              <span class="input-group-text btn mr-1" id="save-fname">Save</span>
+          <div class="form-group row">
+            <div class='col'>
+              <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="First Name">
             </div>
-            <input type="text" class="form-control" placeholder="Last Name" aria-label="Last name"
-              aria-describedby="basic-addon2" id='lname'>
-            <div class="input-group-append">
-              <span class="input-group-text btn" id="save-lname">Save</span>
+            <div class='col'>
+              <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Last Name">
             </div>
           </div>
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email Address" aria-label="Email address"
-              aria-describedby="basic-addon2" id='email'>
-            <div class="input-group-append">
-              <span class="input-group-text btn" id="save-email">Save</span>
-            </div>
+          <div class="form-group">
+            <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
           </div>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-              aria-describedby="basic-addon1" id='username'>
-            <div class="input-group-append">
-              <span class="input-group-text btn" id="save-username">Save</span>
-            </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder='@username'>
           </div>
-        </div>
-        <label for="url" class="text-light">Your URL</label>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" id="url" aria-describedby="basic-addon3"
-            placeholder='https://example.com/users/'>
-          <div class="input-group-append">
-            <span class="input-group-text btn" id="save-url">Save</span>
+          <label class="text-light">GitHub URL</label>
+          <div class='form-group'>
+            <input type="text" class="form-control" id="url" aria-describedby="basic-addon3"
+              placeholder='https://example.com/users/'>
           </div>
-        </div>
-        <label for="Bio" class="text-light">Bio</label>
-        <div class="input-group">
-          <textarea class="form-control" aria-label="With textarea" id='bio'
-            placeholder="Enter your bio here."></textarea>
-          <div class="input-group-append">
-            <span class="input-group-text btn" id='save-bio'>Save</span>
+          <label class="text-light">Bio</label>
+          <div class='form-group'>
+            <textarea class="form-control" aria-label="With textarea" id='bio'
+              placeholder="Enter your bio here."></textarea>
           </div>
-        </div>
+        </form>
       </div>
       <div class="col pl-4">
         <h3 class="pb-2">Content Settings</h3>
@@ -185,9 +168,8 @@
               Non-technical
             </label>
           </div>
-          <button class='btn btn-light mt-2' id='save-role'>Save</button>
         </div>
-        <label class='text-light pt-4'>Difficulty</label>
+        <label class='text-light'>Difficulty</label>
         <div class="input-group mb-3">
           <select class="custom-select" id="inputGroupSelect02">
             <option selected>Choose...</option>
@@ -195,11 +177,13 @@
             <option value="2">Intermediate</option>
             <option value="3">Advanced</option>
           </select>
-          <div class="input-group-append">
-            <label class="input-group-text btn" for="inputGroupSelect02">Save</label>
-          </div>
         </div>
       </div>
+
+    </div>
+
+    <div class='text-right'>
+      <button type="submit" class="btn btn-light" style='width: 15%;'>Save</button>
     </div>
   </div>
   </div>
@@ -451,12 +435,10 @@
 <footer id="sticky-footer" class="py-4 bg-secondary">
   <div class="container text-center">
     <div class='row'>
-      <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
-        <p class="font-weight-bold text-light">Contact them<p>
-      </a>
+      <p class="col font-weight-bold text-light">Contact Us</p>
       <p class='col font-weight-bold text-light'>Catalog</p>
       <p class='col font-weight-bold text-light'>References</p>
-      <p class='col font-weight-bold text-light'>Your Profile</p>
+      <p class='col font-weight-bold text-light'><a href='settings.html' class='text-light' style='text-decoration: none;'>Your Profile</a></p>
     </div>
     <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
   </div>

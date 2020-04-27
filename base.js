@@ -70,17 +70,17 @@ quiz.addEventListener("click", () => {
 
   // add role labels 1
   let genlabel1 = document.createElement("label");
-  genlabel1.classList.add("form-check-label", "text-light");
+  genlabel1.classList.add("form-check-label", "text-light", 'level');
   genlabel1.for = "genexample1";
   genlabel1.textContent = "I've never written a line of code.";
 
   let genlabel2 = document.createElement("label");
-  genlabel2.classList.add("form-check-label", "text-light");
+  genlabel2.classList.add("form-check-label", "text-light", 'level');
   genlabel2.for = "genexample2";
   genlabel2.textContent = "I have some experience.";
 
   let genlabel3 = document.createElement("label");
-  genlabel3.classList.add("form-check-label", "text-light");
+  genlabel3.classList.add("form-check-label", "text-light", 'level');
   genlabel3.for = "genexample3";
   genlabel3.textContent = "I'm an experienced developer.";
 
@@ -157,27 +157,27 @@ quiz.addEventListener("click", () => {
 
   // add role labels 2
   let label1 = document.createElement("label");
-  label1.classList.add("form-check-label", "text-light");
+  label1.classList.add("form-check-label", "text-light", 'role');
   label1.for = "example1";
   label1.textContent = "Data Science";
 
   let label2 = document.createElement("label");
-  label2.classList.add("form-check-label", "text-light");
+  label2.classList.add("form-check-label", "text-light", 'role');
   label2.for = "example2";
   label2.textContent = "Software Developer";
 
   let label3 = document.createElement("label");
-  label3.classList.add("form-check-label", "text-light");
+  label3.classList.add("form-check-label", "text-light", 'role');
   label3.for = "example3";
   label3.textContent = "Cybersecurity";
 
   let label4 = document.createElement("label");
-  label4.classList.add("form-check-label", "text-light");
+  label4.classList.add("form-check-label", "text-light", 'role');
   label4.for = "example4";
   label4.textContent = "Product/Project Manager";
 
   let label5 = document.createElement("label");
-  label5.classList.add("form-check-label", "text-light");
+  label5.classList.add("form-check-label", "text-light", 'role');
   label5.for = "example5";
   label5.textContent = "Other";
 
@@ -206,9 +206,27 @@ quiz.addEventListener("click", () => {
   submitBtn.textContent = "Submit";
   submitBtn.id = "signup";
 
+let r = document.getElementsByName("options");
+
+let roleBtns = document.querySelectorAll('.role');
+for (let i = 0; i < roleBtns.length; i++) {
+  roleBtns[i].addEventListener('click', () => {
+    r[i].checked = true;
+  })
+}
+
+let r2 = document.getElementsByName("options1");
+
+let levelBtns = document.querySelectorAll('.level');
+for (let i = 0; i < levelBtns.length; i++) {
+  levelBtns[i].addEventListener('click', () => {
+    r2[i].checked = true;
+  })
+}
+
   let signUp = document.querySelector("#signup");
   signUp.addEventListener("click", () => {
-    var r = document.getElementsByName("options");
+    r = document.getElementsByName("options");
     var value;
     for (var i = 0; i < r.length; i++) {
       if (r[i].checked) {
@@ -217,7 +235,7 @@ quiz.addEventListener("click", () => {
         break;
       }
     }
-    var r2 = document.getElementsByName("options1");
+    r2 = document.getElementsByName("options1");
     var level;
     for (var i = 0; i < r2.length; i++) {
       if (r2[i].checked) {

@@ -25,6 +25,10 @@ firebase.auth().onAuthStateChanged(function (user) {
         $("#profile-id").append("Welcome back " + name_val + "!");
         $("#profile-name").append(name_val);
       });
+    let settings = document.querySelector('#settings');
+    settings.addEventListener('click', () => {
+      window.location = './settings.html';
+    })
     let buttons = document.querySelectorAll(".card button.save");
       console.log(buttons)
     firebase
