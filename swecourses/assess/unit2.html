@@ -187,7 +187,7 @@
         <div class="row">
             <div class="col">
                 <div class='text-light'>
-                    <a href='../assess.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                    <a href='./unit1.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
                         <i class="fas fa-angle-left"></i> Previous
                     </a>
                 </div>
@@ -210,7 +210,7 @@
             </div>
             <div class="col text-right">
                 <div class='text-light'>
-                    <a href='./unit2.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                    <a href='./unit3.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
                         Next <i class="fas fa-angle-right"></i>
                     </a>
                 </div>
@@ -219,29 +219,140 @@
 
         <div class='row'>
             <!-- <div class='col mb-5' style='max-height: 590px; overflow: scroll;'> -->
-            <div class='col mb-5'>
-                <h3 id='overview'>Introduction</h3>
+            <div class='col mb-5 text-light'>
+                <h3 id='overview'>Meet the team</h3>
                 <div class="text-light">
-                    <iframe width="560" height="315" class='my-3' src="https://www.youtube.com/embed/NpEaa2P7qZI"
+                    <!-- <iframe width="560" height="315" class='my-3' src="https://www.youtube.com/embed/NpEaa2P7qZI"
                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <p>Do you want to improve your release process? Maybe you want to increase the frequency of your
-                        releases. Or maybe you want to increase the quality of your software. Perhaps you want to get
-                        rid of some manual processes and move toward a more automated approach. Whatever your goals,
-                        Azure DevOps can help.</p>
+                        allowfullscreen></iframe> -->
+                    <p>DevOps has many features and tools to help a team collaborate and improve its processes. Your
+                        journey through DevOps begins with an introduction to our fictitious software team members, who
+                        are discovering that they need to improve their release process.</p>
+                    <p>Tailspin Toys, or Tailspin for short, is a video game company. Tailspin hosts its game servers
+                        and websites in an on-premises datacenter. The company just celebrated the release of a new
+                        racing game. They'll be releasing a space shooter game, called Space Game, in the coming months.
+                    </p>
+                    <p>The team that you'll be working with builds websites to support new game titles. These websites
+                        provide information about the game, ways to get it, and leaderboards that show top scores. Each
+                        website must go live the same day the game is released, which requires coordination among the
+                        teams and puts some extra pressure on the web team.</p>
+                    <p>The Space Game website is a .NET Core app written in C# that's deployed to Linux. The website
+                        isn't finished yet, but here's what it looks like right now:
+                    </p>
+                    <img
+                        src='https://docs.microsoft.com/en-us/learn/azure-devops/assess-your-development-process/media/2-space-game-top.png'>
+                    <p class='mt-4'>And here's what the leaderboard looks like:</p>
+                    <img
+                        src='https://docs.microsoft.com/en-us/learn/azure-devops/assess-your-development-process/media/2-space-game-leaderboard.png'>
+                    <p class='mt-4'>You can filter the leaderboard by mode or by game map. You can also select a
+                        player's name to see their profile and game achievements:</p>
+                    <img
+                        src='https://docs.microsoft.com/en-us/learn/azure-devops/assess-your-development-process/media/2-player-profile.png'>
+                    <div class='alert alert-primary mt-4' role='alert'>
+                        <h3 class='alert-heading'>Note:</h3>Although the game and the website aren't finished yet, you
+                        can
+                        <a href='http://tailspin-spacegame-web.azurewebsites.net/' class='alert-link'>check out the
+                            website now</a> to get a sense of how it works.
+                    </div>
+                    <p class='mt-4'>Here are your team members:</p>
+                    <div class='container'>
+                        <div class='row my-4'>
+                            <div class='col-7'>
+                                Andy is the development lead who's been working with computers since he was a kid. He
+                                enjoys working on personal coding projects in his spare time. Andy always wishes he had
+                                more spare time.
+                            </div>
+                            <div class='col my-auto'>
+                                <img src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/andy.png'>
+                            </div>
+                        </div>
+                        <div class='row my-4'>
+                            <div class='col-7'>
+                                Amita is in QA. She's calm, which helps with some temperamental developers. She's good
+                                at organizing and setting priorities and lives to find edge cases.
+
+
+                            </div>
+                            <div class='col my-auto'>
+                                <img src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/amita.png'>
+                            </div>
+                        </div>
+                        <div class='row my-4'>
+                            <div class='col-7'>
+                                Tim is in operations. He likes practical solutions and he's very cautious (although some
+                                people might use the word "paranoid"), which makes sense because he's the person who
+                                gets the 3 A.M. call when something goes wrong.
+
+
+                            </div>
+                            <div class='col my-auto'>
+                                <img src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/tim.png'>
+                            </div>
+                        </div>
+                        <div class='row my-4'>
+                            <div class='col-7'>
+                                Irwin is the product manager. He's been in the video game industry for decades. Irwin
+                                acts friendly towards the development teams, but everyone knows he favors a tight
+                                schedule over people. Irwin has a relatively fixed mindset, but if there's anything that
+                                can help teams get games to market faster with less effort, he's all ears.
+
+
+                            </div>
+                            <div class='col my-auto'>
+                                <img src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/irwin.png'>
+                            </div>
+                        </div>
+                        <div class='row my-4'>
+                            <div class='col-7'>
+                                Mara is new. She just joined Tailspin as a developer and reports to Andy. She joined
+                                Tailspin because she likes games and she thought a smaller company would have lots of
+                                opportunity for innovation. She's a big fan of DevOps.
+
+
+                            </div>
+                            <div class='col my-auto'>
+                                <img src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/mara.png'>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h4 id='host'>Learning objectives</h4>
-                <p class="text-light">In this module, you will:</p>
+                <h4 id='host'>Good morning</h4>
+                <p class="text-light">Irwin, the team's product manager, has called everyone into a meeting, and he's in
+                    a bad mood. The leaderboard for the racing game was just updated with several new features and he
+                    showed it at a local gaming group. Players' reactions were disappointing, to say the least. He reads
+                    off a list of the top problems:</p>
                 <p>
-                    <ol class="text-light">
-                        <li>Learn about value stream maps (VSMs)</li>
-                        <li>Use a VSM to get a sense of where the release process needs improvement</li>
-                        <li>Understand how the VSM gives you a good starting point to discuss your current DevOps
-                            practices</li>
-                    </ol>
+                    <ul class="text-light">
+                        <li>Some features work correctly for only some game modes.</li>
+                        <li>Updating the leaderboard takes too long, even with a small number of players.</li>
+                        <li>Multiple scores per player show up as multiple players.</li>
+                        <li>The new ranking feature returns incorrect results.</li>
+                        <li>There's no way to group scores according to a specific date or game session.</li>
+                        <li>It took months to produce the new release (and it's broken).</li>
+                    </ul>
+                </p>
+                <p>
+                    He demands, "How long before these problems are fixed?"
+                </p>
+                <p>
+                    <strong>Andy thinks:</strong> I bet it takes me a month to write that code.
+                </p>
+                <p>
+                    <strong>Amita thinks:</strong> It'll take me at least a week to test this and I can't start until
+                    Andy is finished, and he always wants to sneak in new code.
+                </p>
+                <p>
+                    <strong>Tim thinks:</strong> It'll take me at least a week to set up the environments and deploy
+                    this to production. I can't start until Amita is finished, and she's never willing to call something
+                    a release candidate.
+                </p>
+                <p>
+                    <strong>Mara wonders:</strong> Was taking this job a mistake?
+                </p>
+                <p>Andy looks around at his teammates and says, "We'll get back to you."
                 </p>
                 <div class='text-light text-right'>
-                    <a href='./unit2.html' class='btn btn-outline-light catalog pl-4 pr-4'>
+                    <a href='./unit3.html' class='btn btn-outline-light catalog pl-4 pr-4'>
                         Next <i class="fas fa-angle-right"></i>
                     </a>
                 </div>

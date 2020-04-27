@@ -34,3 +34,7 @@
     padding-right: 0;
     margin-right: 0;
 }
+
+img {
+    max-width: 60%;
+}
