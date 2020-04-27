@@ -158,7 +158,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         });
     });
   } else {
-    window.location = "./base.html";
+    window.location = "./index.html";
   }
 });
 

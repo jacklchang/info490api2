@@ -2,142 +2,407 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>A-PI</title>
-    <meta name="author" content="A-PI CapstoneAD2020">
-    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
-    <meta name="keywords"
-        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel='stylesheet' href='./index.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>A-PI</title>
+  <meta name="author" content="A-PI CapstoneAD2020">
+  <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+  <meta name="keywords"
+    content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel='stylesheet' href='./index.css'>
+  <link rel='stylesheet' href='./base.css'>
+  <link rel='icon' type='img/jpg' href='./imgs/logo.jpg'>
+  <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
 </head>
 
 <body class='bg-dark'>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg mt-2">
-            <a class="navbar-brand text-light" href="#" id="logo"><img src='./imgs/logo.png' width='30' height="30"
-                class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg mt-2">
+      <a class="navbar-brand text-light" href="#" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+          class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link text-light" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-light" href="./references.html">References</a>
+          </li>
+        </ul>
+
+        <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='login-btn' data-toggle='modal'
+          data-target='#login-window'><span>Log In</span></a>
+        <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='signup-btn' data-toggle="modal"
+          data-target="#signup-window"><span>Sign Up</span></a>
+      </div>
+    </nav>
+
+
+
+    <div class="modal fade" id="login-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-light" id="exampleModalLabel">Welcome back!</h5>
+            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./references.html">References</a>
-                    </li>
-                </ul>
-
-                <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" href='./base.html'
-                    id='nav-button'><span>Take me to Encounter</span></a>
-            </div>
-        </nav>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group text-light">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+              </div>
+              <div class="form-group text-light">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="password" placeholder='Password'>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id='login'>Take Me to Encounter!</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4 text-light text-center mt-lg-3">Microsoft Encounter</h1>
-            <p class="lead text-light text-center mt-4">Code today, Build tomorrow</p>
-            <div class='row justify-content-center'>
-                <div class="card border-light mb-3" style="width: 30rem;">
-                    <div class="card-body">
-                        <h5 class="card-title text-light text-center">Problem Context</h5>
-                        <p class="card-text text-light">Our sponsors, Microsoft Learn, want us to look at their
-                            platform
-                            from a technical and non-technical students perspective.
-                            By filling this content-gap, we will be able to connect students to these Microsoft
-                            resources and provide them with the skills to become adept users,
-                            thereby turning them into lifelong customers.</p>
-                        <div class='row text-center'>
-                            <div class='col'>
-                                <a class="btn btn-outline-light my-2 my-sm-0 mx-auto" type="submit" id='desc-button'
-                                    href='./base.html'><span>Learn with
-                                        Encounter</span></a>
-                            </div>
-                        </div>
-                    </div>
+    <div class="modal fade" id="signup-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Welcome to Encounter!</h5>
+            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class='container'>
+              <div class="form-group row">
+                <div class='col'>
+                  <label for="First Name">First Name</label>
+                  <input type="text" class="form-control" id="fname" aria-describedby="nameHelp"
+                    placeholder="First Name">
                 </div>
-            </div>
+                <div class='col'>
+                  <label for="Last Name">Last Name</label>
+                  <input type="text" class="form-control" id="lname" aria-describedby="nameHelp"
+                    placeholder="Last Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email Address</label>
+                <input type="email" class="form-control" id="nemail" aria-describedby="emailHelp" placeholder="Email">
+                <small id="emailHelp" class="form-text text-light">We'll never share your email with
+                  anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="npassword" placeholder='Password'>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id='next'>Continue Signup</button>
+          </div>
         </div>
+      </div>
     </div>
-    <div class='container-fluid' id="capstoneteam">
-        <div class='row justify-content-center'>
-            <div class='col text-dark'>
-                <h1 class="text-center my-5 text-dark">About the Team</h1>
-                <p class="pl-5">We are team of 4 students at the University of Washington Information School, building
-                    this as
-                    our senior
-                    capstone project.
-                </p>
-                <p class="pl-5 mb-5">
-                    Our sponsors, Microsoft Learn, want us to look at their
-                    platform from a technical and non-technical students perspective.
-                    By filling this content-gap, we will be able to connect students to these Microsoft
-                    resources and provide them with the skills to become adept users,
-                    thereby turning them into lifelong customers.
-                </p>
+  </div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container mt-3">
+      <div class='row justify-content-center'>
+        <div class="card mb-3" style="width: 50rem;">
+          <div class="card-body" id="jumbocard">
+            <h1 class="card-title text-light text-center">Microsoft Encounter</h1>
+            <h2 class="text-light text-center">Code today, Build tomorrow</h2>
+            <p class="lead card-text text-light text-center mb-5">Thousands of lessons available for free. Personalized
+              for you.</p>
+            <div class='row text-center'>
+              <div class='col'>
+                <a class="btn btn-light my-2 my-sm-0 mx-auto" type="submit" id='desc-button' data-toggle="modal"
+                  data-target="#signup-window"><span>Get Started</span></a>
+              </div>
             </div>
-            <div class='col my-5'>
-                <img src="./imgs/teampic.png" id="team-pic" class='my-4'>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class='container mt-5 px-4 wrapper' id='body'>
-        <div class='row justify-content-between my-5 mx-5'>
-            <div class='col-auto col-md-7'>
-                <h2 class='text-light'>Cloud Computing</h1>
-                    <p class='text-light'>Learn how to build distributed applications to change the world. Encounter
-                        provides</p>
-            </div>
-            <div class='col-auto col-md-4'>
-                <img src='./imgs/learn1.png' class='img-fluid'>
-            </div>
-        </div>
-        <div class='row justify-content-between my-5 mx-5'>
-            <div class='col-auto col-md-7'>
-                <h2 class='text-light'>Data Science</h1>
-                    <p class='text-light'>Apply machine learning using to automate and predict what matters to you.
-                    </p>
-            </div>
-            <div class='col-auto col-md-4'>
-                <img src='./imgs/learn2.png' class='img-fluid'>
-            </div>
-        </div>
-        <div class='row justify-content-between my-5 mx-5'>
-            <div class='col-auto col-md-7'>
-                <h2 class='text-light'>No experience necessary</h1>
-                    <p class='text-light'>Encounter is built from the ground up to provide a student-accessible
-                        experience for using Azure. All skill levels are welcome.</p>
-            </div>
-            <div class='col-auto col-md-4'>
-                <img src='./imgs/learn3.png' class='img-fluid'>
-            </div>
-        </div>
+  </div>
+  <div class='container-fluid px-5'>
+    <h1 class="card-title text-center my-3 pt-5 encountertitles px-5">What is Encounter?</h1>
+    <p class='lead text-light text-left mb-5 mt-2 font-weight-light px-5'>
+      Encounter is a learning platform designed to guide people using Microsoft products
+      to build tomorrow. Whether you are trying to implement machine learning into your app or you
+      have never written a line of code, we tailor your experience to help you reach your goals.
+    </p>
+
+    <h1 class="card-title text-center mb-3 mt-5 pt-5 encountertitles">Four student tracks</h1>
+    <p class='lead text-light text-center mb-5 font-weight-light'>Content designed specifically for early career skills
+      development.</p>
+    <div class='row justify-content-center'>
+      <ul class="btn-group text-center mb-5 ml-5 mr-5 pb-5">
+        <li class="icon1 col-3">
+          <img src="./imgs/dev.png" id="softwaredev" alt="Avatar">
+          <span class="caption">Software Developer</span>
+        </li>
+        <li class="icon2 col-3">
+          <img src="./imgs/datasci.png" id="datascience" alt="Avatar">
+          <span class="caption">Data Scientist</span>
+        </li>
+        <li class="icon3 col-3">
+          <img src="./imgs/cyber.png" id="cyber" alt="Avatar">
+          <span class="caption">Cybersecurity</span>
+        </li>
+        <li class="icon4 col-3">
+          <img src="./imgs/nontech.png" id="nontech" alt="Avatar">
+          <span class="caption">Non-technical</span>
+        </li>
+      </ul>
     </div>
-    <!--Footer-->
-    <footer id="sticky-footer" class="py-4 bg-light">
-        <div class="container text-center">
-          <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
-            <h4 class="text-dark">Contact Us</h4>
-          </a>      
+  </div>
+
+  <div id="multi-item-example" class="carousel slide carousel-multi-item px-5 mx-auto mb-5 pb-5" data-ride="carousel">
+    <h2 class='text-center encountertitles'>Popular Courses</h2>
+
+    <!--Slides-->
+    <div class="carousel-inner text-light px-5" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="row card-deck">
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>Introduction to Python</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/intro-to-python.svg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Learn how to write basic Python code, declare variables, and
+                work
+                with console input and output
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-python/?fbclid=IwAR0TrRydOzQ6L_tnOaZgGAB1oudMq0mfwG15mmHv1sgDQ8eeNaAhJ4AWjNs'>View</a>
+            </div>
+          </div>
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>Introduction to Git</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/student-evangelism/introduction-to-git-badge.svg"
+              alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Find out what source control is, and get an introduction to Git
+                -
+                the world's most popular version control system.
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-git/?fbclid=IwAR3j3eeegLW1poUVXVYYBpyKyes57kI-hYbAWA-RMhZbnCW3QfgqJ5bo-OY'>View</a>
+            </div>
+          </div>
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>How to build a simple dashboard</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/build-simple-dashboard.svg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Power BI helps business users and developers alike to easily
+                analyze, visualize, and collaborate on data. This module will teach you how to do all of
+                that
+                without effecting your underlying dataset.
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/build-simple-dashboard/?fbclid=IwAR2UOHymajSZIe9gpwsyIzzur0NWvZ8AeMQjhuiTRdqZObarG9RTS3ax_zY'>View</a>
+            </div>
+          </div>
         </div>
-      </footer>
+      </div>
+      <!--/.First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+
+        <div class="row card-deck">
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>Introduction to Python</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/intro-to-python.svg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Learn how to write basic Python code, declare variables, and
+                work
+                with console input and output
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-python/?fbclid=IwAR0TrRydOzQ6L_tnOaZgGAB1oudMq0mfwG15mmHv1sgDQ8eeNaAhJ4AWjNs'>View</a>
+            </div>
+          </div>
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>Introduction to Git</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/student-evangelism/introduction-to-git-badge.svg"
+              alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Find out what source control is, and get an introduction to Git
+                -
+                the world's most popular version control system.
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-git/?fbclid=IwAR3j3eeegLW1poUVXVYYBpyKyes57kI-hYbAWA-RMhZbnCW3QfgqJ5bo-OY'>View</a>
+            </div>
+          </div>
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>How to build a simple dashboard</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/build-simple-dashboard.svg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Power BI helps business users and developers alike to easily
+                analyze, visualize, and collaborate on data. This module will teach you how to do all of
+                that
+                without effecting your underlying dataset.
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/build-simple-dashboard/?fbclid=IwAR2UOHymajSZIe9gpwsyIzzur0NWvZ8AeMQjhuiTRdqZObarG9RTS3ax_zY'>View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Second slide-->
+
+      <!--Third slide-->
+      <div class="carousel-item">
+
+        <div class="row card-deck">
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>Introduction to Python</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/intro-to-python.svg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Learn how to write basic Python code, declare variables, and
+                work
+                with console input and output
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-python/?fbclid=IwAR0TrRydOzQ6L_tnOaZgGAB1oudMq0mfwG15mmHv1sgDQ8eeNaAhJ4AWjNs'>View</a>
+            </div>
+          </div>
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>Introduction to Git</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/student-evangelism/introduction-to-git-badge.svg"
+              alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Find out what source control is, and get an introduction to Git
+                -
+                the world's most popular version control system.
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-git/?fbclid=IwAR3j3eeegLW1poUVXVYYBpyKyes57kI-hYbAWA-RMhZbnCW3QfgqJ5bo-OY'>View</a>
+            </div>
+          </div>
+          <div class="card mx-3 p-2 pt-3">
+            <div class='card-header'>
+              <h3>How to build a simple dashboard</h3>
+            </div>
+            <img class="card-img my-3 align-self-center"
+              src="https://docs.microsoft.com/en-us/learn/achievements/build-simple-dashboard.svg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-white">Power BI helps business users and developers alike to easily
+                analyze, visualize, and collaborate on data. This module will teach you how to do all of
+                that
+                without effecting your underlying dataset.
+              </p>
+            </div>
+            <div class='card-footer justify-content-around mx-1 mb-2'>
+              <a class='btn btn-light mr-2' role='button'
+                href='https://docs.microsoft.com/en-us/learn/modules/build-simple-dashboard/?fbclid=IwAR2UOHymajSZIe9gpwsyIzzur0NWvZ8AeMQjhuiTRdqZObarG9RTS3ax_zY'>View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Third slide-->
+
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <div class="carousel-indicators controls-top row justify-content-between px-5">
+      <a class="btn-floating col-1 text-light text-left" href="#multi-item-example" data-slide="prev"><i
+          class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating col-1 text-light text-right" href="#multi-item-example" data-slide="next"><i
+          class="fa fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+  <script>
+  </script>
 </body>
+<!--Footer-->
+<footer id="sticky-footer" class="py-4 bg-secondary">
+  <div class="container text-center">
+    <div class='row'>
+      <p class="col font-weight-bold text-light">Contact Us</p>
+      <p class='col font-weight-bold text-light'>Catalog</p>
+      <p class='col font-weight-bold text-light'>References</p>
+    </div>
+    <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+  </div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-
-</html>
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src='./base.js'></script>
+  </html>
