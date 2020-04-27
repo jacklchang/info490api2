@@ -154,25 +154,83 @@
     <h1 class="card-title text-center mb-3 mt-5 pt-5 encountertitles">Four student tracks</h1>
     <p class='lead text-light text-center mb-5 font-weight-light'>Content designed specifically for early career skills
       development.</p>
+    <!--<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </div>
+</div>-->
     <div class='row justify-content-center'>
       <ul class="btn-group text-center mb-5 ml-5 mr-5 pb-5">
         <li class="icon1 col-3">
-          <img src="./imgs/dev.png" id="softwaredev" alt="Avatar">
+          <img src="./imgs/dev.png" id="softwaredev" alt="Avatar" data-toggle="collapse" href="#multiCollapseExample1"
+            role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
           <span class="caption">Software Developer</span>
         </li>
         <li class="icon2 col-3">
-          <img src="./imgs/datasci.png" id="datascience" alt="Avatar">
+          <img src="./imgs/datasci.png" id="datascience" alt="Avatar" data-toggle="collapse"
+            data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
           <span class="caption">Data Scientist</span>
         </li>
         <li class="icon3 col-3">
-          <img src="./imgs/cyber.png" id="cyber" alt="Avatar">
+          <img src="./imgs/cyber.png" id="cyber" alt="Avatar" data-toggle="collapse"
+            data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
           <span class="caption">Cybersecurity</span>
         </li>
         <li class="icon4 col-3">
-          <img src="./imgs/nontech.png" id="nontech" alt="Avatar">
+          <img src="./imgs/nontech.png" id="nontech" alt="Avatar" data-toggle="collapse"
+          data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
           <span class="caption">Non-technical</span>
         </li>
       </ul>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body text-light">
+              Developers design, build, test, and maintain solutions. Developers implement applications and services by
+              partnering with Solution Architects and customers.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body text-light">
+              Data Scientists apply machine learning techniques to train, evaluate, and deploy models that solve
+              business problems. </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample3">
+            <div class="card card-body text-light">
+              Security Engineers implement security controls and threat protection, manage identity and access, and
+              protect data, applications, and networks.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample4">
+            <div class="card card-body text-light">
+              Jump-start your career, earn recognition, and validate your skills in a job-role with industry-recognized
+              Microsoft certifications.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -407,5 +465,6 @@
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src='./base.js'></script>
-  </html>
+<script src='./base.js'></script>
+
+</html>
