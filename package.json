@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/simrankota/info490ad-APi#readme",
   "dependencies": {
+    "codemirror": "^5.53.2",
     "firebase": "^7.14.0",
     "firebase-admin": "^8.10.0"
   }

@@ -24,3 +24,7 @@
 #navigation {
     background: linear-gradient(92.08deg, #04293D 0.88%, #467886 118.8%) !important;;
 }
+
+.CodeMirror {
+    height: inherit!important;
+}
