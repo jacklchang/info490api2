@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Assess process efficiency with value stream maps</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../../home.css'>
+    <link rel='stylesheet' href='../../catalog.css'>
+    <link rel='stylesheet' href='./unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="codemirror-5.53.2/lib/codemirror.css">
+    <script src='../../codemirror-5.53.2/lib/codemirror.js'></script>
+    <script src="../../codemirror-5.53.2/mode/python/python.js"></script>
+    <link rel='stylesheet' href='../../codemirror-5.53.2/theme/pastel-on-dark.css'>
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] } })</SCRIPT>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg pt-3">
+            <a class="navbar-brand text-light" id="logo"><img src='../../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="./references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item"><a href='./settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class='container mt-5'>
+        <div class="row">
+            <div class="col">
+                <div class='text-light'>
+                    <a href='./unit3.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        <i class="fas fa-angle-left"></i> Previous
+                    </a>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class='text-light dropdown text-center'>
+                    <a class="btn btn-outline-light mt-5 catalog pl-3 pr-3 dropdown-toggle" href="#" role="button"
+                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Course Sections
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="./unit1.html">Introduction</a>
+                        <a class="dropdown-item" href="./unit2.html">Meet the team</a>
+                        <a class="dropdown-item" href="./unit3.html">The team's release process</a>
+                        <a class="dropdown-item" href="./unit4.html">Assess process efficiency</a>
+                        <a class="dropdown-item" href="./unit5.html">Summary</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-right">
+                <div class='text-light'>
+                    <a href='./unit5.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        Next <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class='row'>
+            <!-- <div class='col mb-5' style='max-height: 590px; overflow: scroll;'> -->
+            <div class='col mb-5 text-light'>
+                <h3 id='overview'>Assess process efficiency with value stream maps</h3>
+                <div class="text-light">
+                    <!-- <iframe width="560" height="315" class='my-3' src="https://www.youtube.com/embed/NpEaa2P7qZI"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe> -->
+                    <p>Creating a value stream map, or VSM, helps you analyze your current release cycle process. The
+                        purpose of a VSM is to visually show where in the process a team creates value and where there's
+                        waste. The goal, of course, is to arrive at a process that delivers maximum value to the
+                        customer with minimum waste. A VSM can help you pinpoint those areas that either don't
+                        contribute any value or that actually reduce the value of the product.
+                    </p>
+                    <p>
+                        Let's see how Tailspin measures up.
+                    </p>
+                    <p>
+                        Mara, who's new to the team, is going to create a VSM to help her understand the existing
+                        process. With a VSM, she'll get a sense of where the team fits into the DevOps maturity model.
+                        As it turns out, more mature teams typically release faster, with greater confidence, and with
+                        fewer bugs than less mature teams.
+                    </p>
+                    <p>
+                        Mara knows she doesn't understand everything yet. So she's going to create a quick VSM on the
+                        whiteboard in the meeting room. There will be some gaps and unanswered questions, but that's
+                        okay. It's a start. When she's done as much as she can, she'll share it with the team. The VSM
+                        will give everyone a common starting point for identifying the first steps toward improving how
+                        Tailspin develops and releases its websites.
+                    </p>
+                    <p>
+                        Let's take a look at her map.
+                    </p>
+                    <h4 class='encountertitles'>
+                        Understand the current process
+                    </h4>
+                    <p>
+                        Mara gathers the team in the meeting room to present her VSM.
+                    </p>
+                    <img
+                        src='https://docs.microsoft.com/en-us/learn/azure-devops/assess-your-development-process/media/4-vsm-whiteboard2.png'>
+                    <p class='mt-4'><strong>Mara</strong>: A VSM helps us measure where a process has value to the
+                        customer and where
+                        it's eating up time without producing any value. Our map begins on the upper left with the
+                        functional specification for the software. We'll follow just one feature to see how it moves
+                        through our current release cycle.</p>
+                    <p><em>Some people roll their eyes, but Mara presses on.</em></p>
+                    <h5 class='encountertitles'>
+                        Development processes
+                    </h5>
+                    <p>
+                        Creating a new feature currently starts with creating a label in source control <img
+                            src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/callout-01.png'>. We
+                        have one person who can create labels, and that's Andy. We request a label by email. We use a
+                        centralized version control system, so Andy waits until all the existing code is checked in and
+                        stable before he creates the label. After the label is created, we get an email saying we can
+                        begin work. This process takes up to three days and has no value to the customer. Things with no
+                        value to the customer should take as little time as possible.
+                    </p>
+                    <p>
+                        Coding a feature takes about four days for one person once we get access to all the files we
+                        need <img
+                            src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/callout-02.png'>. We
+                        have to be on the corporate network in order to access source control. This
+                        time has value to the customer. They want this feature.
+                    </p>
+                    <h5 class='encountertitles'>
+                        Test processes
+                    </h5>
+                    <p>
+                        After we decide that we have a stable build, we update a spreadsheet to tell Amita that there's
+                        a build ready for testing and where to find it <img
+                            src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/callout-03.png'>. It
+                        takes her two days to get notified.
+                    </p>
+                    <p>
+                        Amita manually tests the build <img
+                            src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/callout-04.png'>. This
+                        process gets longer as the codebase grows. For
+                        now, let's say three days. She then emails Andy with bug reports. Testing doesn't add value, but
+                        it's necessary.
+                    </p>
+                    <p>
+                        Andy then has to take time to triage the bugs and assign work <img
+                            src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/callout-04.png'>. It
+                        can take another
+                        three days for Andy to understand the issues and get them to the right developers.
+                    </p>
+                    <h5 class='encountertitles'>
+                        Operations processes
+                    </h5>
+                    <p>
+                        When Amita approves a build, she hands it off to Tim. Tim needs to deploy this build to the
+                        pre-production servers for more testing. Often, the pre-production servers are out of sync with
+                        the latest patches and updates that are needed to run the website. It takes Tim about two days
+                        to deploy to pre-production and run some tests. Again, while deploying to pre-production doesn't
+                        add value, it's necessary <img
+                            src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/callout-05.png'>.
+                    </p>
+                    <p>
+                        After a build is ready for production, leadership needs to approve the release before it can be
+                        deployed. This happens in a meeting. It takes four days to get leadership to meet and review the
+                        release.
+                    </p>
+                    <p>
+                        Eventually, Tim deploys the feature and the feature makes it to the customer here on the upper
+                        right of the VSM. If the production server configuration has drifted so it's out of sync with
+                        pre-production, Tim first needs to update it, and this takes one day <img
+                            src='https://docs.microsoft.com/en-us/learn/azure-devops/shared/media/callout-06.png'>.
+                    </p>
+                    <h5 class='encountertitles'>
+                        Calculate the customer value metrics
+                    </h5>
+                    <p>
+                        Now we can look at the key performance metrics and see how we measure up.
+                    </p>
+                    <p>
+                        <em>Total lead time</em> is the time it takes for a feature to make it to the customer.
+                        <em>Process time</em> is
+                        the time spent on a feature that has value to the customer. The <em>activity ratio</em> is
+                        process time
+                        divided by total lead time:
+                    </p>
+                    <div class='text-center'>
+                        <img src='./ar1.png'>
+                    </div>
+                    <p class='mt-4'>
+                        This is our <strong>efficiency</strong>. Multiply efficiency by 100 to get a percentage. The
+                        result is greater
+                        than 0% and typically less than 100%. A higher percentage indicates greater efficiency.
+                    </p>
+                    <p>
+                        Substitute our numbers and we get:
+                    </p>
+                    <div class='text-center'>
+                        <img src='./ar2.png'>
+                    </div>
+                    <p class='mt-4'>
+                        Multiply the result by 100% and you get <strong>23%</strong>.
+                    </p>
+                    <p>
+                        As you can see, we have a lot of room for improvement. And taking 22 days to develop a feature
+                        is too long.
+                    </p>
+                    <p>
+                        <strong>Tim</strong>: So how does this help us?
+                    </p>
+                    <h4 class='encountertitles'>
+                        Where do we go from here?
+                    </h4>
+                    <p>
+                        <strong>Mara:</strong> It helps to see where we are now so that we can pinpoint the areas where
+                        there's waste. We
+                        want to minimize the time we spend that has no value to the customer. I believe we can really
+                        improve our efficiency by adopting a DevOps approach. For one thing, we can automate a lot of
+                        these steps, and that will definitely cut down on the time.
+                    </p>
+                    <p>
+                        I'm not suggesting we drop our current processes, but I think we can work toward a more
+                        efficient process in small increments without disrupting what we currently have in place.
+                    </p>
+                    <p>
+                        Let's look at just a couple of areas where we can improve.
+                    </p>
+                    <p>
+                        <strong>Andy:</strong> We might as well start at the beginning. It takes me a long time to get a
+                        label on the
+                        code so we can start the new feature. I have to walk around to the developers and ask them to
+                        check in what they have so we can build and test. If you can figure out how to speed that up,
+                        you'll have my attention.
+                    </p>
+                    <p>
+                        Also, I noticed that you don't have time in there for the build itself. That takes half a day
+                        right now. It would be nice to see that time improve.
+                    </p>
+                    <p>
+                        <strong>Amita:</strong> And dev doesn't always update the spreadsheet to let me know there's a
+                        new build that
+                        needs testing. It would save time if there was some way to make sure that part gets done.
+                    </p>
+                    <p>
+                        <strong>Mara:</strong> Great! I think DevOps can help us out with all of these concerns.
+                    </p>
+                    <p>
+                        <strong>Andy:</strong> We don't have time to change the process now. You heard Irwin. We're in
+                        crisis mode here!
+                    </p>
+                    <p>
+                        <strong>Mara:</strong> I understand. For now, let's do what we always do. But we can all think
+                        about our part in
+                        the process and how we can improve. We can start making small changes in parallel to our current
+                        processes. That will let us see if DevOps will help us without disrupting what we have. I'll
+                        keep this map and the performance metrics. If we end up adopting Azure DevOps practices, then we
+                        can revisit the numbers. Maybe we can update the VSM at some point.
+                    </p>
+                    <h4 class='encountertitles mt-5'>
+                        Check your knowledge
+                    </h4>
+                    <div class='form-group text-light'>
+                        <label class='mt-2'>1. What's the purpose of the value stream map?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1">
+                            <label class="form-check-label pb-2" for="exampleRadios1">
+                                It helps you think about your existing processes and where you fit in the DevOps
+                                maturity model.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2">
+                            <label class="form-check-label pb-2" for="exampleRadios2">
+                                It helps you gain official DevOps accreditation.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3">
+                            <label class="form-check-label pb-2" for="exampleRadios3">
+                                It's just extra paperwork.
+                            </label>
+                        </div>
+                        <label class='mt-4'>2. What do we mean by waste?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1">
+                            <label class="form-check-label pb-2" for="exampleRadios1">
+                                Waste is time between tasks.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2">
+                            <label class="form-check-label pb-2" for="exampleRadios2">
+                                Waste means we are having to rewrite code and throw away the old code.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3">
+                            <label class="form-check-label pb-2" for="exampleRadios3">
+                                Waste is time spent on tasks that don't have direct customer value.
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class='text-light text-right'>
+                        <a href='./unit5.html' class='btn btn-outline-light catalog pl-4 pr-4'>
+                            Check your answers <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class='col code' style='height: 590px;'>
+
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+</body>
+
+
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+        <div class='row'>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+                <p class="text-light font-weight-bold">Contact them</p>
+            </a>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'>Your Profile</p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+<script src='./home.js'></script>
+<script src='./unit.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
