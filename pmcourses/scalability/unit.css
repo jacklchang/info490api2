@@ -34,3 +34,11 @@
     padding-right: 0;
     margin-right: 0;
 }
+
+.code {
+    background-color: white;
+}
+
+.main-content{
+    border-color: blue;
+}
