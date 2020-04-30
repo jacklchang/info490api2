@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Summary</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../../home.css'>
+    <link rel='stylesheet' href='../../catalog.css'>
+    <link rel='stylesheet' href='./unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="codemirror-5.53.2/lib/codemirror.css">
+    <script src='../../codemirror-5.53.2/lib/codemirror.js'></script>
+    <script src="../../codemirror-5.53.2/mode/python/python.js"></script>
+    <link rel='stylesheet' href='../../codemirror-5.53.2/theme/pastel-on-dark.css'>
+    <SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+    <SCRIPT>MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] } })</SCRIPT>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg pt-3">
+            <a class="navbar-brand text-light" id="logo"><img src='../../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item"><a href='../../settings.html' class='text-light'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class='container mt-5'>
+        <div class="row">
+            <div class="col">
+                <div class='text-light'>
+                    <a href='./unit4.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        <i class="fas fa-angle-left"></i> Previous
+                    </a>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class='text-light dropdown text-center'>
+                    <a class="btn btn-outline-light mt-5 catalog pl-3 pr-3 dropdown-toggle" href="#" role="button"
+                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Course Sections
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="./unit1.html">Introduction</a>
+                        <a class="dropdown-item" href="./unit2.html">Meet the team</a>
+                        <a class="dropdown-item" href="./unit3.html">The team's release process</a>
+                        <a class="dropdown-item" href="./unit4.html">Assess process efficiency</a>
+                        <a class="dropdown-item" href="./unit5.html">Summary</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-right">
+                <div class='text-light'>
+                    <a href='../../catalog.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
+                        Return to Catalog <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class='row'>
+            <!-- <div class='col mb-5' style='max-height: 590px; overflow: scroll;'> -->
+            <div class='col mb-5 text-light'>
+                <h3 id='overview'>Summary</h3>
+                <div class="text-light">
+                    <!-- <iframe width="560" height="315" class='my-3' src="https://www.youtube.com/embed/NpEaa2P7qZI"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe> -->
+                    <p>As you can see, Mara and her team face a number of challenges. Although releases happen
+                        eventually, Mara feels they can happen much more frequently and efficiently.
+                    </p>
+                    <p>
+                        Mara hopes she can convince the team it's at least worth testing out a DevOps approach. Perhaps
+                        they can apply a few DevOps practices as they finish up work on the Space Game website.
+                    </p>
+                    <h4 class='encountertitles'>
+                        What is DevOps?
+                    </h4>
+                    <p>
+                        At this point, we haven't yet defined DevOps. We'll do that in the next module. But for now,
+                        think of DevOps as something that brings together people, processes and products, automating
+                        software delivery to provide continuous value to your users.
+                    </p>
+                    <p>Azure DevOps is a suite of services that spans the entire DevOps life cycle. Azure
+                        DevOps starts with planning and goes all the way through deployment and monitoring. If you
+                        already have some pieces in place, you can select which services you want to use. Azure DevOps
+                        integrates with many tools, such as Jenkins.</p>
+                    <p>We'll go deeper into Azure DevOps in future modules. You can also check out these resources:</p>
+                    <p>
+                        <ul>
+                            <li>
+                                <a href='https://azure.com/devops'>Azure DevOps</a>
+                            </li>
+                            <li>
+                                <a href='https://docs.microsoft.com/azure/devops/learn'>DevOps Resource Center</a>
+                            </li>
+                        </ul>
+                    </p>
+                    <h4 class='encountertitles'>
+                        General recommendations for migrating and consolidating tools to Azure DevOps
+                    </h4>
+                    <p>
+                        You've seen how analyzing all your existing artifacts and tools is the first step toward
+                        designing a DevOps strategy. Once you've done that, here are a few recommendations for
+                        developing migration and integration strategies you can use if you're using Azure DevOps.
+                    </p>
+                    <h5 class='encountertitles'>
+                        Designing an authentication and access strategy
+                    </h5>
+                    <p>
+                        Azure DevOps Services uses enterprise-grade authentication. You can use either a Microsoft
+                        account or Azure Active Directory (Azure AD) to protect and secure your data. Many client
+                        applications such as Visual Studio or Visual Studio code, natively support authentication by
+                        either Microsoft Accounts or Azure AD. Eclipse can also support this, if you install a Team
+                        Explorer Everywhere plugin.
+                    </p>
+                    <p>
+                        When you need a non-Microsoft tool to integrate directly with Azure DevOps Services and the
+                        tools don't directly support a Microsoft account or an Azure AD account for authentication, you
+                        can still use them by setting up personal access tokens. These tokens can be set up using Git
+                        credential managers or you can create them manually.
+                    </p>
+                    <p>
+                        Personal access tokens are also useful when you need to establish access in command line tools,
+                        or in tools and tasks in build pipelines and when calling REST-based APIs, because you don't
+                        have a UI popping out to perform the authentication. When access is no longer required you can
+                        then just revoke the personal access token.
+                    </p>
+                    <p>
+                        Azure DevOps is pre-configured with default security groups. Default permissions are assigned to
+                        the default security groups. But you can also configure access at the organization level, the
+                        collection level and at the project or object level. In the organization settings in Azure
+                        DevOps, you can configure app access policies. Based on your security policies, you might allow
+                        alternate authentication methods, allow third party applications to access via OAuth or even
+                        allow anonymous access to some projects.
+                    </p>
+                    <p>
+                        For even tighter control, you can set conditional access to Azure DevOps. This offers simple
+                        ways to help secure resources when using Azure Active Directory for authentication. Conditional
+                        access policies such as multifactor authentication can help to minimize the risk of compromised
+                        credentials. As part of a conditional access policy you might require security group membership,
+                        a particular location or network identity, a specific operating system, a managed device, or
+                        other criteria.
+                    </p>
+                    <h5 class='encountertitles'>
+                        Migrating and integrating artifact repositories
+                    </h5>
+                    <p>
+                        While you can continue to work with your existing artifact repositories in their current
+                        locations when using Azure DevOps, there are advantages to migrating them. For NuGet, Azure
+                        DevOps Services provides hosted NuGet feeds as a service. By using this service, you can often
+                        eliminate the dependencies on on-premises resources such as file shares and locally hosted
+                        instances of NuGet.Server. The feeds can also be consumed by any continuous integration system
+                        that supports authenticated NuGet feeds.
+                    </p>
+                    <h5 class='encountertitles'>
+                        Designing a licensing strategy
+                    </h5>
+                    <p>
+                        Azure DevOps has many different licensing policies designed to suit many different situations.
+                        To get a quick overview, go to <a
+                            href='https://azure.microsoft.com/pricing/details/devops/azure-devops-services/'>Pricing for
+                            Azure DevOps</a> to see what's available.
+                    </p>
+                    <p>
+                        There is also a large number of both free and paid extensions, many of which you use to
+                        integrate third-party applications. Depending upon your current configuration, you might also
+                        decide to implement Group-Based Licensing. This makes it easier to manage licenses in Azure
+                        DevOps. If you're planning to make this change though, it's important to avoid a situation where
+                        migration to Group-Based Licensing results in users temporarily losing their currently assigned
+                        licenses.
+                    </p>
+                    <p>
+                        In addition to Azure DevOps Licensing, you need to ensure you have appropriate licenses for any
+                        third party tools that you need. Also, you need to make sure that any open-source tools that you
+                        have included have licenses that are compatible with how you intend to use them.
+                    </p>
+                    <h5 class='encountertitles'>
+                        Migrating and integrating source control
+                    </h5>
+                    <p>
+                        Similarly to artifacts, you might consider migrating your source control to Azure DevOps by
+                        using Azure Repos. However, moving your team from a centralized version control system to a
+                        distributed system like Git involves much more than learning the new commands. A successful
+                        migration to Git requires that you understand the differences in how file history and branches
+                        are handled.
+                    </p>
+                    <p>
+                        The Azure DevOps team recommends the following process:
+                    </p>
+                    <p>
+                        <ol>
+                            <li>
+                                Evaluate the tools and processes you're using.
+                            </li>
+                            <li>
+                                Select a branching strategy for Git.
+                            </li>
+                            <li>
+                                Decide how to migrate history – or if you even want to.
+                            </li>
+                            <li>
+                                Maintain your old version control system.
+                            </li>
+                            <li>
+                                Remove binaries and executables from source control.
+                            </li>
+                            <li>
+                                Train your team in the concepts and practice of Git.
+                            </li>
+                            <li>
+                                Perform the actual migration to Git.
+                            </li>
+                        </ol>
+                    </p>
+                    <h5 class='encountertitles'>
+                        Migrating and integrating work management tools
+                    </h5>
+                    <p>
+                        Migrating from other work management tools to Azure DevOps takes considerable planning. Most
+                        work management tools are highly configurable by the end user. This means that there might not
+                        be a tool available that will perform the migration without further configuration. One example
+                        is Jira.
+                    </p>
+                    <p>
+                        In the Visual Studio Marketplace, <a
+                            href='https://marketplace.visualstudio.com/items?itemName=solidify.jira-devops-migration'>Solidify</a>
+                        offers a tool for Jira to Azure DevOps migration. It
+                        does the migration in two phases. Jira issues are exported to files and then the files are
+                        imported to Azure DevOps.
+                    </p>
+                    <p>
+                        If you decide to try to write the migration code yourself, the following blog post provides
+                        sample code that might help you to get started: <a
+                            href='https://www.cryingcloud.com/2018/10/01/migrate-your-project-from-jira-to-azure-devops/'>Migrate
+                            Your Project From Jira to Azure DevOps</a>
+                    </p>
+                    <h5 class='encountertitles'>
+                        Migrating and integrating test tools
+                    </h5>
+                    <p>
+                        <a href='https://azure.microsoft.com/services/devops/test-plans/'>Azure Test Plans</a> are used
+                        to track manual testing for sprints and milestones. This allows you to track when that testing
+                        is complete.
+                    </p>
+                    <p>
+                        <a
+                            href='https://docs.microsoft.com/azure/devops/test/load-test/get-started-jmeter-test?view=azure-devops&viewFallbackFrom=vsts'>Apache
+                            JMeter</a> is open source software written in Java and designed to load test functional
+                        behavior and measure performance.
+                    </p>
+                    <p>
+                        <a
+                            href='https://marketplace.visualstudio.com/items?itemName=richardfennellBM.BM-VSTS-PesterRunner-Task'>Pester</a>
+                        is a tool that can be used to automate the testing of PowerShell code.
+                    </p>
+                    <p>
+                        <a href='https://marketplace.visualstudio.com/items?itemName=AjeetChouksey.soapui'>SoapUI</a> is
+                        another testing framework for SOAP and REST testing.
+                    </p>
+                    
+                    <div class='text-light text-right'>
+                        <a href='../../catalog.html' class='btn btn-outline-light catalog pl-4 pr-4'>
+                            Return to Catalog
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class='col code' style='height: 590px;'>
+
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+</body>
+
+
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+        <div class='row'>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+                <p class="text-light font-weight-bold">Contact them</p>
+            </a>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'>Your Profile</p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+<script src='./home.js'></script>
+<script src='./unit.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
