@@ -11,6 +11,7 @@
         content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="./assets/css/main.css" />
         <link rel="stylesheet" href="./style.css"> -->
     <link rel='stylesheet' href='../../home.css'>
@@ -24,7 +25,7 @@
 </head>
 
 <body class='bg-dark'>
-    <div class="container-fluid">
+    <div class="container-fluid pb-5">
         <nav class="navbar navbar-expand-lg pt-0">
             <a class="navbar-brand text-light" id="logo"><img src='../../imgs/logo.png' width='30' height="30"
                     class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
@@ -77,163 +78,56 @@
             </div>
         </nav>
     </div>
-    <!--Content -->
-    <!--Content taken from: https://docs.microsoft.com/en-us/learn/modules/build-a-faq-chat-bot-with-qna-maker-and-azure-bot-service/3-exercise-create-qna-knowledge-base-->
-    <!-- <div class='container px-0 mt-5 pl-5'>
-        <div class="row">
-            <div class="col">
-                <div class='text-light align-items-center justify-content-start'>
-                    <a href='../catalog.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
-                        <i class="fas fa-angle-left"></i> Previous
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <div class='text-light align-items-center justify-content-start'>
-                    <a href='./catalog.html' class='btn btn-outline-light mt-5 catalog pl-3 pr-3'>
-                        Course Sections <i class="fas fa-caret-down"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col">
-                <div class='text-light align-items-center justify-content-start'>
-                    <a href='./catalog.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
-                        Next <i class="fas fa-angle-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="row text-light justify-content-between">
-                    <div class='col'>
-                        <h3 id='overview'>Create Intelligent Bots with the Azure Bot Service</h3>
-                        <div class="text-light">
-                            <p>Let's create a QnA Maker knowledge base (KB).</p>
-                            <p>
-                                <ol type="1">
-                                    <li>Go to the <a href="https://www.qnamaker.ai/">QnA Maker portal.</a></li>
-                                    <li>Select Sign in in the upper-right corner and sign in with your Azure
-                                        credentials.
-                                    </li>
-                                    <li>Unless you already have a knowledge base (KB), the portal will point out that
-                                        you
-                                        don't have
-                                        any.</li>
-                                </ol>
-                            </p>
-                        </div>
-                        <h3 id='host'>Hosting a knowledge base</h3>
-    <p class="text-light">A knowledge base is a searchable collection of questions and answers.
-        Knowledge bases are hosted in a QnA service, which is created in Azure,
-        and determines the region in which the knowledge base will sit, and its billing and
-        performance.</p>
-    <h3 class='mt-3' id='create'>Creating a knowledge base and QnA serv</h3>
-    <p>
-        <ol class="text-light">
-            <li>In the menu at the top of the portal, select Create a knowledge base.</li>
-            <li>Select Create a QnA service. Selecting this button takes you to the Azure portal
-                and signs you in with the credentials you used earlier.
-                You create the QnA Maker service and the associated Azure app service that will host
-                it
-                in
-                this portal.</li>
-        </ol>
-    </p>
-    <h3 id='provide'>Provide the QnA Maker service details</h3>
-    <p class="text-light">Provide these details to create the QnA Maker service:</p>
-    <p class="text-light">
-        <ol type="1" class="text-light">
-            <li>Enter a globally unique name for your QnA Maker service, such as yourname-qna.
-                Make a note of this name as you'll be using it later.</li>
-            <li>Select your Azure subscription.</li>
-            <li>Select the F0 pricing tier for the service, which is the free tier.</li>
-            <li>Select a location for the service, which should be the same region as the bot
-                service,
-                and
-                near your physical location.</li>
-            <li>Create a resource group called LearnRG.</li>
-            <li>Select F (three Indexes), the free tier, for the search pricing tier.</li>
-            <li>For the search location, select the location you used earlier.</li>
-            <li>Verify that the app name is unique. (If it is, it will be marked with a green check
-                mark.)
-            </li>
-            <li>Select the location for the website, which should match the location you used
-                earlier.
-            </li>
-            <li>You won't be using Application Insights for this test, so disable App insights.</li>
-            <li>Select Create.</li>
-        </ol>
-    </p>
-    <p class="text-light">After a brief deployment process, your resource will be created for the
-        service.</p>
-    </div>
-    </div>
-    </div>
 
-    <div class='col col-lg-3 pt-5'>
-        <div id="navigation">
-            <nav class="nav flex-column p-3">
-                <a class="nav-link active bg-dark text-secondary" href="#overview">Overview</a>
-                <a class="nav-link text-light" href="#host">Hosting a knowledge base</a>
-                <a class="nav-link text-light" href="#create">Creating a knowledge base and QnA serv</a>
-                <a class="nav-link text-light" href="#provide">Provide the QnA Maker service details</a>
-            </nav>
-        </div>
-    </div>
-    </div>
-    </div> -->
-    <div class='container mt-5'>
-        <div class="row">
-            <div class="col">
-                
-                <div class='text-light'>
-                    <a href='../catalog.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
-                        <i class="fas fa-angle-left"></i> Previous
-                    </a>
+    <div class='container mt-5 main-content mb-5 ml-0 mr-0'>
+        <div class='row'>
+            <div class="col-2 p-0">
+                <div class="sidebar">
+                    <a href="#home">Home</a>
+                    <a class="active" href="#intro">Introduction</a>
+                    <a href="#leverage">Leverage scaling up...</a>
+                    <a href="#network">Optimize network...</a>
+                    <a href="#storage">Optimize storage...</a>
+                    <a href="#performance">Identify performa...</a>
+                    <a href="#summary">Summary</a>
+                    <a href="#next" id="next">Next</a>
                 </div>
             </div>
-            <div class="col text-center">
-                <div class='text-light dropdown text-center'>
-                    <a class="btn btn-outline-light mt-5 catalog pl-3 pr-3 dropdown-toggle" href="#" role="button"
-                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Course Sections
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Introduction</a>
-                        <a class="dropdown-item" href="#">Leverage scaling up and scaling out in your architecture</a>
-                        <a class="dropdown-item" href="#">Optimize network performance</a>
-                        <a class="dropdown-item" href="#">Optimize storage performance</a>
-                        <a class="dropdown-item" href="#">Identify performance bottlenecks in your application</a>
-                        <a class="dropdown-item" href="#">Summary</a>
+            <div class="col main-content">
+                <div class="row justify-content-between">
+                    <div class="col-8">
+                        <h3 class="text-light pt-3">Design for performance and scalability in Azure</h3>
+                        <p class="text-light">Program Management Course</p>
+                    </div>
+                    <div class="col-3 pt-5">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="text-light">4.7 (3,344)</span>
                     </div>
                 </div>
-            </div>
-            <div class="col text-right">
-                <div class='text-light'>
-                    <a href='../../catalog.html' class='btn btn-outline-light mt-5 catalog pl-4 pr-4'>
-                        Next <i class="fas fa-angle-right"></i>
-                    </a>
+                <div class='row bg-dark p-2 m-3 pt-4'>
+                    <div class='col mb-5 text-light'>
+                        <h3 id='overview'>Introduction</h3>
+                        <p>Learning objectives<p>
+                                <p>In this module, you will:</p>
+                                <ul>
+                                    <li>Adjust your capacity based on workload by scaling up and scaling out
+                                    </li>
+                                    <li>Optimize network performance
+                                    </li>
+                                    <li>Optimize storage and database performance
+                                    </li>
+                                </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class='row main-content'>
-            <div class='col mb-5 text-light' style='max-height: 590px; overflow: scroll;'>
-                <h3 id='overview'>Introduction</h3>
-                <p>Learning objectives<p>
-                   <p>In this module, you will:</p> 
-                    <ul>
-                        <li>Adjust your capacity based on workload by scaling up and scaling out
-                        </li>
-                        <li>Optimize network performance
-                        </li>
-                        <li>Optimize storage and database performance
-                        </li>
-                    </ul>
-            </div>
-            <div class='col code' style='height: 590px;'>
-
+                <div class="row justify-content-center">
+                    <div class="col-2">
+                        <button type="button" class="btn btn-success pl-5 pr-5">Next</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
