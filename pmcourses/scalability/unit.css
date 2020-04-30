@@ -29,30 +29,51 @@
     height: inherit!important;
 }
 
-.dropdown {
+/* .dropdown {
     padding-top: 0;
     padding-right: 0;
     margin-right: 0;
-}
+} */
 
 .code {
     background-color: white;
 }
 
 .main-content{
-    background-color:black;
-    height:660px;
+    background-color:#262626;
+    height:725px;
+    overflow: scroll;
+}
+
+.fa-star {
+  color: white;
+  opacity: 0.2;
 }
 
 .checked {
     color: orange;
+    opacity: 1;
   }
 
 #next {
-    margin-top:5rem;
-    background-color:#038724;
-    border-radius:10px;
+    width: 100%;
 }
+
+.container, .row {
+  max-width: 100%!important;
+  padding: 0;
+  margin: 0;
+}
+
+.row-outer {
+  max-width: 90%!important;
+}
+
+/* Useful for debugging */
+/* .row, .col-8, .col-3, .container {
+  border: 1px solid white;
+} */
+
 /* The side navigation menu */
 .sidebar {
     margin: 0;
@@ -60,17 +81,18 @@
     padding-left:0;
     margin-left:0;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     height: 100%;
     overflow: auto;
   }
   
   /* Sidebar links */
-  .sidebar a {
+  .sidebar a, #next {
     display: block;
     color: white;
     padding: 16px;
     text-decoration: none;
+    border-radius: 5px;
   }
   
   /* Active/current link */
