@@ -94,6 +94,18 @@ p, h1, h2, h3, h4, h5, a {
     opacity: 1 !important;
 }
 
+.card-img {
+    width: 50%;
+    height: auto;
+}
+
+.card-body {
+padding-bottom: 5rem;}
+
+.card-footer {
+    padding-top: 2rem;
+}
+
 #capstoneteam {
     background-color:white;
     margin-left: 0 !important;
