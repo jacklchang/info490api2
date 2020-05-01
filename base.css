@@ -1,117 +1,147 @@
-#login-btn, #signup-btn {
-    border-radius: 30px;
-    color: white;
+body {
+    overflow-x: hidden;
 }
 
-#login-btn:hover, #signup-btn:hover, #desc-button {
-    color: rgb(75, 75, 75);
+#login-btn,
+#signup-btn {
+  border-radius: 30px;
+  color: white;
 }
 
-#login-btn span, #signup-btn span {
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
+#login-btn:hover,
+#signup-btn:hover,
+#desc-button {
+  color: rgb(75, 75, 75);
+}
+
+#login-btn span,
+#signup-btn span {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
 }
 
 #desc-button:hover {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
 }
 
-  h1, h3 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color:white;
-  }
+h1,
+h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
 
-  #jumbocard{
-    background-image: linear-gradient(108.25deg, #142135 1.44%, #037DFF 140.24%);
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    border-radius: 5px;
-  }
+#jumbocard {
+  background-image: linear-gradient(108.25deg, #142135 1.44%, #037dff 140.24%);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-radius: 5px;
+}
 
-  .card {
-    border-radius: 5px;
-    border: 0px solid;
-  }
- 
- #softwaredev, #datascience, #cyber, #nontech {
-    display:block;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 2px solid white;  
-    color:white;
-    margin-left:3rem;
-    margin-right:3rem;
-    padding: 1rem;
- }
+.card {
+  border-radius: 5px;
+  border: 0px solid;
+}
 
- .caption {
-    margin-top: 2rem;
-    display: block;
-    color:white;
+#softwaredev,
+#datascience,
+#cyber,
+#nontech {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid white;
+  color: white;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding: 1rem;
+}
+
+.caption {
+  margin-top: 2rem;
+  display: block;
+  color: white;
 }
 
 #team-pic {
-    width: 100%;
-    height: 100%;
-    background-size:cover;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.card-header {
+  min-height: 6rem;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+}
+
+.card {
+  display: flex;
+  margin-top: 2vh;
+  position: inline;
+  opacity: 0.8 !important;
+  background-color: #000000;
+}
+
+.card-text,
+.card-img {
+  opacity: 1 !important;
+}
+
+.card-img {
+  max-width: 60%;
+}
+
+.card-footer button {
+  border-radius: 0.5rem;
+}
+
+.carousel {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .carousel .card {
     border: 1px solid;
     border-color: #d5d5d5;
-    height: 27rem;
-    /* background-color: white!important; */
-}
-
-.carousel .col-md-4 .card-body {
-    background-color: #4f4f4f!important;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 10rem;
-    overflow: hidden;
-}
-
-.carousel .btn {
-    position: absolute;
-    left: 50%;
-    width: 100px;
-    margin-left: -50px;
-    bottom:1rem;
-}
-
-.carousel .btn:hover {
-    color: #4f4f4f!important;
+    background-color: black!important;
 }
 
 .carousel-indicators {
-    padding-bottom: 30vh!important;
+    position: absolute;
+    padding-bottom: 35vh!important;
     margin: 0;
+    pointer-events: none;
+}
+
+.carousel-indicators a {
+    pointer-events: all;
 }
 
 .navbar {
-    background-color: transparent !important;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-brand {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .encountertitles {
-    color: #71C2CC!important;
+  color: #71c2cc !important;
 }
 
 .modal-content {
-    background-color: #303d52;
+  background-color: #303d52;
 }
 
 #sticky-footer {
-    flex-shrink: none;
-  }
+  flex-shrink: none;
+}

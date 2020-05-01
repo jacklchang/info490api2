@@ -126,7 +126,7 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container mt-3">
       <div class='row justify-content-center'>
-        <div class="card mb-3" style="width: 50rem;">
+        <div class="card card-nav mb-3" style="width: 50rem;">
           <div class="card-body" id="jumbocard">
             <h1 class="card-title text-light text-center">Microsoft Encounter</h1>
             <h2 class="text-light text-center">Code today, Build tomorrow</h2>
@@ -194,11 +194,11 @@
         </li>
         <li class="icon4 col-3">
           <img src="./imgs/nontech.png" id="nontech" alt="Avatar" data-toggle="collapse"
-          data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+            data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
           <span class="caption">Non-technical</span>
         </li>
       </ul>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col">
           <div class="collapse multi-collapse" id="multiCollapseExample1">
             <div class="card card-body text-light">
@@ -230,7 +230,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -242,21 +242,23 @@
 
       <!--First slide-->
       <div class="carousel-item active">
-        <div class="row card-deck">
+        <div class="card-deck text-left mx-5">
           <div class="card mx-3 p-2 pt-3">
             <div class='card-header'>
               <h3>Introduction to Python</h3>
             </div>
             <img class="card-img my-3 align-self-center"
               src="https://docs.microsoft.com/en-us/learn/achievements/intro-to-python.svg" alt="Card image cap">
-            <div class="card-body text-white pb-4">
-           Learn how to write basic Python code, declare variables, and
+            <div class="card-body">
+              <p class="card-text text-white">Learn how to write basic Python code, declare variables, and
                 work
                 with console input and output
+              </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2 mt-5'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-python/?fbclid=IwAR0TrRydOzQ6L_tnOaZgGAB1oudMq0mfwG15mmHv1sgDQ8eeNaAhJ4AWjNs'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./giscourses/python.html'>Get
+                Started</a>
+              
             </div>
           </div>
           <div class="card mx-3 p-2 pt-3">
@@ -272,9 +274,10 @@
                 the world's most popular version control system.
               </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-git/?fbclid=IwAR3j3eeegLW1poUVXVYYBpyKyes57kI-hYbAWA-RMhZbnCW3QfgqJ5bo-OY'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./giscourses/gitcourse.html'>Get
+                Started</a>
+              
             </div>
           </div>
           <div class="card mx-3 p-2 pt-3">
@@ -290,11 +293,33 @@
                 without effecting your underlying dataset.
               </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/build-simple-dashboard/?fbclid=IwAR2UOHymajSZIe9gpwsyIzzur0NWvZ8AeMQjhuiTRdqZObarG9RTS3ax_zY'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./dscourses/dashboard.html'>Get
+                Started</a>
+              
             </div>
           </div>
+          <!-- <div class="card mx-3 p-2 pt-3">
+              <div class='card-header'>
+                  <h3>How to build a simple dashboard</h3>
+              </div>
+              <img class="card-img my-3 align-self-center"
+                  src="https://docs.microsoft.com/en-us/learn/achievements/build-simple-dashboard.svg"
+                  alt="Card image cap">
+              <div class="card-body">
+                  <p class="card-text text-white">Power BI helps business users and developers alike to easily
+                      analyze, visualize, and collaborate on data. This module will teach you how to do all of
+                      that
+                      without effecting your underlying dataset.
+                  </p>
+              </div>
+              <div class='card-footer justify-content-around row mx-1 mb-2'>
+                  <a class='btn btn-light col mt-2' role='button'
+                      href='./dscourses/dashboard.html'>Get
+                      Started</a>
+                  <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+              </div>
+          </div> -->
         </div>
       </div>
       <!--/.First slide-->
@@ -302,7 +327,7 @@
       <!--Second slide-->
       <div class="carousel-item">
 
-        <div class="row card-deck">
+        <div class="card-deck text-left mx-5">
           <div class="card mx-3 p-2 pt-3">
             <div class='card-header'>
               <h3>Introduction to Python</h3>
@@ -315,9 +340,10 @@
                 with console input and output
               </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-python/?fbclid=IwAR0TrRydOzQ6L_tnOaZgGAB1oudMq0mfwG15mmHv1sgDQ8eeNaAhJ4AWjNs'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./giscourses/python.html'>Get
+                Started</a>
+              
             </div>
           </div>
           <div class="card mx-3 p-2 pt-3">
@@ -333,9 +359,10 @@
                 the world's most popular version control system.
               </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-git/?fbclid=IwAR3j3eeegLW1poUVXVYYBpyKyes57kI-hYbAWA-RMhZbnCW3QfgqJ5bo-OY'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./giscourses/gitcourse.html'>Get
+                Started</a>
+              
             </div>
           </div>
           <div class="card mx-3 p-2 pt-3">
@@ -351,11 +378,33 @@
                 without effecting your underlying dataset.
               </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/build-simple-dashboard/?fbclid=IwAR2UOHymajSZIe9gpwsyIzzur0NWvZ8AeMQjhuiTRdqZObarG9RTS3ax_zY'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./dscourses/dashboard.html'>Get
+                Started</a>
+              
             </div>
           </div>
+          <!-- <div class="card mx-3 p-2 pt-3">
+              <div class='card-header'>
+                  <h3>How to build a simple dashboard</h3>
+              </div>
+              <img class="card-img my-3 align-self-center"
+                  src="https://docs.microsoft.com/en-us/learn/achievements/build-simple-dashboard.svg"
+                  alt="Card image cap">
+              <div class="card-body">
+                  <p class="card-text text-white">Power BI helps business users and developers alike to easily
+                      analyze, visualize, and collaborate on data. This module will teach you how to do all of
+                      that
+                      without effecting your underlying dataset.
+                  </p>
+              </div>
+              <div class='card-footer justify-content-around row mx-1 mb-2'>
+                  <a class='btn btn-light col mt-2' role='button'
+                      href='./dscourses/dashboard.html'>Get
+                      Started</a>
+                  <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+              </div>
+          </div> -->
         </div>
       </div>
       <!--/.Second slide-->
@@ -363,7 +412,7 @@
       <!--Third slide-->
       <div class="carousel-item">
 
-        <div class="row card-deck">
+        <div class="card-deck text-left mx-5">
           <div class="card mx-3 p-2 pt-3">
             <div class='card-header'>
               <h3>Introduction to Python</h3>
@@ -376,9 +425,10 @@
                 with console input and output
               </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-python/?fbclid=IwAR0TrRydOzQ6L_tnOaZgGAB1oudMq0mfwG15mmHv1sgDQ8eeNaAhJ4AWjNs'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./giscourses/python.html'>Get
+                Started</a>
+              
             </div>
           </div>
           <div class="card mx-3 p-2 pt-3">
@@ -394,9 +444,10 @@
                 the world's most popular version control system.
               </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/intro-to-git/?fbclid=IwAR3j3eeegLW1poUVXVYYBpyKyes57kI-hYbAWA-RMhZbnCW3QfgqJ5bo-OY'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./giscourses/gitcourse.html'>Get
+                Started</a>
+              
             </div>
           </div>
           <div class="card mx-3 p-2 pt-3">
@@ -412,11 +463,33 @@
                 without effecting your underlying dataset.
               </p>
             </div>
-            <div class='card-footer justify-content-around mx-1 mb-2'>
-              <a class='btn btn-light mr-2' role='button'
-                href='https://docs.microsoft.com/en-us/learn/modules/build-simple-dashboard/?fbclid=IwAR2UOHymajSZIe9gpwsyIzzur0NWvZ8AeMQjhuiTRdqZObarG9RTS3ax_zY'>View</a>
+            <div class='card-footer justify-content-around row mx-1 mb-2'>
+              <a class='btn btn-light col mt-2' role='button' href='./dscourses/dashboard.html'>Get
+                Started</a>
+              
             </div>
           </div>
+          <!-- <div class="card mx-3 p-2 pt-3">
+              <div class='card-header'>
+                  <h3>How to build a simple dashboard</h3>
+              </div>
+              <img class="card-img my-3 align-self-center"
+                  src="https://docs.microsoft.com/en-us/learn/achievements/build-simple-dashboard.svg"
+                  alt="Card image cap">
+              <div class="card-body">
+                  <p class="card-text text-white">Power BI helps business users and developers alike to easily
+                      analyze, visualize, and collaborate on data. This module will teach you how to do all of
+                      that
+                      without effecting your underlying dataset.
+                  </p>
+              </div>
+              <div class='card-footer justify-content-around row mx-1 mb-2'>
+                  <a class='btn btn-light col mt-2' role='button'
+                      href='./dscourses/dashboard.html'>Get
+                      Started</a>
+                  <button class='btn btn-primary col ml-2 mt-2 save' role='button'>Save</button>
+              </div>
+          </div> -->
         </div>
       </div>
       <!--/.Third slide-->

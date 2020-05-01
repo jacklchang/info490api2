@@ -1,126 +1,143 @@
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
-p, h1, h2, h3, h4, h5, a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .wrapper {
-    height:auto !important;
-    /* min-height:100%; */
+  height: auto !important;
+  /* min-height:100%; */
 }
 
-#nav-button, #desc-button {
-    border-radius: 30px;
-    color: white;
+#nav-button,
+#desc-button {
+  border-radius: 30px;
+  color: white;
 }
 
-#nav-button:hover, #desc-button:hover {
-    color: rgb(75, 75, 75);
+#nav-button:hover,
+#desc-button:hover {
+  color: rgb(75, 75, 75);
 }
 
 .navbar {
-    background-color: transparent !important;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-brand {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
-#nav-button span, #desc-button span {
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+#nav-button span,
+#desc-button span {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
 }
 
-#login-btn, #signup-btn, #desc-button {
-    border-radius: 30px;
-    color: white;
+#login-btn,
+#signup-btn,
+#desc-button {
+  border-radius: 30px;
+  color: white;
 }
 
-#login-btn:hover, #signup-btn:hover, #desc-button:hover {
-    color: rgb(75, 75, 75);
+#login-btn:hover,
+#signup-btn:hover,
+#desc-button:hover {
+  color: rgb(75, 75, 75);
 }
 
-#login-btn span, #signup-btn span {
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
+#login-btn span,
+#signup-btn span {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
 }
 
 .bg-secondary {
-    background-color: #505050!important;
+  background-color: #505050 !important;
 }
 
-.bg-dark, .navbar-dark {
-    background-color: #1e1e1e!important;
+.bg-dark,
+.navbar-dark {
+  background-color: #1e1e1e !important;
 }
 
 .btn-secondary {
-    background-color: #3e3e3e!important;
+  background-color: #3e3e3e !important;
 }
 
 .btn-secondary:hover {
-    background-color: #2e2e2e!important;
+  background-color: #2e2e2e !important;
 }
 
-
 .jumbotron .jumbotron-fluid #home-banner {
-    height: 50vh!important;
+  height: 50vh !important;
 }
 
 .jumbotron {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('./imgs/heroimagedark.jpg');
-    background-size: cover;
-    height: 75vh;
-    margin-bottom: 0;
-} 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url("./imgs/heroimagedark.jpg");
+  background-size: cover;
+  height: 75vh;
+  margin-bottom: 0;
+}
 
 #contact-link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.card {
-    display:flex;
-    margin-top: 3vh;
-    position: inline;
-    opacity: 0.8 !important;
-    background-image: linear-gradient(108.25deg, #142135 1.44%, #037DFF 140.24%);
+.card-nav {
+  display: flex;
+  margin-top: 3vh;
+  position: inline;
+  opacity: 0.8 !important;
+  background-image: linear-gradient(108.25deg, #142135 1.44%, #037dff 140.24%);
 }
 
-.card-text {
-    opacity: 1 !important;
+.card-nav .card-text {
+  opacity: 1 !important;
 }
 
-.card-img {
-    width: 50%;
-    height: auto;
+.card-nav .card-img {
+  width: 50%;
+  height: auto;
 }
 
-.card-body {
-padding-bottom: 5rem;}
+.card-nav .card-body {
+  padding-bottom: 5rem;
+}
 
-.card-footer {
-    padding-top: 2rem;
+.card-nav .card-footer {
+  padding-top: 2rem;
 }
 
 #capstoneteam {
-    background-color:white;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: fit-content;
+  background-color: white;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: fit-content;
 }
 
 #team-pic {
-    width: 30rem;
-    height:auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 30rem;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #sticky-footer {
-    flex-shrink: none;
-  }
+  flex-shrink: none;
+}

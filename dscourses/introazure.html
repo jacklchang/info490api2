@@ -64,7 +64,7 @@
                             </div>
                             <p class="card-text mb-2">12% complete</p>
                         </li>
-                        <li class="dropdown-item"><a href='../settings.html' class='text-light'><small>View
+                        <li class="dropdown-item" id='settings'><a href='../settings.html'><small>View
                                     Profile</small></a></li>
                         <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
                     </ul>
@@ -113,10 +113,14 @@
                 <div class="col">
                     <h1 class="pt-5">Course Sections</h1>
                     <p class="text-light pt-3"><a href='./introazure/unit1.html' class='text-light'>Introduction</a></p>
-                    <p class="text-light"><a href='./introazure/unit2.html' class='text-light'>Azure Machine Learning workspaces</a></p>
-                    <p class="text-light"><a href='./introazure/unit3.html' class='text-light'>Azure Machine Learning tools and interfaces</a></p>
-                    <p class="text-light"><a href='./introazure/unit4.html' class='text-light'>Azure Machine Learning experiments</a></p>
-                    <p class="text-light"><a href='./introazure/unit5.html' class='text-light'>Exercise - Getting started with Azure Machine Learning</a></p>
+                    <p class="text-light"><a href='./introazure/unit2.html' class='text-light'>Azure Machine Learning
+                            workspaces</a></p>
+                    <p class="text-light"><a href='./introazure/unit3.html' class='text-light'>Azure Machine Learning
+                            tools and interfaces</a></p>
+                    <p class="text-light"><a href='./introazure/unit4.html' class='text-light'>Azure Machine Learning
+                            experiments</a></p>
+                    <p class="text-light"><a href='./introazure/unit5.html' class='text-light'>Exercise - Getting
+                            started with Azure Machine Learning</a></p>
                     <p class="text-light"><a href='./introazure/unit6.html' class='text-light'>Summary</a></p>
                     <a type="button" class="btn btn-outline-light mt-4 mb-5" href='./introazure/unit1.html'>
                         <div class="pt-2 pb-2 pl-4 pr-4">
@@ -131,8 +135,7 @@
                             <p class="text-light">Predict flight delays by creating a machine learning model in
                                 Python</p>
                             <div>
-                                <a class='btn btn-light mr-3' role='button'
-                                    href='./predictflight.html'>See
+                                <a class='btn btn-light mr-3' role='button' href='./predictflight.html'>See
                                     more</a>
                                 <button class='btn btn-primary save' role='button'>Save for later</button>
                             </div>
@@ -140,8 +143,7 @@
                         <div class="row related p-4">
                             <p class="text-light mr-5">Introduction to Azure Machine Learning</p>
                             <div>
-                                <a class='btn btn-light mr-3' role='button'
-                                    href='./introazure.html'>
+                                <a class='btn btn-light mr-3' role='button' href='./introazure.html'>
                                     See More</a>
                                 <button class='btn btn-primary save' role='button'>Save for later</button>
                             </div>
@@ -161,20 +163,22 @@
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
-    <script src='./home.js'></script>
+    <script src='../course_to_home.js'></script>
+
 
 </body>
 <footer id="sticky-footer" class="py-4 bg-secondary">
     <div class="container text-center">
-      <div class='row'>
-        <p class="col font-weight-bold text-light">Contact Us</p>
-        <p class='col font-weight-bold text-light'>Catalog</p>
-        <p class='col font-weight-bold text-light'>References</p>
-        <p class='col font-weight-bold text-light'><a href='settings.html' class='text-light' style='text-decoration: none;'>Your Profile</a></p>
-      </div>
-      <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+        <div class='row'>
+            <p class="col font-weight-bold text-light">Contact Us</p>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'><a href='settings.html' class='text-light'
+                    style='text-decoration: none;'>Your Profile</a></p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
     </div>
-  </footer>
+</footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
