@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Exercise - Getting started with Azure Machine Learning</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../../home.css'>
+    <link rel='stylesheet' href='../../catalog.css'>
+    <link rel='stylesheet' href='./unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../codemirror-5.53.2/lib/codemirror.css">
+    <script src='../../codemirror-5.53.2/lib/codemirror.js'></script>
+    <script src="../../codemirror-5.53.2/mode/python/python.js"></script>
+    <script src="../../codemirror-5.53.2/mode/powershell/powershell.js"></script>
+    <script src="../../codemirror-5.53.2/mode/javascript/javascript.js"></script>
+    <link rel='stylesheet' href='../../codemirror-5.53.2/theme/pastel-on-dark.css'>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid pb-5">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='../../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item" id='settings'><a href='../../settings.html'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class='container main-content pt-5 mt-4 px-5'>
+        <div class='row row-outer justify-content-around mx-auto' style='height: 80%!important'>
+            <div class="col-3 col-lg-2 p-0 pt-2" style='height: 100%!important' id='side-nav'>
+                <div class="sidebar" style='height: 92%!important'>
+                    <a href="../introazure.html">Home</a>
+                    <a href="./unit1.html">Introduction</a>
+                    <a href="./unit2.html">Azure Machine Learning workspace</a>
+                    <a href="./unit3.html">Azure Machine Learning tools and interfaces</a>
+                    <a href="./unit4.html">Azure Machine Learning experiments</a>
+                    <a class="active" href="./unit5.html">Exercise - Getting started with Azure Machine Learning</a>
+                    <a href="./unit6.html">Summary</a>
+                </div>
+                <hr style='border-color: white;'>
+                <a href="./unit6.html" id="next" class='btn btn-success text-center mt-4'>Next <i
+                        class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="col-8 col-lg-9 p-0">
+                <h3 class="text-light pt-3 pl-3">Introduction to Azure Machine Learning</h3>
+
+                <div class="row justify-content-between" style='width: 100%;'>
+                    <div class="col-7">
+                        <p class="text-light">Data Science Course</p>
+                    </div>
+                    <div class="col-4 text-right">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="text-light text-muted">4.6</span>
+                    </div>
+                </div>
+                <div class='bg-dark p-3'>
+                    <div class='row justify-content-between'>
+                        <div class='col-6 text-light px-0' style='height: 95%; max-height: 505px; overflow: scroll;'>
+                            <h3 id='overview'>Exercise - Getting started with Azure Machine Learning</h3>
+                            <p>
+                                Now it's your chance to try out Azure Machine Learning for yourself.
+                            </p>
+                            <p>
+                                In this exercise, you will:
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>
+                                        Provision an Azure Machine Learning workspace.
+                                    </li>
+                                    <li>
+                                        Create a compute instance.
+                                    </li>
+                                    <li>
+                                        Run a Python-based experiment.
+                                    </li>
+                                </ul>
+                            </p>
+                            <h4 class='encountertitles'>
+                                Instructions
+                            </h4>
+                            <p>
+                                Follow these instructions to complete the exercise.
+                            </p>
+                            <p>
+                                <ol>
+                                    <li>
+                                        Azure Machine Learning (Azure ML) is a Microsoft Azure-based service for running
+                                        data science and machine learning workloads at scale in the cloud. To use Azure
+                                        Machine Learning, you will need an Azure subscription. If you do not already
+                                        have an Azure subscription, sign up for a free trial at <a
+                                            href='https://azure.microsoft.com/'>https://azure.microsoft.com</a>.
+                                    </li>
+                                    <li>
+                                        Complete the <strong>Getting Started with Azure Machine Learning</strong> lab
+                                        from the Lab repo in GitHub at <a
+                                            href='https://aka.ms/mslearn-aml-labs'>https://aka.ms/mslearn-aml-labs</a>
+                                        (also included inline).
+                                    </li>
+                                </ol>
+                            </p>
+                            <h4 class='encountertitles'>
+                                Getting Started with Azure Machine Learning
+                            </h4>
+                            <p>
+                                In this exercise, you will create the Azure Machine Learning workspace and a compute
+                                instance, and clone the lab files to your workspace. You'll then run a simple Python
+                                experiment in your workspace.
+                            </p>
+                            <h5 class='encountertitles'>
+                                Create an Azure Machine Learning Workspace
+                            </h5>
+                            <p>
+                                As its name suggests, a workspace is a centralized place to manage all of the Azure ML
+                                assets you need to work on a machine learning project.
+                            </p>
+                            <p>
+                                <ol>
+                                    <li>
+                                        Sign into the <a href='https://portal.azure.com/'>Azure portal</a> and create a
+                                        new resource - search for "machine learning" and select <strong>Machine
+                                            Learning</strong>. Specify a unique workspace name, create a new resource
+                                        group in the region nearest to your location, and select the
+                                        <strong>Enterprise</strong> workspace edition.
+                                        <div class='alert alert-primary'>
+                                            <h5 class='alert-heading'>
+                                                Note:
+                                            </h5>
+                                            <p>
+                                                Basic edition workspaces have lower cost, but don't include capabilities
+                                                like Auto ML, the Visual Designer, and data drift monitoring. For more
+                                                details, see <a
+                                                    href='https://azure.microsoft.com/pricing/details/machine-learning/'>Azure
+                                                    Machine Learning pricing</a>.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        When the workspace and its associated resources have been created, view the
+                                        workspace in the portal. You can manage workspace assets in the Azure portal,
+                                        but for data scientists, this tool contains lots of irrelevant information and
+                                        links that relate to managing general Azure resources. An alternative, Azure
+                                        ML-specific web interface for managing workspaces is available.
+                                    </li>
+                                    <li>
+                                        In the Azure portal blade for your Azure Machine Learning workspace, click the
+                                        link to launch <strong>Azure Machine Learning studio</strong>; or alternatively,
+                                        in a new browser tab, open <a
+                                            href='https://ml.azure.com'>https://ml.azure.com</a>. If prompted, sign in
+                                        using the Microsoft account associated with your Azure subscription and select
+                                        your Azure subscription and workspace.
+                                    </li>
+                                    <li>
+                                        View the Azure Machine Learning studio interface for your workspace - you can
+                                        manage all of the assets in your workspace from here.
+                                    </li>
+                                </ol>
+                            </p>
+                            <h5 class='encountertitles'>
+                                Create a Compute Instance
+                            </h5>
+                            <p>
+                                You can perform many machine learning tasks in the <em>Studio</em> interface, but it's
+                                also
+                                important to be able to script configuration tasks and data experiments to make them
+                                easier to repeat and automate. <em>Compute Instances</em> provide a virtual machine that
+                                you can
+                                use as a hosted development workstation to do this.
+                            </p>
+                            <p>
+                                <ol>
+                                    <li>
+                                        In the Azure Machine Learning studio web interface for your workspace, view the
+                                        <strong>Compute</strong> page. This is where you'll manage all the compute
+                                        targets for your data science activities.
+                                    </li>
+                                    <li>
+                                        On the <strong>Compute Instances</strong> tab, add a new compute instance,
+                                        giving it a unique name and using the <strong>STANDARD_DS3_V2</strong> VM type
+                                        template. You'll use this VM as a development environment.
+                                    </li>
+                                    <li>
+                                        If necessary, click <strong>Refresh</strong> periodically until the compute
+                                        instance you created has started. Then click its <strong>Jupyter</strong> link
+                                        to open Jupyter Notebooks on the VM.
+                                    </li>
+                                    <li>
+                                        In the notebook environment, on the <strong>New</strong> menu, click
+                                        <strong>Terminal</strong>. This will open a new tab with a command shell.
+                                    </li>
+                                    <li>
+                                        The Azure Machine Learning SDK is already installed in the compute instance
+                                        image, but it's worth ensuring you have the latest version, with the optional
+                                        packages you'll need in this lab; so enter the following command to update the
+                                        SDK packages:
+                                        <div class='code22 my-4'>
+
+                                        </div>
+                                        <div class='alert alert-info'>
+                                            <h5 class='alert-heading'>
+                                                More Information:
+                                            </h5>
+                                            <p>
+                                                For more details about installing the Azure ML SDK and its optional
+                                                components, see the <a
+                                                    href='https://docs.microsoft.com/python/api/overview/azure/ml/install?view=azure-ml-py'>Azure
+                                                    ML SDK Documentation</a>.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        Next, run the following commands to change the current directory to the
+                                        <strong>Users</strong> directory, and retrieve the notebooks you will use in
+                                        this lab:
+                                        <div class='code23 my-4'>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        After the command has completed, close the terminal tab and view the home page
+                                        in your Jupyter notebook file explorer. Then open the <strong>Users</strong>
+                                        folder - it should contain an <strong>mslearn-aml-labs</strong> folder,
+                                        containing the files you will use in the rest of this lab.
+                                    </li>
+                                </ol>
+                            </p>
+                            <h5 class='encountertitles'>
+                                Use the Azure Machine Learning SDK in a Notebook
+                            </h5>
+                            <p>
+                                <ol>
+                                    <li>
+                                        In the <strong>Users/mslearn-aml-labs</strong> folder, open the
+                                        <strong>01-Getting_Started_with_Azure_ML.ipynb</strong> notebook. Then read the
+                                        notes in the notebook (also included inline), running each code cell in turn.
+                                    </li>
+                                    <li>
+                                        When you have finished the lab, close all Jupyter tabs and <strong>Stop</strong>
+                                        your compute instance to avoid incurring unnecessary costs.
+                                    </li>
+                                </ol>
+                            </p>
+                            <h4 class='encountertitles'>
+                                Azure Machine Learning
+                            </h4>
+                            <p>
+                                Azure Machine Learning (<em>Azure ML</em>) is a cloud-based service for creating and
+                                managing machine learning solutions. It's designed to help data scientists leverage
+                                their existing data processing and model development skills and frameworks, and help
+                                them scale their workloads to the cloud. The Azure ML SDK for Python provides classes
+                                you can use to work with Azure ML in your Azure subscription.
+                            </p>
+                            <h5 class='encountertitles'>
+                                Check the Azure ML SDK Version
+                            </h5>
+                            <p>
+                                Let's start by importing the <strong>azureml-core</strong> package and checking the
+                                version of the SDK that is installed.
+                            </p>
+                            <div class='code24 my-4'>
+
+                            </div>
+                            <h5 class='encountertitles'>
+                                Connect to Your Workspace
+                            </h5>
+                            <p>
+                                All experiments and associated resources are managed within you Azure ML workspace. You
+                                can connect to an existing workspace, or create a new one using the Azure ML SDK.
+                            </p>
+                            <p>
+                                In most cases, you should store the workspace configuration in a JSON configuration
+                                file. This makes it easier to reconnect without needing to remember details like your
+                                Azure subscription ID. You can download the JSON configuration file from the blade for
+                                your workspace in the Azure portal, but if you're using a Compute Instance within your
+                                workspace, the configuration file has alreday been downloaded to the root folder.
+                            </p>
+                            <p>
+                                The code below uses the configuration file to connect to your workspace. The first time
+                                you run it in a notebook session, you'll be prompted to sign into Azure by clicking the
+                                <a href='https://microsoft.com/devicelogin'>https://microsoft.com/devicelogin</a> link,
+                                entering an automatically generated code, and signing into Azure. After you have
+                                successfully signed in, you can close the browser tab that was opened and return to this
+                                notebook.
+                            </p>
+                            <div class='code25 my-4'>
+
+                            </div>
+                            <h5 class='encountertitles'>
+                                Run an Experiment
+                            </h5>
+                            <p>
+                                One of the most fundamentals tasks that data scientists need to perform is to create and
+                                run experiments that process and analyze data. In this exercise, you'll learn how to use
+                                an Azure ML <em>experiment</em> to run Python code and record values extracted from
+                                data. In this
+                                case, you'll use a simple dataset that contains details of patients that have been
+                                tested for diabetes. You'll run an experiment to explore the data, extracting
+                                statistics, visualizations, and data samples. Most of the code you'll use is fairly
+                                generic Python, such as you might run in any data exploration process. However, with the
+                                addition of a few lines, the code uses an Azure ML <em>experiment</em> to log details of
+                                the run.
+                            </p>
+                            <div class='code26 my-4'>
+
+                            </div>
+                            <h5 class='encountertitles'>
+                                View Experiment Results
+                            </h5>
+                            <p>
+                                After the experiment has been finished, you can use the <strong>run</strong> object to
+                                get information about the run and its outputs:
+                            </p>
+                            <div class='code27 my-4'>
+
+                            </div>
+                            <p>
+                                In Jupyter Notebooks, you can use the <strong>RunDetails</strong> widget to get a better
+                                visualization of the run details, while the experiment is running or after it has
+                                finished.
+                            </p>
+                            <div class='code28 my-4'>
+
+                            </div>
+                            <p>
+                                Note that the <strong>RunDetails</strong> widget includes a link to view the run in
+                                Azure Machine Learning studio. Click this to open a new browser tab with the run details
+                                (you can also just open <a href='https://ml.azure.com/'>Azure Machine Learning
+                                    studio</a> and find the run on the <strong>Experiments</strong> page). When viewing
+                                the run in Azure Machine Learning studio, note the following:
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>
+                                        The <strong>Properties</strong> tab contains the general properties of the
+                                        experiment run.
+                                    </li>
+                                    <li>
+                                        The <strong>Metrics</strong> tab enables you to select logged metrics and view
+                                        them as tables or charts.
+                                    </li>
+                                    <li>
+                                        The <strong>Images</strong> tab enables you to select and view any images or
+                                        plots that were logged in the experiment (in this case, the <em>Label
+                                            Distribution</em> plot)
+                                    </li>
+                                    <li>
+                                        The <strong>Child Runs</strong> tab lists any child runs (in this experiment
+                                        there are none).
+                                    </li>
+                                    <li>
+                                        The <strong>Outputs</strong> tab shows the output files generated by the
+                                        experiment.
+                                    </li>
+                                    <li>
+                                        The <strong>Logs</strong> tab shows any logs that were generated by the compute
+                                        context for the experiment (in this case, the experiment was run inline so there
+                                        are no logs).
+                                    </li>
+                                    <li>
+                                        The <strong>Snapshots</strong> tab contains all files in the folder where the
+                                        experiment code was run (in this case, everything in the same folder as this
+                                        notebook).
+                                    </li>
+                                    <li>
+                                        The <strong>Raw JSON</strong> tab shows a JSON representation of the experiment
+                                        details.
+                                    </li>
+                                    <li>
+                                        The <strong>Explanations</strong> tab is used to show model explanations
+                                        generated by the experiment (in this case, there are none).
+                                    </li>
+                                </ul>
+                            </p>
+                            <h5 class='encountertitles'>
+                                Run an Experiment Script
+                            </h5>
+                            <p>
+                                In the previous example, you ran an experiment inline in this notebook. A more flexible
+                                solution is to create a separate script for the experiment, and store it in a folder
+                                along with any other files it needs, and then use Azure ML to run the experiment based
+                                on the script in the folder.
+                            </p>
+                            <p>
+                                First, let's create a folder for the experiment files, and copy the data into it:
+                            </p>
+                            <div class='code29 my-4'>
+
+                            </div>
+                            <p>
+                                Now we'll create a Python script containing the code for our experiment, and save it in
+                                the experiment folder.
+                            </p>
+                            <div class='alert alert-primary'>
+                                <h5 class='alert-heading'>
+                                    Note:
+                                </h5>
+                                <p>
+                                    Running the following cell just <em>creates</em> the script file - it doesn't run
+                                    it!
+                                </p>
+                            </div>
+                            <div class='code30 my-4'>
+
+                            </div>
+                            <p>
+                                This code is a simplified version of the inline code used before. However, note the
+                                following:
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>
+                                        It uses the <code>Run.get_context()</code> method to retrieve the experiment run
+                                        context when the script is run.
+                                    </li>
+                                    <li>
+                                        It loads the diabetes data from the folder where the script is located.
+                                    </li>
+                                    <li>
+                                        It creates a folder named <strong>outputs</strong> and writes the sample file to
+                                        it - this folder is automatically uploaded to the experiment run
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Now you're almost ready to run the experiment. There are just a few configuration issues
+                                you need to deal with:
+                            </p>
+                            <p>
+                                <ol>
+                                    <li>
+                                        Create a <em>Run Configuration</em> that defines the Python code execution
+                                        environment
+                                        for the script - in this case, it will automatically create a Conda environment
+                                        with some default Python packages installed.
+                                    </li>
+                                    <li>
+                                        Create a <em>Script Configuration</em> that identifies the Python script file to
+                                        be run in the experiment, and the environment in which to run it.
+                                    </li>
+                                </ol>
+                            </p>
+                            <p>
+                                The following cell sets up these configuration objects, and then submits the experiment.
+                                <div class='alert alert-primary'>
+                                    <h5 class='alert-heading'>
+                                        Note:
+                                    </h5>
+                                    <p>
+                                        This will take a little longer to run the first time, as the conda environment
+                                        must be created.
+                                    </p>
+                                </div>
+                            </p>
+                            <div class='code31 my-4'>
+
+                            </div>
+                            <p>
+                                As before, you can use the widget or the link to the experiment in <a
+                                    href='https://ml.azure.com/'>Azure Machine Learning studio</a> to view the outputs
+                                generated by the experiment, and you can also write code to retrieve the metrics and
+                                files it generated:
+                            </p>
+                            <div class='code32 my-4'>
+
+                            </div>
+                            <h5 class='encountertitles'>
+                                View Experiment Run History
+                            </h5>
+                            <p>
+                                Now that you've run the same experiment multiple times, you can view the history in <a
+                                    href='https://ml.azure.com/'>Azure Machine Learning studio</a> and explore each
+                                logged run. Or you can retrieve an experiment by name from the workspace and iterate
+                                through its runs using the SDK:
+                            </p>
+                            <div class='code33 my-4'>
+
+                            </div>
+                            <p>
+                                Now you've seen how to use the Azure ML SDK to view the resources in your workspace and
+                                run experiments.
+                            </p>
+                            <h6 class='encountertitles'>
+                                Learn More
+                            </h6>
+                            <p>
+                                <ul>
+                                    <li>
+                                        For more details about the SDK, see the <a
+                                            href='https://docs.microsoft.com/python/api/overview/azure/ml/intro?view=azure-ml-py'>Azure
+                                            ML SDK documentation</a>
+                                    </li>
+                                    <li>
+                                        To find out more about running experiments, see <a
+                                            href='https://docs.microsoft.com/azure/machine-learning/how-to-manage-runs'>Start,
+                                            monitor, and cancel training runs in Python</a> in the Azure ML
+                                        documentation.
+                                    </li>
+                                    <li>
+                                        For details of how to log metrics in a run, see <a
+                                            href='https://docs.microsoft.com/azure/machine-learning/how-to-track-experiments'>Monitor
+                                            Azure ML experiment runs and metrics</a>
+                                    </li>
+                                </ul>
+                            </p>
+                            <h5 class='encountertitles'>
+                                Clean Up
+                            </h5>
+                            <p>
+                                On the <strong>File</strong> menu, click <strong>Close and Halt</strong> o close this
+                                notebook. Then close all Jupyter tabs in your browser and <strong>stop</strong> your
+                                compute instance to minimize costs.
+                            </p>
+                        </div>
+                        <div class='col code-11' style='height: 505px;'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+</body>
+
+
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+        <div class='row'>
+            <p class="col text-light font-weight-bold">Contact them</p>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'>Your Profile</p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+<script src='../../unit_to_home.js'></script>
+<script src='./unit.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
