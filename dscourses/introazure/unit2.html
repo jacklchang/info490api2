@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../codemirror-5.53.2/lib/codemirror.css">
     <script src='../../codemirror-5.53.2/lib/codemirror.js'></script>
     <script src="../../codemirror-5.53.2/mode/python/python.js"></script>
+    <script src="../../codemirror-5.53.2/mode/powershell/powershell.js"></script>
     <link rel='stylesheet' href='../../codemirror-5.53.2/theme/pastel-on-dark.css'>
 </head>
 
@@ -69,7 +70,7 @@
                             </div>
                             <p class="card-text mb-2">12% complete</p>
                         </li>
-                        <li class="dropdown-item" id='settings'><a href='../settings.html'><small>View
+                        <li class="dropdown-item" id='settings'><a href='../../settings.html'><small>View
                                     Profile</small></a></li>
                         <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
                     </ul>
@@ -209,7 +210,7 @@
                     <a href="./unit6.html">Summary</a>
                 </div>
                 <hr style='border-color: white;'>
-                <a href="#next" id="next" class='btn btn-success text-center mt-4'>Next <i
+                <a href="./unit3.html" id="next" class='btn btn-success text-center mt-4'>Next <i
                         class="fas fa-angle-right"></i></a>
             </div>
             <div class="col-8 col-lg-9 p-0">
@@ -330,15 +331,84 @@
                                 <li>
                                     Use the Azure Machine Learning Python SDK to run code that creates a workspace. For
                                     example:
-                                    <div class='code mt-4'>
+                                    <div class='code my-4'>
 
                                     </div>
                                 </li>
                                 <li>
+                                    Use the Azure Command Line Interface (CLI) with the Azure Machine Learning CLI
+                                    extension. For example, you could use the following command (which assumes a
+                                    resource group named aml-resources has already been created):
+                                    <div class='code1 my-4'>
 
+                                    </div>
+                                </li>
+                                <li>
+                                    Create an Azure Resource Manager template. For more information the template format
+                                    for an Azure Machine Learning workspace, see the <a
+                                        href='https://aka.ms/AA70rq4'>Azure Machine Learning documentation</a>
                                 </li>
                             </ul>
                         </p>
+                        <h4 class='encountertitles'>
+                            Considerations for Creating a Workspace
+                        </h4>
+                        <p>
+                            When planning to create an Azure Machine Learning workspace, there are some options you
+                            should consider.
+                        </p>
+                        <h5 class='encountertitles'>
+                            Region
+                        </h5>
+                        <p>
+                            Your workspace will be created in an Azure region, which determines the data center in which
+                            the workspace resources will be hosted. You should ensure that the region where you create
+                            the workspace will support the resources you will need.
+                        </p>
+                        <p>
+                            For example, you might need to create virtual machines in your workspace to support notebook
+                            development or model training. If you intend to leverage graphical processing unit (GPU)
+                            processing, which are commonly used to perform training of deep neural network (DNN) models,
+                            then you should ensure that the region where your workspace is hosted supports the
+                            appropriate series of virtual machines (for example, NC-series virtual machines support
+                            vGPUs, but are not available in all regions).
+                        </p>
+                        <div class='alert alert-success my-4'>
+                            <h5 class='alert-heading'>
+                                Tip
+                            </h5>
+                            <p>
+                                You can check for specific resource availability by region in the <a
+                                    href='https://aka.ms/AA70zfd'>Azure Global Infrastructure products available by
+                                    region page</a>
+                            </p>
+                        </div>
+                        <h5 class='encountertitles'>
+                            Edition
+                        </h5>
+                        <p>
+                            Azure Machine Learning workspaces are available in two editions:
+                        </p>
+                        <p>
+                            <ul>
+                                <li>
+                                    <em>Enterprise</em> - includes all features.
+                                </li>
+                                <li>
+                                    <em>Basic</em> - includes core features, but does not include Designer or graphical
+                                    tools for
+                                    automated machine learning or data drift monitoring.
+                                </li>
+                            </ul>
+                        </p>
+                        <div class='alert alert-success my-4'>
+                            <h5 class='alert-heading'>
+                                Tip
+                            </h5>
+                            <p>
+                                You can upgrade from <em>Basic</em> to <em>Enterprise</em> edition at any time.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Azure Machine Learning tools and interfaces</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../../home.css'>
+    <link rel='stylesheet' href='../../catalog.css'>
+    <link rel='stylesheet' href='./unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../codemirror-5.53.2/lib/codemirror.css">
+    <script src='../../codemirror-5.53.2/lib/codemirror.js'></script>
+    <script src="../../codemirror-5.53.2/mode/python/python.js"></script>
+    <script src="../../codemirror-5.53.2/mode/powershell/powershell.js"></script>
+    <script src="../../codemirror-5.53.2/mode/javascript/javascript.js"></script>
+    <link rel='stylesheet' href='../../codemirror-5.53.2/theme/pastel-on-dark.css'>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid pb-5">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='../../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item" id='settings'><a href='../../settings.html'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class='container main-content pt-5 mt-4 px-5'>
+        <div class='row row-outer justify-content-around mx-auto' style='height: 80%!important'>
+            <div class="col-3 col-lg-2 p-0 pt-2" style='height: 100%!important' id='side-nav'>
+                <div class="sidebar" style='height: 92%!important'>
+                    <a href="../introazure.html">Home</a>
+                    <a href="./unit1.html">Introduction</a>
+                    <a href="./unit2.html">Azure Machine Learning workspace</a>
+                    <a class="active" href="./unit3.html">Azure Machine Learning tools and interfaces</a>
+                    <a href="./unit4.html">Azure Machine Learning experiments</a>
+                    <a href="./unit5.html">Exercise - Getting started with Azure Machine Learning</a>
+                    <a href="./unit6.html">Summary</a>
+                </div>
+                <hr style='border-color: white;'>
+                <a href="./unit3.html" id="next" class='btn btn-success text-center mt-4'>Next <i
+                        class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="col-8 col-lg-9 p-0">
+                <h3 class="text-light pt-3 pl-3">Introduction to Azure Machine Learning</h3>
+
+                <div class="row justify-content-between" style='width: 100%;'>
+                    <div class="col-7">
+                        <p class="text-light">Data Science Course</p>
+                    </div>
+                    <div class="col-4 text-right">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="text-light text-muted">4.6</span>
+                    </div>
+                </div>
+                <div class='bg-dark p-3'>
+                    <div class='row justify-content-between'
+                        style='height: 95%; max-height: 300px; overflow: scroll;'>
+                        <div class='col text-light px-0'>
+                            <h3 id='overview'>Azure Machine Learning tools and interfaces</h3>
+                            <p>
+                                Azure Machine Learning provides a cloud-based service that offers flexibility in how you
+                                use
+                                it. There are user interfaces specifically designed for Azure Machine Learning, or you
+                                can
+                                use a programmatic interface to manage workspace resources and run machine learning
+                                operations.
+                            </p>
+                            <h4 class='encountertitles'>
+                                Azure Machine Learning studio
+                            </h4>
+                            <p>
+                                You can manage the assets in your Azure Machine Learning workspace in the Azure portal,
+                                but
+                                as this is a general interface for managing all kinds of resources in Azure, data
+                                scientists
+                                and other users involved in machine learning operations may prefer to use a more
+                                focused,
+                                dedicated interface.
+                            </p>
+                            <img
+                                src='https://docs.microsoft.com/en-us/learn/data-ai-cert/intro-to-azure-machine-learning-service/media/01-03-aml-studio.jpg'>
+                            <p class='mt-4'>
+                                Azure Machine Learning studio is a web-based tool for managing an Azure Machine Learning
+                                workspace. It enables you to create, manage, and view all of the assets in your
+                                workspace
+                                and provides the following graphical tools:
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>
+                                        <em>Designer:</em> A drag and drop interface for "no code" machine learning
+                                        model
+                                        development.
+                                    </li>
+                                    <li>
+                                        <em>Automated Machine Learning</em>: A wizard interface that enables you to
+                                        train a
+                                        model
+                                        using a combination of algorithms and data preprocessing techniques to find the
+                                        best
+                                        model for your data.
+                                    </li>
+                                </ul>
+                            </p>
+                            <div class='alert alert-primary my-4'>
+                                <h5 class='alert-heading'>
+                                    Note
+                                </h5>
+                                <p>
+                                    A previously released tool named Azure Machine Learning Studio provided a free
+                                    service
+                                    for drag and drop machine learning model development. The studio interface for the
+                                    Azure
+                                    Machine Learning service includes this capability in the <em>Designer</em> tool, as
+                                    well
+                                    as other
+                                    workspace asset management capabilities.
+                                </p>
+                            </div>
+                            <p>
+                                To use Azure Machine Learning studio, use a a web browser to navigate to
+                                <a href='https://ml.azure.com'>https://ml.azure.com</a> and sign in using credentials
+                                associated with your Azure subscription.
+                                You can then select the subscription and workspace you want to manage.
+                            </p>
+                            <h4 class='encountertitles'>
+                                The Azure Machine Learning SDK
+                            </h4>
+                            <p>
+                                While graphical interfaces like Azure Machine Learning studio make it easy to create and
+                                manage machine learning assets, it is often advantageous to use a code-based approach to
+                                managing resources. By writing scripts to create and manage resources, you can:
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>
+                                        Run machine learning operations from your preferred development environment.
+                                    </li>
+                                    <li>
+                                        Automate asset creation and configuration to make it repeatable.
+                                    </li>
+                                    <li>
+                                        Ensure consistency for resources that must be replicated in multiple
+                                        environments
+                                        (for example, development, test, and production)
+                                    </li>
+                                    <li>
+                                        Incorporate machine learning asset configuration into developer operations
+                                        (DevOps)
+                                        workflows, such as continuous integration / continuous deployment (CI/CD)
+                                        pipelines.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Azure Machine Learning provides software development kits (SDKs) for Python and R, which
+                                you
+                                can use to create, manage, and use assets in an Azure Machine Learning workspace.
+                            </p>
+                            <div class='alert alert-primary my-4'>
+                                <h5 class='alert-heading'>
+                                    Note
+                                </h5>
+                                <p>
+                                    This course focuses on the Python SDK because it has broader capabilities than the R
+                                    SDK, which is in preview at the time of writing.
+                                </p>
+                            </div>
+                            <h5 class='encountertitles'>
+                                Installing the Azure Machine Learning SDK for Python
+                            </h5>
+                            <p>
+                                You can install the Azure Machine Learning SDK for Python by using the <code>pip</code>
+                                package
+                                management utility, as shown in the following code sample:
+                            </p>
+                            <div class='code2 my-4'>
+
+                            </div>
+                            <p>
+                                The SDK includes optional extras that aren't required for core operations, but can be
+                                useful
+                                in some scenarios. For example, the **notebooks extra include widgets for displaying
+                                detailed output in Jupyter Notebooks, the automl extra includes packages for automated
+                                machine learning training, and the explain extra includes packages for generating model
+                                explanations. To install extras, specify them in brackets as shown here:
+                            </p>
+                            <div class='code3 my-4'>
+
+                            </div>
+                            <p>
+                                <strong>More Information</strong>: For more information about installing the Azure
+                                Machine
+                                Learning SDK for Python, see the <a href='https://aka.ms/AA70rq7'>SDK documentation</a>.
+                                Also, you should be aware that the SDK is updated on a regular basis, and review the <a
+                                    href='https://aka.ms/AA70zel'>release notes for the latest release</a>.
+                            </p>
+                            <h5 class='encountertitles'>
+                                Connecting to a Workspace
+                            </h5>
+                            <p>
+                                After installing the SDK package in your Python environment, you can write code to
+                                connect
+                                to your workspace and perform machine learning operations. The easiest way to connect to
+                                a
+                                workspace is to use a workspace configuration file, which includes the Azure
+                                subscription,
+                                resource group, and workspace details as shown here:
+                            </p>
+                            <div class='code4 my-4'>
+
+                            </div>
+                            <div class='alert alert-success my-4'>
+                                <h5 class='alert-heading'>
+                                    Tip
+                                </h5>
+                                <p>
+                                    You can download a configuration file for a workspace from the
+                                    <strong>Overview</strong>
+                                    page of its
+                                    blade in the Azure portal.
+                                </p>
+                            </div>
+                            <p>
+                                To connect to the workspace using the configuration file, you can use the
+                                <strong>from_config</strong> method of the <strong>Workspace</strong> class in the SDK,
+                                as
+                                shown here:
+                            </p>
+                            <div class='code5 my-4'>
+
+                            </div>
+                            <p>
+                                By default, the <strong>from_config</strong> method looks for a file named
+                                <strong>config.json</strong> in the folder
+                                containing the Python code file, but you can specify another path if necessary.
+                            </p>
+                            <p>
+                                As an alternative to using a configuration file, you can use the get method of the
+                                Workspace
+                                class with explicitly specified subscription, resource group, and workspace details as
+                                shown
+                                here - though the configuration file technique is generally preferred due to its greater
+                                flexibility when using multiple scripts:
+                            </p>
+                            <div class='code6 my-4'>
+
+                            </div>
+                            <p>
+                                Whichever technique you use, if there is no current active session with your Azure
+                                subscription, you will be prompted to authenticate.
+                            </p>
+                            <h5 class='encountertitles'>
+                                Working with the Workspace Class
+                            </h5>
+                            <p>
+                                The <strong>Workspace</strong> class is the starting point for most code operations. For
+                                example, you can use its <strong>compute_targets</strong> attribute to retrieve a
+                                dictionary
+                                object containing the compute targets defined in the workspace, like this:
+                            </p>
+                            <div class='code7 my-4'>
+
+                            </div>
+                            <p>
+                                The SDK contains a rich library of classes that you can use to create, manage, and use
+                                many
+                                kinds of asset in an Azure Machine Learning workspace.
+                            </p>
+                            <p>
+                                <strong>More Information</strong>: For more information about the Azure Machine Learning
+                                SDK, see the <a href='https://aka.ms/AA70zeq'>SDK documentation</a>.
+                            </p>
+                            <h4 class='encountertitles'>
+                                The Azure Machine Learning CLI Extension
+                            </h4>
+                            <p>
+                                The Azure command-line interface (CLI) is a cross-platform command-line tool for
+                                managing
+                                Azure resources. The Azure Machine Learning CLI extension is an additional package that
+                                provides commands for working with Azure Machine Learning.
+                            </p>
+                            <p>
+                                To install the Azure Machine Learning CLI extension, you must first install the Azure
+                                CLI.
+                                See the <a href='https://aka.ms/AA70zet'>full installation instructions for all
+                                    supported
+                                    platforms</a> for more details.
+                            </p>
+                            <p>
+                                After installing the Azure CLI, you can add the Azure Machine Learning CLI extension by
+                                running the following command:
+                            </p>
+                            <div class='code8 my-4'>
+
+                            </div>
+                            <p>
+                                To use the Azure Machine Learning CLI extension, run the <code>az ml</code> command with
+                                the
+                                appropriate parameters for the action you want to perform. For example, to list the
+                                compute
+                                targets in a workspace, run the following command:
+                            </p>
+                            <div class='code9 my-4'>
+
+                            </div>
+                            <div class='alert alert-primary my-4'>
+                                <h5 class='alert-heading'>
+                                    Note
+                                </h5>
+                                <p>
+                                    In the code sample above, the <strong>-g</strong> parameter specifies the name of
+                                    the
+                                    resource group in which the Azure Machine Learning workspace specified in the
+                                    <strong>-w</strong> parameter is defined. These parameters are shortened aliases for
+                                    <strong>--resource-group</strong> and <strong>--workspace-name</strong>.
+
+                                    <strong>More Information</strong>: For more information about the Azure Machine
+                                    Learning
+                                    CLI Extension, see the <a href='https://aka.ms/AA70zeu'>documentation</a>.
+                                </p>
+                            </div>
+                            <h4 class='encountertitles'>
+                                Compute Instances
+                            </h4>
+                            <p>
+                                Azure Machine Learning includes the ability to create <em>Compute Instances</em> in a
+                                workspace to provide a development environment that is managed with all of the other
+                                assets
+                                in the workspace.
+                            </p>
+                            <img
+                                src='https://docs.microsoft.com/en-us/learn/data-ai-cert/intro-to-azure-machine-learning-service/media/01-05-notebook-vm.jpg'>
+                            <p class='mt-4'>
+                                Compute Instances include Jupyter Notebook and JupyterLab installations that you can use
+                                to
+                                write and run code that uses the Azure Machine Learning SDK to work with assets in your
+                                workspace.
+                            </p>
+                            <p>
+                                You can choose a VM image that provides the compute specification you need, from small
+                                CPU-only VMs to large GPU-enabled workstations. Because the VMs are hosted in Azure, you
+                                only pay for the compute resources when they are running; so you can create a VM to suit
+                                your needs, and stop it when your workload has completed to minimize costs.
+                            </p>
+                            <p>
+                                You can store notebooks independently in workspace storage, and open them in any VM.
+                            </p>
+                            <h4 class='encountertitles'>
+                                Visual Studio Code
+                            </h4>
+                            <p>
+                                Visual Studio Code (VS Code) is a lightweight code editing environment for Microsoft
+                                Windows, Apple macOS, and Linux. It provides a visual interface for many kinds of code,
+                                including Microsoft C#, Javascript, Python and others; as well as intellisense and
+                                syntax
+                                formatting for common data formats such as JSON and XML.
+                            </p>
+                            <p>
+                                VS Code's flexibility is based on the ability to install modular <em>extensions</em>
+                                that
+                                add syntax checking, debugging, and visual management interfaces for specific workloads.
+                                For
+                                example, the Microsoft Python extension for VS Code adds support for writing and running
+                                Python code in scripts or notebooks within the VS Code interface.
+                            </p>
+                            <img
+                                src='https://docs.microsoft.com/en-us/learn/data-ai-cert/intro-to-azure-machine-learning-service/media/01-04-vscode.jpg'>
+                            <p class='mt-4'>
+                                The Azure Machine Learning Extension for VS Code provides a graphical interface for
+                                working
+                                with assets in an Azure Machine Learning workspace. You can combine the capabilities of
+                                the
+                                Azure Machine Learning and Python extensions to manage a complete end-to-end machine
+                                learning workload in Azure Machine Learning from the VS Code environment.
+                            </p>
+                            <p><em>More Information</em>: For more information about using the Azure Machine Learning
+                                extension for VS Code, see the <a
+                                    href='https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-setup-vscode-extension'>documentation</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class='code-10 mt-4' style='height: 75px;'>
+
+                    </div>
+                    <div class='code-11 mt-3' style='height: 75px;'>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+</body>
+
+
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+        <div class='row'>
+            <p class="col text-light font-weight-bold">Contact them</p>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'>Your Profile</p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+<script src='../../unit_to_home.js'></script>
+<script src='./unit.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
