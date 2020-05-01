@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Introduction</title>
+    <title>Azure Machine Learning workspaces</title>
     <meta name="author" content="A-PI CapstoneAD2020">
     <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
     <meta name="keywords"
@@ -201,8 +201,8 @@
             <div class="col-3 col-lg-2 p-0 pt-2" style='height: 100%!important'>
                 <div class="sidebar" style='height: 92%!important'>
                     <a href="../introazure.html">Home</a>
-                    <a class="active" href="./unit1.html">Introduction</a>
-                    <a href="./unit2.html">Azure Machine Learning workspace</a>
+                    <a href="./unit1.html">Introduction</a>
+                    <a class="active" href="./unit2.html">Azure Machine Learning workspace</a>
                     <a href="./unit3.html">Azure Machine Learning tools and interfaces</a>
                     <a href="./unit4.html">Azure Machine Learning experiments</a>
                     <a href="./unit5.html">Exercise - Getting started with Azure Machine Learning</a>
@@ -229,57 +229,109 @@
                 </div>
                 <div class='row bg-dark py-4' style='height: 95%; max-height: 505px; overflow: scroll;'>
                     <div class='col text-light px-4' id='#'>
-                        <h3 id='overview'>Introduction</h3>
+                        <h3 id='overview'>Azure Machine Learning workspaces</h3>
                         <p>
-                            Azure Machine Learning is a platform for operating machine learning workloads in the cloud.
+                            A workspace is a context for the experiments, data, compute targets, and other assets
+                            associated with a machine learning workload.
                         </p>
-                        <img
-                            src='https://docs.microsoft.com/en-us/learn/data-ai-cert/intro-to-azure-machine-learning-service/media/01-01-what-is-azure-ml.jpg'>
-                        <p class='mt-4'>
-                            Built on the Microsoft Azure cloud platform, Azure Machine Learning enables you
-                            to manage:
+                        <h4 class='encountertitles'>
+                            Workspaces for Machine Learning Assets
+                        </h4>
+                        <p>
+                            A workspace defines the boundary for a set of related machine learning assets. You can use
+                            workspaces to group machine learning assets based on projects, deployment environments (for
+                            example, test and production), teams, or some other organizing principle. The assets in a
+                            workspace include:
                         </p>
                         <p>
                             <ul>
                                 <li>
-                                    Scalable on-demand compute for machine learning workloads.
+                                    Compute targets for development, training, and deployment.
                                 </li>
                                 <li>
-                                    Data storage and connectivity to ingest data from a wide range sources.
+                                    Data for experimentation and model training.
                                 </li>
                                 <li>
-                                    Machine learning workflow orchestration to automate model training, deployment, and
-                                    management processes.
+                                    Notebooks containing shared code and documentation.
                                 </li>
                                 <li>
-                                    Model registration and management, so you can track multiple versions of models and
-                                    the
-                                    data on which they were trained.
+                                    Experiments, including run history with logged metrics and outputs.
                                 </li>
                                 <li>
-                                    Metrics and monitoring for training experiments, datasets, and published services.
+                                    Pipelines that define orchestrated multi-step processes.
                                 </li>
                                 <li>
-                                    Model deployment for real-time and batch inferencing.
+                                    Models that you have trained.
                                 </li>
                             </ul>
                         </p>
                         <h4 class='encountertitles'>
-                            Learning objectives
+                            Workspaces as Azure Resources
                         </h4>
                         <p>
-                            In this module, you will learn how to:
+                            Workspaces are Azure resources, and as such they are defined within a resource group in an
+                            Azure subscription, along with other related Azure resources that are required to support
+                            the workspace.
+                        </p>
+                        <img
+                            src='https://docs.microsoft.com/en-us/learn/data-ai-cert/intro-to-azure-machine-learning-service/media/01-02-workspace.jpg'>
+                        <p class='mt-4'>
+                            The Azure resources created alongside a workspace include:
                         </p>
                         <p>
                             <ul>
                                 <li>
-                                    Provision an Azure Machine Learning workspace.
+                                    A storage account - used to store files used by the workspace as well as data for
+                                    experiments and model training.
                                 </li>
                                 <li>
-                                    Use tools and interfaces to work with Azure Machine Learning.
+                                    An Application Insights instance, used to monitor predictive services in the
+                                    workspace.
                                 </li>
                                 <li>
-                                    Run code-based experiments in an Azure Machine Learning workspace.
+                                    An Azure Key Vault instance, used to manage secrets such as authentication keys and
+                                    credentials used by the workspace.
+                                </li>
+                                <li>
+                                    Virtual Machines, and their associated virtual hardware resources, used to provide
+                                    compute for notebook development in the workspace.
+                                </li>
+                                <li>
+                                    A container registry, used to manage containers for deployed models.
+                                </li>
+                            </ul>
+                        </p>
+                        <h5 class='encountertitles'>
+                            Role-Based Access Control
+                        </h5>
+                        <p>
+                            You can assign role-based authorization policies to a workspace, enabling you to manage
+                            permissions that restrict what actions specific Azure Active Directory (AAD) principals can
+                            perform. For example, you could create a policy that allows only users in the <strong>IT
+                                Operations</strong>
+                            group to create compute targets and datastores, while allowing users in the <strong>Data
+                                Scientists</strong>
+                            group to create and run experiments and register models.
+                        </p>
+                        <h4 class='encountertitles'>
+                            Creating a Workspace
+                        </h4>
+                        <p>
+                            You can create a workspace in any of the following ways:
+                        </p>
+                        <p>
+                            <ul>
+                                <li>
+                                    In the Microsoft Azure portal, create a new <strong>Machine Learning</strong>
+                                    resource, specifying the subscription, resource group, workspace name, and workspace
+                                    edition.
+                                </li>
+                                <li>
+                                    Use the Azure Machine Learning Python SDK to run code that creates a workspace. For
+                                    example:
+                                    <div class='code mt-4'>
+
+                                    </div>
                                 </li>
                             </ul>
                         </p>

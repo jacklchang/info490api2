@@ -1,40 +1,133 @@
 .catalog {
-    background: #0D6C94;
-    mix-blend-mode: normal;
-    border-radius: 20px;
-    margin-bottom: 2rem;
+  background: #0d6c94;
+  mix-blend-mode: normal;
+  border-radius: 20px;
+  margin-bottom: 2rem;
 }
 
-#overview {
-    color: #71C2CC;
-}
-
-#host {
-    color: #71C2CC;
-}
-
-#provide {
-    color: #71C2CC;
-}
-
+#overview,
+#host,
+#provide,
 #create {
-    color: #71C2CC;
+  color: #71c2cc;
 }
 
 #navigation {
-    background: linear-gradient(92.08deg, #04293D 0.88%, #467886 118.8%) !important;;
+  background: linear-gradient(
+    92.08deg,
+    #04293d 0.88%,
+    #467886 118.8%
+  ) !important;
 }
 
 .CodeMirror {
-    height: inherit!important;
+  height: inherit !important;
 }
 
-.dropdown {
-    padding-top: 0;
-    padding-right: 0;
-    margin-right: 0;
+.code {
+  background-color: white;
 }
 
-.nav-link {
+.main-content {
+  background-color: #262626;
+  height: 725px;
+  overflow: scroll;
+}
+
+.fa-star {
+  color: white;
+  opacity: 0.2;
+}
+
+.checked {
+  color: orange;
+  opacity: 1;
+}
+
+#next {
+  width: 100%;
+}
+
+.container,
+.row {
+  max-width: 100% !important;
+  padding: 0;
+  margin: 0;
+}
+
+.row-outer {
+  max-width: 90% !important;
+}
+
+/* Useful for debugging */
+/* .row, .col-8, .col-3, .container {
     border: 1px solid white;
+  } */
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+  /* background-color: black; */
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a,
+#next {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #71c2cc;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+img {
+    max-width: 95%;
 }
