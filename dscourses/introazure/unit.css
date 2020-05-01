@@ -131,3 +131,17 @@ div.content {
 img {
     max-width: 85%;
 }
+
+code {
+  color: white;
+  background-color: #262626;
+  padding: 2px;
+}
+
+p a {
+  color: #0d6c94;
+}
+
+p a:hover {
+  color: #0d6c94;
+}
