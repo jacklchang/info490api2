@@ -5,7 +5,10 @@
   margin-bottom: 2rem;
 }
 
-#overview, #host, #provide, #create {
+#overview,
+#host,
+#provide,
+#create, h4, h5 {
   color: #71c2cc;
 }
 
@@ -58,8 +61,8 @@
 
 /* Useful for debugging */
 /* .row, .col-8, .col-3, .container {
-  border: 1px solid white;
-} */
+    border: 1px solid white;
+  } */
 
 /* The side navigation menu */
 .sidebar {
@@ -123,4 +126,8 @@ div.content {
     text-align: center;
     float: none;
   }
+}
+
+img {
+    max-width: 85%;
 }
