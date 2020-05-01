@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Azure Machine Learning experiments</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../../home.css'>
+    <link rel='stylesheet' href='../../catalog.css'>
+    <link rel='stylesheet' href='./unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../codemirror-5.53.2/lib/codemirror.css">
+    <script src='../../codemirror-5.53.2/lib/codemirror.js'></script>
+    <script src="../../codemirror-5.53.2/mode/python/python.js"></script>
+    <script src="../../codemirror-5.53.2/mode/powershell/powershell.js"></script>
+    <script src="../../codemirror-5.53.2/mode/javascript/javascript.js"></script>
+    <link rel='stylesheet' href='../../codemirror-5.53.2/theme/pastel-on-dark.css'>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid pb-5">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='../../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item" id='settings'><a href='../../settings.html'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class='container main-content pt-5 mt-4 px-5'>
+        <div class='row row-outer justify-content-around mx-auto' style='height: 80%!important'>
+            <div class="col-3 col-lg-2 p-0 pt-2" style='height: 100%!important' id='side-nav'>
+                <div class="sidebar" style='height: 92%!important'>
+                    <a href="../introazure.html">Home</a>
+                    <a href="./unit1.html">Introduction</a>
+                    <a href="./unit2.html">Azure Machine Learning workspace</a>
+                    <a href="./unit3.html">Azure Machine Learning tools and interfaces</a>
+                    <a class="active" href="./unit4.html">Azure Machine Learning experiments</a>
+                    <a href="./unit5.html">Exercise - Getting started with Azure Machine Learning</a>
+                    <a href="./unit6.html">Summary</a>
+                </div>
+                <hr style='border-color: white;'>
+                <a href="./unit5.html" id="next" class='btn btn-success text-center mt-4'>Next <i
+                        class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="col-8 col-lg-9 p-0">
+                <h3 class="text-light pt-3 pl-3">Introduction to Azure Machine Learning</h3>
+
+                <div class="row justify-content-between" style='width: 100%;'>
+                    <div class="col-7">
+                        <p class="text-light">Data Science Course</p>
+                    </div>
+                    <div class="col-4 text-right">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="text-light text-muted">4.6</span>
+                    </div>
+                </div>
+                <div class='bg-dark p-3'>
+                    <div class='row justify-content-between'>
+                        <div class='col-6 text-light px-0' style='height: 95%; max-height: 505px; overflow: scroll;'>
+                            <h3 id='overview'>Azure Machine Learning experiments</h3>
+                            <p>
+                                Like any scientific discipline, data science involves running <em>experiments</em>;
+                                typically to explore data or to build and evaluate predictive models. In Azure Machine
+                                Learning, an experiment is a named process, usually the running of a script or a
+                                pipeline, that can generate metrics and outputs and be tracked in the Azure Machine
+                                Learning workspace.
+                            </p>
+                            <img
+                                src='https://docs.microsoft.com/en-us/learn/data-ai-cert/intro-to-azure-machine-learning-service/media/03-01-experiment.jpg'>
+                            <p class='mt-4'>
+                                An experiment can be run multiple times, with different data, code, or
+                                settings; and Azure Machine Learning tracks each run, enabling you to view run history
+                                and compare results for each run.
+                            </p>
+                            <h4 class='encountertitles'>
+                                The Experiment Run Context
+                            </h4>
+                            <p>
+                                When you submit an experiment, you use its <em>run context</em> to initialize and end
+                                the experiment run that is tracked in Azure Machine Learning, as shown in the following
+                                code sample:
+                            </p>
+                            <div class='code12 my-4'>
+
+                            </div>
+                            <p>
+                                After the experiment run has completed, you can view the details of the run in the
+                                <strong>Experiments</strong> tab in Azure Machine Learning studio.
+                            </p>
+                            <h4 class='encountertitles'>
+                                Logging Metrics and Creating Outputs
+                            </h4>
+                            <p>
+                                Experiments are most useful when they produce metrics and outputs that can be tracked
+                                across runs.
+                            </p>
+                            <h5 class='encountertitles'>
+                                Logging Metrics
+                            </h5>
+                            <p>
+                                Every experiment generates log files that include the messages that would be written to
+                                the terminal during interactive execution. This enables you to use simple
+                                <code>print</code>
+                                statements to write messages to the log. However, if you want to record named metrics
+                                for comparison across runs, you can do so by using the <strong>Run</strong> object;
+                                which provides a
+                                range of logging functions specifically for this purpose. These include:
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>
+                                        <strong>log</strong>: Record a single named value.
+                                    </li>
+                                    <li>
+                                        <strong>log_list</strong>: Record a named list of values.
+                                    </li>
+                                    <li>
+                                        <strong>log_row</strong>: Record a row with multiple columns.
+                                    </li>
+                                    <li>
+                                        <strong>log_table</strong>: Record a dictionary as a table.
+                                    </li>
+                                    <li>
+                                        <strong>log_image</strong>: Record an image file or a plot.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                <strong>More Information</strong>: For more information about logging metrics during
+                                experiment runs, see <a href='https://aka.ms/AA70zf6'>Monitor Azure ML experiment runs
+                                    and metrics</a> in the Azure Machine Learning documentation.
+                            </p>
+                            <p>
+                                For example, following code records the number of observations (records) in a CSV file:
+                            </p>
+                            <div class='code13 my-4'>
+
+                            </div>
+                            <h5 class='encountertitles'>
+                                Retrieving and Viewing Logged Metrics
+                            </h5>
+                            <p>
+                                You can view the metrics logged by an experiment run in Azure Machine Learning studio or
+                                by using the RunDetails widget in a notebook, as shown here:
+                            </p>
+                            <div class='code14 my-4'>
+
+                            </div>
+                            <p>
+                                You can also retrieve the metrics using the <strong>Run</strong> object's
+                                <strong>get_metrics</strong> method, which returns a JSON representation of the metrics,
+                                as shown here:
+                            </p>
+                            <div class='code15 my-4'>
+
+                            </div>
+                            <p>
+                                The previous code produces output similar to this:
+                            </p>
+                            <div class='code16 my-4'>
+
+                            </div>
+                            <h5 class='encountertitles'>
+                                Experiment Output Files
+                            </h5>
+                            <p>
+                                In addition to logging metrics, an experiment can generate output files. Often these are
+                                trained machine learning models, but you can save any sort of file and make it available
+                                as an output of your experiment run. The output files of an experiment are saved in its
+                                <strong>outputs</strong> folder.
+                            </p>
+                            <p>
+                                The technique you use to add files to the outputs of an experiment depend on how you're
+                                running the experiment. The examples shown so far control the experiment lifecycle
+                                inline in your code, and when taking this approach you can upload local files to the
+                                run's <strong>outputs</strong> folder by using the <strong>Run</strong> object's
+                                <strong>upload_file</strong> method in your experiment code as shown here:
+                            </p>
+                            <div class='code17 my-4'>
+
+                            </div>
+                            <p>
+                                When running an experiment in a remote compute context (which we'll discuss later in
+                                this course), any files written to the <strong>outputs</strong> folder in the compute
+                                context are automatically uploaded to the run's <strong>outputs</strong> folder when the
+                                run completes.
+                            </p>
+                            <p>
+                                Whichever approach you use to run your experiment, you can retrieve a list of output
+                                files from the <strong>Run</strong> object like this:
+                            </p>
+                            <div class='code18 my-4'>
+
+                            </div>
+                            <p>
+                                The previous code produces output similar to this:
+                            </p>
+                            <div class='code19 my-4'>
+
+                            </div>
+                            <h4 class='encountertitles'>
+                                Running a Script as an Experiment
+                            </h4>
+                            <p>
+                                You can run an experiment inline using the <strong>start_logging</strong> method of the
+                                <strong>Experiment</strong> object, but it's more common to encapsulate the experiment
+                                logic in a script and run the script as an experiment. The script can be run in any
+                                valid compute context, making this a more flexible solution for running experiments as
+                                scale.
+                            </p>
+                            <p>
+                                An experiment script is just a Python code file that contains the code you want to run
+                                in the experiment. To access the experiment run context (which is needed to log metrics)
+                                the script must import the <strong>azureml.core.Run</strong> class and call its
+                                <strong>get_context</strong> method. The script can then use the run context to log
+                                metrics, upload files, and complete the experiment, as shown here:
+                            </p>
+                            <div class='code20 my-4'>
+
+                            </div>
+                            <p>
+                                To run a script as an experiment, you must define a <em>run configuration</em> that
+                                defines the Python environment in which the script will be run, and a <em>script run
+                                    configuration</em> that associates the run environment with the script. These are
+                                implemented by using the <strong>RunConfiguration</strong> and
+                                <strong>ScriptRunConfig</strong> objects.
+                            </p>
+                            <p>
+                                For example, the following code could be used to run an experiment based on a script in
+                                the <strong>experiment_files</strong> folder (which must also contain any files used by
+                                the script, such as the <em>data.csv</em> file in previous script code example):
+                            </p>
+                            <div class='code21 my-4'>
+
+                            </div>
+                            <div class='alert alert-primary my-4'>
+                                <h5 class='alert-heading'>
+                                    Note
+                                </h5>
+                                <p>
+                                    The <strong>RunConfig</strong> object defines the Python environment for the
+                                    experiment, including the packages available to the script. If your script depends
+                                    on packages that are not included in the default environment, you must associate the
+                                    <strong>RunConfig</strong> with an <strong>Environment</strong> object that makes
+                                    use of a <strong>CondaDependencies</strong> object to specify the Python packages
+                                    required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class='col code-11' style='height: 505px;'>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+</body>
+
+
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+        <div class='row'>
+            <p class="col text-light font-weight-bold">Contact them</p>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'>Your Profile</p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+<script src='../../unit_to_home.js'></script>
+<script src='./unit.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
