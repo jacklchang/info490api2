@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Introduction</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../../home.css'>
+    <link rel='stylesheet' href='../../catalog.css'>
+    <link rel='stylesheet' href='./unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../codemirror-5.53.2/lib/codemirror.css">
+    <script src='../../codemirror-5.53.2/lib/codemirror.js'></script>
+    <script src="../../codemirror-5.53.2/mode/python/python.js"></script>
+    <link rel='stylesheet' href='../../codemirror-5.53.2/theme/pastel-on-dark.css'>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid pb-5">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='../../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item" id='settings'><a href='../../settings.html'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class='container main-content pt-5 mt-4 px-5'>
+        <div class='row row-outer justify-content-around mx-auto' style='height: 80%!important'>
+            <div class="col-3 col-lg-2 p-0 pt-2" style='height: 100%!important'>
+                <div class="sidebar" style='height: 92%!important'>
+                    <a href="../scalability.html">Home</a>
+                    <a class="active" href="./unit.html">Introduction</a>
+                    <a href="./unit2.html">Discover DevOps</a>
+                    <a href="./unit3.html">Explore the first foundation</a>
+                    <a href="./unit4.html">Explore the second foundation</a>
+                    <a href="./unit5.html">Knowledge check</a>
+                    <a href="./unit6.html">Summary</a>
+                </div>
+                <hr style='border-color: white;'>
+                <a href="../../catalog.html" id="next" class='btn btn-success text-center mt-4'>Finish<i
+                        class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="col-8 col-lg-9 p-0">
+                <div class="row justify-content-between" style='width: 100%;'>
+                    <h3 class="text-light pt-3 pl-3">Introduce the foundation pillars of DevOps: Culture and Lean
+                        Product</h3>
+                    <div class="col-7">
+                        <p class="text-light">Cybersecurity Course</p>
+                    </div>
+                    <div class="col-4 text-right">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="text-light text-muted">4.7</span>
+                    </div>
+                </div>
+                <div class='row bg-dark py-4' style='height: 95%; max-height: 505px; overflow: scroll;'>
+                    <div class='col text-light px-4' id='#'>
+                        <h3 id='overview'>Summary
+                        </h3>
+                        <p>DevOps is the union of people, process, and products to enable continuous delivery of value
+                            to our end-users. For Microsoft Services, it encompasses the entire software delivery
+                            lifecycle, from idea to applications running in production.
+                        </p>
+                        <p>We identified four foundation pillars that support the mindset and foundation for DevOps,
+                            derived from People/Process/Product: Culture, Lean Product, Architecture, and Technology.
+                        </p>
+                        <p>Then we identified eight functions, or capabilities:
+                        </p>
+                        <ul>
+                            <li>Continuous Planning
+                            </li>
+                            <li>Continuous Integration
+                            </li>
+                            <li>Continuous Delivery
+                            </li>
+                            <li>Continuous Quality
+                            </li>
+                            <li>Continuous Security
+                            </li>
+                            <li>Continuous Operations
+                            </li>
+                            <li>Continuous Collaboration
+                            </li>
+                            <li>Continuous Improvement
+                            </li>
+                        </ul>
+                        <p>The first two pillars in our view of DevOps are Culture and Lean Product.
+                        </p>
+                        <p>Lean Product Management refers to a way of discovering products that embraces user-centrism. It acknowledges that product teams are on a continuous journey of solving well-understood end-user problems in as lean a manner as possible. It separates the concerns of why a product matters, what the product is, and how it's built.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+</body>
+
+
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+        <div class='row'>
+            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
+                <p class="text-light font-weight-bold">Contact them</p>
+            </a>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'>Your Profile</p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+<script src='../../unit_to_home.js'></script>
+<script src='./unit.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
