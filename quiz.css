@@ -29,3 +29,15 @@
     height: auto;
     float:left;
 }
+
+.quiz1b {
+    background-color:black;
+    color: white;
+    border:none;
+    height: auto;
+    margin: 1rem;
+    width: 20rem;
+    height: 5rem;
+    border-radius: 1rem;
+    line-height: 4rem;
+}
