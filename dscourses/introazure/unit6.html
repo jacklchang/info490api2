@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Summary</title>
+    <meta name="author" content="A-PI CapstoneAD2020">
+    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+    <meta name="keywords"
+        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./style.css"> -->
+    <link rel='stylesheet' href='../../home.css'>
+    <link rel='stylesheet' href='../../catalog.css'>
+    <link rel='stylesheet' href='./unit.css'>
+    <script src="https://kit.fontawesome.com/2dd473fe6e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../codemirror-5.53.2/lib/codemirror.css">
+    <script src='../../codemirror-5.53.2/lib/codemirror.js'></script>
+    <script src="../../codemirror-5.53.2/mode/python/python.js"></script>
+    <script src="../../codemirror-5.53.2/mode/powershell/powershell.js"></script>
+    <script src="../../codemirror-5.53.2/mode/javascript/javascript.js"></script>
+    <link rel='stylesheet' href='../../codemirror-5.53.2/theme/pastel-on-dark.css'>
+</head>
+
+<body class='bg-dark'>
+    <div class="container-fluid pb-5">
+        <nav class="navbar navbar-expand-lg pt-0">
+            <a class="navbar-brand text-light" id="logo"><img src='../../imgs/logo.png' width='30' height="30"
+                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../catalog.html">Catalog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../bookmarks.html">Saved Courses<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-light" href="../../references.html">References</a>
+                    </li>
+                </ul>
+
+                <form class='form-inline'>
+                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
+                        id='nav-search'>
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
+                            class="fas fa-search mx-1"></i></button>
+                </form>
+
+                <div class="dropdown text-light">
+                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../../imgs/microsoft_user.jpeg" id="profile-pic">
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
+                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
+                            <img src="../../imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
+                            <div class="progress mb-2">
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="card-text mb-2">12% complete</p>
+                        </li>
+                        <li class="dropdown-item" id='settings'><a href='../../settings.html'><small>View
+                                    Profile</small></a></li>
+                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class='container main-content pt-5 mt-4 px-5'>
+        <div class='row row-outer justify-content-around mx-auto' style='height: 80%!important'>
+            <div class="col-3 col-lg-2 p-0 pt-2" style='height: 100%!important' id='side-nav'>
+                <div class="sidebar" style='height: 92%!important'>
+                    <a href="../introazure.html">Home</a>
+                    <a href="./unit1.html">Introduction</a>
+                    <a href="./unit2.html">Azure Machine Learning workspace</a>
+                    <a href="./unit3.html">Azure Machine Learning tools and interfaces</a>
+                    <a href="./unit4.html">Azure Machine Learning experiments</a>
+                    <a href="./unit5.html">Exercise - Getting started with Azure Machine Learning</a>
+                    <a class="active" href="./unit6.html">Summary</a>
+                </div>
+                <hr style='border-color: white;'>
+                <a href="../../catalog.html" id="next" class='btn btn-success text-center mt-4'>Return to Catalog <i
+                        class="fas fa-angle-right"></i></a>
+            </div>
+            <div class="col-8 col-lg-9 p-0">
+                <h3 class="text-light pt-3 pl-3">Introduction to Azure Machine Learning</h3>
+
+                <div class="row justify-content-between" style='width: 100%;'>
+                    <div class="col-7">
+                        <p class="text-light">Data Science Course</p>
+                    </div>
+                    <div class="col-4 text-right">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="text-light text-muted">4.6</span>
+                    </div>
+                </div>
+                <div class='bg-dark p-3'>
+                    <div class='row justify-content-between'>
+                        <div class='col text-light px-1' style='height: 95%; max-height: 505px; overflow: scroll;'>
+                            <h3 id='overview'>Summary</h3>
+                            <p>In this module, you learned how to:</p>
+                            <p>
+                                <ul>
+                                    <li>
+                                        Provision an Azure Machine Learning workspace.
+                                    </li>
+                                    <li>
+                                        Use tools and interfaces to work with Azure Machine Learning.
+                                    </li>
+                                    <li>
+                                        Run code-based experiments in an Azure Machine Learning workspace.
+                                    </li>
+                                </ul>
+                            </p>
+                            <h4 class='encountertitles mt-5'>
+                                Check your knowledge
+                            </h4>
+                            <div class='form-group text-light'>
+                                <label class='mt-2'>1. Which of the following descriptions accurately describes Azure
+                                    Machine Learning?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1">
+                                    <label class="form-check-label pb-2" for="exampleRadios1">
+                                        A Python library that you can use as an alternative to common machine learning
+                                        frameworks like Scikit-Learn, PyTorch, and Tensorflow.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2">
+                                    <label class="form-check-label pb-2" for="exampleRadios2">
+                                        A cloud-based platform for operating machine learning solutions at scale.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios3">
+                                    <label class="form-check-label pb-2" for="exampleRadios3">
+                                        An application for Microsoft Windows that enables you to create machine learning
+                                        models by using a drag and drop interface.
+                                    </label>
+                                </div>
+                                <label class='mt-4'>2. Which edition of Azure Machine Learning workspace should you
+                                    provision if you only plan to use the graphical Designer tool to train machine
+                                    learning models?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios1"
+                                        id="exampleRadios1">
+                                    <label class="form-check-label pb-2" for="exampleRadios1">
+                                        Basic
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios1"
+                                        id="exampleRadios2">
+                                    <label class="form-check-label pb-2" for="exampleRadios2">
+                                        Enterprise
+                                    </label>
+                                </div>
+                                <label class='mt-2'>3. You are using the Azure Machine Learning Python SDK to write code
+                                    for an experiment. You must log metrics from each run of the experiment, and be able
+                                    to retrieve them easily from each run. What should you do?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1">
+                                    <label class="form-check-label pb-2" for="exampleRadios1">
+                                        Add print statements to the experiment code to print the metrics.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2">
+                                    <label class="form-check-label pb-2" for="exampleRadios2">
+                                        Save the experiment data in the outputs folder.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios3">
+                                    <label class="form-check-label pb-2" for="exampleRadios3">
+                                        Use the log* methods of the Run class to record named metrics.
+                                    </label>
+                                </div>
+                            </div>
+                            <button class='btn btn-primary'>Check your answers</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+</body>
+
+
+<footer id="sticky-footer" class="py-4 bg-secondary">
+    <div class="container text-center">
+        <div class='row'>
+            <p class="col text-light font-weight-bold">Contact them</p>
+            <p class='col font-weight-bold text-light'>Catalog</p>
+            <p class='col font-weight-bold text-light'>References</p>
+            <p class='col font-weight-bold text-light'>Your Profile</p>
+        </div>
+        <p class='text-center text-light'>This project is part of the Informatics 2020 Capstone.</p>
+    </div>
+</footer>
+<script src='../../unit_to_home.js'></script>
+<script src='./unit.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
