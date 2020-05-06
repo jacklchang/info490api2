@@ -1,0 +1,31 @@
+.buttonoptions {
+    background-color:black;
+    color: white;
+    border:none;
+    height: auto;
+    margin: 1rem;
+    width: 40rem;
+    height: 10rem;
+    border-radius: 1rem;
+    line-height: 2rem;
+}
+
+.buttonoptions span {
+    line-height: 2rem;
+    text-align: left;
+    padding-top:0;
+}
+
+.buttonoptions p {
+    font-size: 1.5rem;
+}
+
+.container {
+    padding-bottom: 5rem;
+}
+
+.icons {
+    width: 5rem;
+    height: auto;
+    float:left;
+}
