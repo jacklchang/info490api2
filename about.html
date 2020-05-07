@@ -2,126 +2,163 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>A-PI</title>
-    <meta name="author" content="A-PI CapstoneAD2020">
-    <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
-    <meta name="keywords"
-        content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel='stylesheet' href='./index.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>A-PI</title>
+  <meta name="author" content="A-PI CapstoneAD2020">
+  <meta name="description" content="Our capstone for Microsoft Learn, Azure, Docs.">
+  <meta name="keywords"
+    content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel='stylesheet' href='./index.css'>
+  <link rel='stylesheet' href="./about.css">
 </head>
 
 <body class='bg-dark'>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg mt-2">
-          <a class="navbar-brand text-light" href="./index.html" id="logo"><img src='./imgs/logo.png' width='30' height="30"
-              class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item mx-2">
-                <a class="nav-link text-light" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link text-light" href="./references.html">References</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link text-light" href="./about.html">About</a>
-              </li>
-            </ul>
-    
-            <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='login-btn' data-toggle='modal'
-              data-target='#login-window'><span>Log In</span></a>
-            <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='signup-btn' href='./signup.html'><span>Sign Up</span></a>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg mt-2">
+      <a class="navbar-brand text-light" href="./index.html" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+          class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link text-light" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-light" href="./references.html">References</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-light" href="./about.html">About</a>
+          </li>
+        </ul>
+
+        <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='login-btn' data-toggle='modal'
+          data-target='#login-window'><span>Log In</span></a>
+        <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='signup-btn' href='./signup.html'><span>Sign
+            Up</span></a>
+      </div>
+    </nav>
+
+
+    <div class='container'>
+      <h1 class="text-center my-5 text-light mt-5 pt-5 pb-5">About Encounter</h1>
+      <div class='row justify-content-center'>
+        <div class='col text-dark'>
+          <p class="text-light">We are team of 4 students at the University of Washington Information School, building
+            this as
+            our senior
+            capstone project.
+          </p>
+          <p class="mb-5 text-light">
+            Our sponsors, Microsoft Learn, want us to look at their
+            platform from a technical and non-technical students perspective.
+            By filling this content-gap, we will be able to connect students to these Microsoft
+            resources and provide them with the skills to become adept users,
+            thereby turning them into lifelong customers.
+          </p>
+        </div>
+        <div class='col'>
+          <div class='row'>
+            <div class='col'>
+              <img src='./imgs/sim 1.png' class='pl-5'>
+              <p class="text-light pl-5 pt-2">Simran Kota</p>
+            </div>
+            <div class='col'>
+              <img src='./imgs/jack 1.png'>
+              <p class="text-light pt-2">Jack Lucas Chang</p>
+            </div>
           </div>
-        </nav>
-    
-    
-    
-        <div class="modal fade" id="login-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Welcome back!</h5>
-                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="form-group text-light">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
-                  </div>
-                  <div class="form-group text-light">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder='Password'>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" id='login'>Take Me to Encounter!</button>
-              </div>
+          <div class='row'>
+            <div class='col'>
+              <img src='./imgs/brendan 1.png' class='pl-5'>
+              <p class="text-light pl-5 pt-2">Brendan Jacobsen</p>
+            </div>
+            <div class='col'>
+              <img src='./imgs/god 1.png'>
+              <p class="text-light pt-2">Godgiven Grogan</p>
             </div>
           </div>
         </div>
       </div>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4 text-light text-center mt-lg-3">Microsoft Encounter</h1>
-            <p class="lead text-light text-center mt-4">Code today, Build tomorrow</p>
-            <div class='row justify-content-center'>
-                <div class="card card-nav border-light mb-3" style="width: 30rem;">
-                    <div class="card-body">
-                        <h5 class="card-title text-light text-center">Problem Context</h5>
-                        <p class="card-text text-light">Our sponsors, Microsoft Learn, want us to look at their
-                            platform
-                            from a technical and non-technical students perspective.
-                            By filling this content-gap, we will be able to connect students to these Microsoft
-                            resources and provide them with the skills to become adept users,
-                            thereby turning them into lifelong customers.</p>
-                        <div class='row text-center'>
-                            <div class='col'>
-                                <a class="btn btn-outline-light my-2 my-sm-0 mx-auto" type="submit" id='desc-button'
-                                    href='./index.html'><span>Learn with
-                                        Encounter</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <div class='container-fluid' id="capstoneteam">
-        <div class='row justify-content-center'>
-            <div class='col text-dark'>
-                <h1 class="text-center my-5 text-dark">About the Team</h1>
-                <p class="pl-5">We are team of 4 students at the University of Washington Information School, building
-                    this as
-                    our senior
-                    capstone project.
-                </p>
-                <p class="pl-5 mb-5">
-                    Our sponsors, Microsoft Learn, want us to look at their
-                    platform from a technical and non-technical students perspective.
-                    By filling this content-gap, we will be able to connect students to these Microsoft
-                    resources and provide them with the skills to become adept users,
-                    thereby turning them into lifelong customers.
-                </p>
-            </div>
-            <div class='col my-5'>
-                <img src="./imgs/teampic.png" id="team-pic" class='my-4'>
-            </div>
+    <div class="container mt-5 content">
+      <div class="row" id="ourgoals">
+        <h1 class='text-light'>Our Goals</h1>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5 class='text-light'>Navigation</h5>
+          <p class='text-light'>We simplified the navigation to only have the most relevant content for a student.
+            Instead of multiple navigational layers, there are now three main pages: the catalog, saved courses, and
+            references.</p>
         </div>
+        <div class='col'>
+          <h5 class='text-light'>Audience targeting</h5>
+          <p class='text-light'>We specifically tailored our content to appeal to the student demographic by providing
+            them with topics that are in demand and will help them develop skills to get their next internship or job.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h5 class='text-light'>Roles</h5>
+          <p class='text-light'>We developed five main personas for student users: the data science student, the
+            software engineering student, the aspiring product manager, the non-techincal student who needs to learn
+            basic computing skills to work with data, and the non-techincal student who has some computing background.
+          </p>
+        </div>
+        <div class='col-6'>
+          <h5 class='text-light'>Personalized Courses</h5>
+          <p class='text-light'>Based on the role and skill level a student chooses, they receive personalized course
+            recommendations that help them gather the skills they will need to apply to positions in that field.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5 class='text-light'>Personalized on-boarding</h5>
+          <p class='text-light'>We personalized the onboarding process to let the user select exactly what they hope to
+            get out of the platform, which in turn helps us ensure they are presented with the most relevant content for
+            their goals.
+          </p>
+        </div>
+        <div class='col'>
+          <h5 class='text-light'>Dynamic Content</h5>
+          <p class='text-light'>Students appreciate a variety of content mediums to appeal to various learning styles,
+            which is why we edited courses to incorporate text, images, videos, and code windows. A student is able to
+            use whichever tool works best for their unique learning needs.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5 class='text-light'>Simplified Content Model</h5>
+          <p class='text-light'>The original content model was very confusing from a student’s perspective with multiple
+            layers of course content and hundreds of filters, most with topics students have never heard of. We
+            simplified this to make content more discoverable with a Topic, Language, and Difficulty filter, and
+            simplified the course structure by simply having modules with units and attached recommendations to
+            continue.
+          </p>
+        </div>
+        <div class='col'>
+          <h5 class='text-light'>Better Student Outcomes</h5>
+          <p class='text-light'>The new platform, renamed to Microsoft Encounter, has been proven to be more relevant
+            and user friendly to the target audience. A user is much more easily able to find their desired content and
+            start engaging with the content.
+          </p>
+        </div>
+      </div>
+      <div class="row" id="contactus">
+        <div class="col-12 text-center">
+          <button type="button" class="btn btn-outline-light">Contact Us</button>
+        </div>
+      </div>
     </div>
     <!--
     <div class='container mt-5 px-4 wrapper' id='body'>
@@ -157,24 +194,13 @@
         </div>
     </div>
     -->
-    <!--Footer-->
-    <footer id="sticky-footer" class="py-4 bg-light">
-        <div class="container text-center">
-            <a href='https://forms.gle/udjCPzusf47xDcx39' class='text-light' id='contact-link'>
-                <h4 class="text-dark">Contact Us</h4>
-            </a>
-        </div>
-    </footer>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </html>
