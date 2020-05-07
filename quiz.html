@@ -11,6 +11,7 @@
         content="Azure, Capstone, Informatics, Microsoft Learn, Microsoft, Students, Azure for Students">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='./index.css'>
     <link rel='stylesheet' href='./base.css'>
     <link rel='stylesheet' href='./home.css'>
     <link rel='stylesheet' href='./quiz.css'>
@@ -18,75 +19,126 @@
 </head>
 
 <body class='bg-dark'>
-    <div class="container-fluid pb-5">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg pt-0">
-            <a class="navbar-brand text-light" href="#" id="logo"><img src='./imgs/logo.png' width='30' height="30"
-                    class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./catalog.html">Catalog<span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./bookmarks.html">Saved Courses<span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link text-light" href="./references.html">References</a>
-                    </li>
-                </ul>
-
-                <form class='form-inline'>
-                    <input class='form-control mr-sm-2' type='search' placeholder="Search" aria-label="Search"
-                        id='nav-search'>
-                    <button class="btn btn-outline-light my-2 my-sm-0 mr-4" type="submit" id='search-btn'><i
-                            class="fas fa-search mx-1"></i></button>
-                </form>
-
-                <div class="dropdown text-light">
-                    <span class="dropdown-toggle" type="button" id="profile-pic" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <img src="./imgs/microsoft_user.jpeg" id="profile-pic">
-                    </span>
-                    <ul class="dropdown-menu dropdown-menu-right bg-dark pb-3" aria-labelledby="profile-pic">
-                        <li class="dropdown-item text-center text-light mb-3 disabled" id='profile-id'>
-                            <img src="./imgs/microsoft_user.jpeg" id="profile-lg" class='mb-4'>
-                            <div class="progress mb-2">
-                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
-                                    aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="card-text mb-2">12% complete</p>
-                        </li>
-                        <li class="dropdown-item" id='settings'><a href='./settings.html'><small>View
-                                    Profile</small></a></li>
-                        <li class="dropdown-item text-light" id='log-out'><small>Log Out</small></li>
-                    </ul>
-                </div>
-            </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg mt-2">
+          <a class="navbar-brand text-light" href="./index.html" id="logo"><img src='./imgs/logo.png' width='30' height="30"
+              class='d-inline-block align-top mr-3' alt='Microsoft Encounter logo'>Encounter</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light" href="./catalog.html">Catalog<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light" href="./references.html">References</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-light" href="./about.html">About</a>
+              </li>
+            </ul>
+    
+            <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='login-btn' data-toggle='modal'
+              data-target='#login-window'><span>Log In</span></a>
+            <a class="btn btn-outline-light my-2 my-sm-0 mr-3" type="submit" id='signup-btn' data-toggle="modal"
+              data-target="#signup-window"><span>Sign Up</span></a>
+          </div>
         </nav>
-    </div>
-    <div class="container">
-        <h1 class="encountertitles mt-5 mb-5">Just a few questions</h1>
-        <h2 class="text-light mb-5">Do you have any programming or software development experience?</h2>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="btn-group-vertical">
-                    <a class="btn quiz1b btn-dark" href="./quiz2.html" role="button">
-                        <img class="icons" src="./imgs/bar1.png">
-                        I've never written a line of code</a>
-                    <a class="btn quiz1b btn-dark" href="./quiz2.html" role="button">
-                        <img class="icons" src="./imgs/bar2.png">
-                        I have some experience</a>
-                    <a class="btn quiz1b btn-dark" href="./quiz2.html" role="button">
-                        <img class="icons" src="./imgs/bar3.png">I'm an experienced developer</a>
-                </div>
+    
+    
+    
+        <div class="modal fade" id="login-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-light" id="exampleModalLabel">Welcome back!</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group text-light">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                  </div>
+                  <div class="form-group text-light">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder='Password'>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id='login'>Take Me to Encounter!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="signup-window" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Welcome to Encounter!</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class='container'>
+                  <div class="form-group row">
+                    <div class='col'>
+                      <label for="First Name">First Name</label>
+                      <input type="text" class="form-control" id="fname" aria-describedby="nameHelp"
+                        placeholder="First Name">
+                    </div>
+                    <div class='col'>
+                      <label for="Last Name">Last Name</label>
+                      <input type="text" class="form-control" id="lname" aria-describedby="nameHelp"
+                        placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email Address</label>
+                    <input type="email" class="form-control" id="nemail" aria-describedby="emailHelp" placeholder="Email">
+                    <small id="emailHelp" class="form-text text-light">We'll never share your email with
+                      anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="npassword" placeholder='Password'>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id='next'>Continue Signup</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="container mt-5 pt-5">
+        <h1 class="encountertitles mt-5 mb-5">Just a few questions...</h1>
+        <p class="text-light mb-5 lead">Do you have any programming or software development experience?</p>
+        <div class="row justify-content-center">
+            <div class="col-6 text-center">
+                <div class="btn quiz1b btn-dark" role="button">
+                    <img class="icons" src="./imgs/bar1.png">
+                    I've never written a line of code  <i
+                    class="fas fa-angle-right"></i></div>
+                <div class="btn quiz1b btn-dark" role="button">
+                    <img class="icons" src="./imgs/bar2.png">
+                    I have some experience  <i
+                    class="fas fa-angle-right"></i></div>
+                <div class="btn quiz1b btn-dark" role="button">
+                    <img class="icons" src="./imgs/bar3.png">I'm an experienced developer  <i
+                    class="fas fa-angle-right"></i></div>
             </div>
         </div>
     </div>
@@ -115,7 +167,7 @@
     </div>
 </footer>
 
-<script src='./home.js'></script>
+<script src='./base.js'></script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

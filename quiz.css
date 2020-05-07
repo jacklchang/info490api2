@@ -4,10 +4,11 @@
     border:none;
     height: auto;
     margin: 1rem;
-    width: 40rem;
-    height: 10rem;
+    /* width: 40rem; */
+    /* height: 10rem; */
     border-radius: 1rem;
     line-height: 2rem;
+    padding: 2rem;
 }
 
 .buttonoptions span {
@@ -35,9 +36,16 @@
     color: white;
     border:none;
     height: auto;
-    margin: 1rem;
-    width: 20rem;
+    margin: 0.4rem;
+    width: 25rem;
     height: 5rem;
     border-radius: 1rem;
     line-height: 4rem;
+}
+
+.fas {
+    font-size: 28px;
+    font-weight: 600!important;
+    vertical-align: middle;
+    margin-left: 1rem;
 }

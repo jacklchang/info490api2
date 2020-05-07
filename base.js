@@ -15,7 +15,7 @@ firebase.analytics();
 
 let quiz = document.querySelector("#next");
 quiz.addEventListener("click", () => {
-  let modal = document.querySelector("#signup-window .modal-body");
+  let modal = document.querySelector(".signup");
   var email = document.querySelector("#nemail").value;
   var password = document.querySelector("#npassword").value;
   var fname = document.querySelector("#fname").value;
@@ -23,281 +23,235 @@ quiz.addEventListener("click", () => {
   // Clear modal content on click
   modal.innerHTML = "";
 
-  modal.classList.add("p-4");
+  // modal.classList.add("p-4");
 
-  let heading = document.createElement("h2");
-  heading.classList.add("text-light");
+  let heading = document.createElement("h1");
+  heading.classList.add("encountertitles", "mt-5", "mb-5");
   heading.textContent = "Just a few more questions...";
   modal.appendChild(heading);
 
   // Add question prompt 1
-  let generalquestion = document.createElement("label");
-  generalquestion.textContent = "Do you have any programming experience?";
-  generalquestion.classList.add("text-light", "h5", "mt-3");
+  let generalquestion = document.createElement("p");
+  generalquestion.textContent =
+    "Do you have any programming or software development experience?";
+  generalquestion.classList.add("text-light", "lead", "mb-5");
   modal.appendChild(generalquestion);
 
-  // add divs for options 1
+  let row = document.createElement("div");
+  row.classList.add("row", "justify-content-center");
+
+  let wrapper = document.createElement("div");
+  wrapper.classList.add("col-6", "text-center");
+
   let option1 = document.createElement("div");
-  option1.classList.add("form-check");
+  option1.classList.add("btn", "quiz1b", "btn-dark");
+  option1.role = "button";
+  option1.textContent = "I've never written a line of code";
+  let arrow1 = document.createElement("i");
+  arrow1.classList.add("fas", "fa-angle-right");
+  option1.appendChild(arrow1);
+
+  wrapper.appendChild(option1);
 
   let option2 = document.createElement("div");
-  option2.classList.add("form-check");
+  option2.classList.add("btn", "quiz1b", "btn-dark");
+  option2.role = "button";
+  option2.textContent = "I have some experience";
+  let arrow2 = document.createElement("i");
+  arrow2.classList.add("fas", "fa-angle-right");
+  option2.appendChild(arrow2);
+
+  wrapper.appendChild(option2);
 
   let option3 = document.createElement("div");
-  option3.classList.add("form-check");
+  option3.classList.add("btn", "quiz1b", "btn-dark");
+  option3.role = "button";
+  option3.textContent = "I'm an experienced developer";
+  let arrow3 = document.createElement("i");
+  arrow3.classList.add("fas", "fa-angle-right");
+  option3.appendChild(arrow3);
 
-  // add input options for divs 1
-  let geninput1 = document.createElement("INPUT");
-  geninput1.classList.add("form-check-input");
-  geninput1.id = "genexample1";
-  geninput1.name = "options1";
-  geninput1.value = "fundamental";
-  geninput1.type = "radio";
+  wrapper.appendChild(option3);
+  row.appendChild(wrapper);
+  modal.appendChild(row);
 
-  let geninput2 = document.createElement("INPUT");
-  geninput2.classList.add("form-check-input");
-  geninput2.id = "genexample2";
-  geninput2.name = "options1";
-  geninput2.value = "intermediate";
-  geninput2.type = "radio";
-
-  let geninput3 = document.createElement("INPUT");
-  geninput3.classList.add("form-check-input");
-  geninput3.id = "genexample3";
-  geninput3.name = "options1";
-  geninput3.value = "advanced";
-  geninput3.type = "radio";
-
-  // add role labels 1
-  let genlabel1 = document.createElement("label");
-  genlabel1.classList.add("form-check-label", "text-light", 'level');
-  genlabel1.for = "genexample1";
-  genlabel1.textContent = "I've never written a line of code.";
-
-  let genlabel2 = document.createElement("label");
-  genlabel2.classList.add("form-check-label", "text-light", 'level');
-  genlabel2.for = "genexample2";
-  genlabel2.textContent = "I have some experience.";
-
-  let genlabel3 = document.createElement("label");
-  genlabel3.classList.add("form-check-label", "text-light", 'level');
-  genlabel3.for = "genexample3";
-  genlabel3.textContent = "I'm an experienced developer.";
-
-  // pull together all elements 1
-  option1.appendChild(geninput1);
-  option1.appendChild(genlabel1);
-  modal.appendChild(option1);
-
-  option2.appendChild(geninput2);
-  option2.appendChild(genlabel2);
-  modal.appendChild(option2);
-
-  option3.appendChild(geninput3);
-  option3.appendChild(genlabel3);
-  modal.appendChild(option3);
-
-  // Add question prompt 2
-  let roleTitle = document.createElement("label");
-  roleTitle.textContent = "What role are you interested in?";
-  roleTitle.classList.add("text-light", "mt-3", "h5");
-  modal.appendChild(roleTitle);
-
-  // add divs for options 2
-  let div1 = document.createElement("div");
-  div1.classList.add("form-check");
-
-  let div2 = document.createElement("div");
-  div2.classList.add("form-check");
-
-  let div3 = document.createElement("div");
-  div3.classList.add("form-check");
-
-  let div4 = document.createElement("div");
-  div4.classList.add("form-check");
-
-  let div5 = document.createElement("div");
-  div5.classList.add("form-check");
-
-  // add input options for divs 2
-  let input1 = document.createElement("INPUT");
-  input1.classList.add("form-check-input");
-  input1.type = "radio";
-  input1.value = "Data Science";
-  input1.id = "example1";
-  input1.name = "options";
-
-  let input2 = document.createElement("INPUT");
-  input2.classList.add("form-check-input");
-  input2.type = "radio";
-  input2.value = "Software Developer";
-  input2.id = "example2";
-  input2.name = "options";
-
-  let input3 = document.createElement("INPUT");
-  input3.classList.add("form-check-input");
-  input3.type = "radio";
-  input3.value = "Cybersecurity";
-  input3.id = "example3";
-  input3.name = "options";
-
-  let input4 = document.createElement("INPUT");
-  input4.classList.add("form-check-input");
-  input4.type = "radio";
-  input4.value = "Product/Project Manager";
-  input4.id = "example4";
-  input4.name = "options";
-
-  let input5 = document.createElement("INPUT");
-  input5.classList.add("form-check-input");
-  input5.type = "radio";
-  input5.value = "Non-technical";
-  input5.id = "example5";
-  input5.name = "options";
-
-  // add role labels 2
-  let label1 = document.createElement("label");
-  label1.classList.add("form-check-label", "text-light", 'role');
-  label1.for = "example1";
-  label1.textContent = "Data Science";
-
-  let label2 = document.createElement("label");
-  label2.classList.add("form-check-label", "text-light", 'role');
-  label2.for = "example2";
-  label2.textContent = "Software Developer";
-
-  let label3 = document.createElement("label");
-  label3.classList.add("form-check-label", "text-light", 'role');
-  label3.for = "example3";
-  label3.textContent = "Cybersecurity";
-
-  let label4 = document.createElement("label");
-  label4.classList.add("form-check-label", "text-light", 'role');
-  label4.for = "example4";
-  label4.textContent = "Product/Project Manager";
-
-  let label5 = document.createElement("label");
-  label5.classList.add("form-check-label", "text-light", 'role');
-  label5.for = "example5";
-  label5.textContent = "Other";
-
-  // pull together all elements 2
-  div1.appendChild(input1);
-  div1.appendChild(label1);
-  modal.appendChild(div1);
-
-  div2.appendChild(input2);
-  div2.appendChild(label2);
-  modal.appendChild(div2);
-
-  div3.appendChild(input3);
-  div3.appendChild(label3);
-  modal.appendChild(div3);
-
-  div4.appendChild(input4);
-  div4.appendChild(label4);
-  modal.appendChild(div4);
-
-  div5.appendChild(input5);
-  div5.appendChild(label5);
-  modal.appendChild(div5);
-
-  let submitBtn = document.querySelector("#next");
-  submitBtn.textContent = "Submit";
-  submitBtn.id = "signup";
-
-let r = document.getElementsByName("options");
-
-let roleBtns = document.querySelectorAll('.role');
-for (let i = 0; i < roleBtns.length; i++) {
-  roleBtns[i].addEventListener('click', () => {
-    r[i].checked = true;
-  })
-}
-
-let r2 = document.getElementsByName("options1");
-
-let levelBtns = document.querySelectorAll('.level');
-for (let i = 0; i < levelBtns.length; i++) {
-  levelBtns[i].addEventListener('click', () => {
-    r2[i].checked = true;
-  })
-}
-
-  let signUp = document.querySelector("#signup");
-  signUp.addEventListener("click", () => {
-    r = document.getElementsByName("options");
-    var value;
-    for (var i = 0; i < r.length; i++) {
-      if (r[i].checked) {
-        // insert code to use the checked value
-        value = r[i].value;
-        break;
+  let levels = document.querySelectorAll(".quiz1b");
+  for (let i = 0; i < levels.length; i++) {
+    levels[i].addEventListener("click", () => {
+      let level;
+      if (levels[i].textContent == "I've never written a line of code") {
+        level = "fundamental";
+      } else if (levels[i].textContent == "I have some experience") {
+        level = "intermediate";
+      } else {
+        level = "advanced";
       }
-    }
-    r2 = document.getElementsByName("options1");
-    var level;
-    for (var i = 0; i < r2.length; i++) {
-      if (r2[i].checked) {
-        // insert code to use the checked value
-        level = r2[i].value;
-        break;
-      }
-    }
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((userCredentials) => {
-        let rootRef = firebase.database().ref("users");
-        var uid = userCredentials.user.uid;
-        var user = {
-          [uid]: {
-            fname: fname,
-            lname: lname,
-            role: value,
-            email: email,
-            exp: level,
-            saved: {key: 0},
-          },
-        };
-        return rootRef.update(user);
-      })
-      .then(() => {
-        firebase.auth().onAuthStateChanged(function (user) {
-          if (user) {
-            let uid = user.uid;
-            firebase
-              .database()
-              .ref("users/" + uid)
-              .once("value")
-              .then((snapshot) => {
-                var userInfo = snapshot.val();
-                userRole = userInfo.role;
-                userLevel = userInfo.exp;
-                if (userRole == "Data Science") {
-                  window.location = "./ds_home.html";
-                } else if (userRole == "Cybersecurity") {
-                  window.location = "./cyber_home.html";
-                } else if (userLevel == "fundamental") {
-                  window.location = "./home.html";
-                } else if (userRole == 'Software Developer') {
-                  window.location = './swe_home.html'
-                } else if (userRole == 'Product/Project Manager') {
-                  window.location = './pm_home.html';
-                } else {
-                  window.location = "./non_tech_home.html";
+      modal.innerHTML = "";
+      let heading = document.createElement("h1");
+      heading.classList.add("encountertitles", "mt-5", "mb-5");
+      heading.textContent = "Just a few more questions...";
+      modal.appendChild(heading);
+
+      // Add question prompt 1
+      let generalquestion = document.createElement("p");
+      generalquestion.textContent = "What track would you like to pursue?";
+      generalquestion.classList.add("text-light", "lead", "mb-5");
+      modal.appendChild(generalquestion);
+
+      let nrow = document.createElement("div");
+      nrow.classList.add("row", "justify-content-center");
+      let wrapper1 = document.createElement("div");
+      wrapper1.classList.add("col-9");
+      group = document.createElement("div");
+      group.classList.add("btn-group-vertical");
+
+      let rec = document.createElement("h3");
+      rec.classList.add("text-light");
+      rec.textContent = "Encounter recommends...";
+
+      role1 = document.createElement("button");
+      role1.classList.add("buttonoptions");
+      role1.type = "button";
+      inrow1 = document.createElement("div");
+      inrow1.classList.add("row", "pl-4");
+      p1 = document.createElement("p");
+      p1.textContent = "First time developer";
+      a1 = document.createElement("i");
+      a1.classList.add("fas", "fa-angle-right");
+      p1.appendChild(a1);
+      inrow1.appendChild(p1);
+      s1 = document.createElement("span");
+      s1.textContent = `Jump-start your career, earn recognition, and validate your skills in a job-role with
+      industry-recognized Microsoft certifications.`;
+      inrow1.appendChild(s1);
+      role1.appendChild(inrow1);
+      group.appendChild(role1);
+
+      other = document.createElement("h3");
+      other.classList.add("text-light", "pt-5");
+      other.textContent = "Available tracks";
+      group.appendChild(other);
+
+      role2 = document.createElement("button");
+      role2.classList.add("buttonoptions");
+      role2.type = "button";
+      inrow2 = document.createElement("div");
+      inrow2.classList.add("row", "pl-4");
+      p2 = document.createElement("p");
+      p2.textContent = "Software Developer";
+      a2 = document.createElement("i");
+      a2.classList.add("fas", "fa-angle-right");
+      p2.appendChild(a2);
+      inrow2.appendChild(p2);
+      s2 = document.createElement("span");
+      s2.textContent = `Developers design, build, test, and maintain solutions. Developers implement
+      applications and services by partnering with Solution Architects and customers.`;
+      inrow2.appendChild(s2);
+      role2.appendChild(inrow2);
+      group.appendChild(role2);
+
+      role3 = document.createElement("button");
+      role3.classList.add("buttonoptions");
+      role3.type = "button";
+      inrow3 = document.createElement("div");
+      inrow3.classList.add("row", "pl-4");
+      p3 = document.createElement("p");
+      p3.textContent = "Data Science";
+      a3 = document.createElement("i");
+      a3.classList.add("fas", "fa-angle-right");
+      p3.appendChild(a3);
+      inrow3.appendChild(p3);
+      s3 = document.createElement("span");
+      s3.textContent = `Data Scientists apply machine learning techniques to train, evaluate, and deploy models
+      that solve business problems.`;
+      inrow3.appendChild(s3);
+      role3.appendChild(inrow3);
+      group.appendChild(role3);
+
+      role4 = document.createElement("button");
+      role4.classList.add("buttonoptions");
+      role4.type = "button";
+      inrow4 = document.createElement("div");
+      inrow4.classList.add("row", "pl-4");
+      p4 = document.createElement("p");
+      p4.textContent = "Cybersecurity";
+      a4 = document.createElement("i");
+      a4.classList.add("fas", "fa-angle-right");
+      p4.appendChild(a4);
+      inrow4.appendChild(p4);
+      s4 = document.createElement("span");
+      s4.textContent = `Security Engineers implement security controls and threat protection, manage identity
+      and access, and protect data, applications, and networks.`;
+      inrow4.appendChild(s4);
+      role4.appendChild(inrow4);
+      group.appendChild(role4);
+
+      wrapper1.appendChild(group);
+      nrow.appendChild(wrapper1);
+      modal.appendChild(nrow);
+
+      let roles = document.querySelectorAll(".buttonoptions");
+      for (let j = 0; j < roles.length; j++) {
+        roles[j].addEventListener("click", () => {
+          let role = roles[j].children[0].children[0].textContent;
+          // console.log(role);
+          firebase
+            .auth()
+            .createUserWithEmailAndPassword(email, password)
+            .then((userCredentials) => {
+              let rootRef = firebase.database().ref("users");
+              var uid = userCredentials.user.uid;
+              var user = {
+                [uid]: {
+                  fname: fname,
+                  lname: lname,
+                  role: role,
+                  email: email,
+                  exp: level,
+                  saved: { key: 0 },
+                },
+              };
+              return rootRef.update(user);
+            })
+            .then(() => {
+              firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                  let uid = user.uid;
+                  firebase
+                    .database()
+                    .ref("users/" + uid)
+                    .once("value")
+                    .then((snapshot) => {
+                      var userInfo = snapshot.val();
+                      userRole = userInfo.role;
+                      // console.log(userRole)
+                      userLevel = userInfo.exp;
+                      // console.log('here')
+                      if (userRole == "Data Science") {
+                        window.location = "./ds_home.html";
+                      } else if (userRole == "Cybersecurity") {
+                        window.location = "./cyber_home.html";
+                      } else if (userLevel == "fundamental") {
+                        window.location = "./home.html";
+                      } else if (userRole == "Software Developer") {
+                        window.location = "./swe_home.html";
+                      } else if (userRole == "First time developer") {
+                        window.location = "./non_tech_home.html";
+                      }
+                    });
                 }
               });
-          }
+            })
+            .catch(function (error) {
+              // Handle Errors here.
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.log(errorMessage);
+            });
         });
-      })
-      .catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorMessage);
-      });
-  });
+      }
+    });
+  }
 });
 
 let login = document.querySelector("#login");
@@ -325,10 +279,8 @@ login.addEventListener("click", () => {
                 window.location = "./cyber_home.html";
               } else if (userLevel == "fundamental") {
                 window.location = "./home.html";
-              } else if (userRole == 'Software Developer') {
-                window.location = './swe_home.html'
-              } else if (userRole == 'Product/Project Manager') {
-                window.location = './pm_home.html';
+              } else if (userRole == "Software Developer") {
+                window.location = "./swe_home.html";
               } else {
                 window.location = "./non_tech_home.html";
               }
@@ -344,18 +296,18 @@ login.addEventListener("click", () => {
     });
 });
 
-$(".carousel.carousel-multi-item.v-2 .carousel-item").each(function () {
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(":first");
-  }
-  next.children(":first-child").clone().appendTo($(this));
+// $(".carousel.carousel-multi-item.v-2 .carousel-item").each(function () {
+//   var next = $(this).next();
+//   if (!next.length) {
+//     next = $(this).siblings(":first");
+//   }
+//   next.children(":first-child").clone().appendTo($(this));
 
-  for (var i = 0; i < 4; i++) {
-    next = next.next();
-    if (!next.length) {
-      next = $(this).siblings(":first");
-    }
-    next.children(":first-child").clone().appendTo($(this));
-  }
-});
+//   for (var i = 0; i < 4; i++) {
+//     next = next.next();
+//     if (!next.length) {
+//       next = $(this).siblings(":first");
+//     }
+//     next.children(":first-child").clone().appendTo($(this));
+//   }
+// });
