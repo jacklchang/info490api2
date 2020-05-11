@@ -1,0 +1,18 @@
+.content .row {
+    height: 12rem;
+    width: auto;
+}
+
+#contactus button{
+    width: 10rem;
+    height: auto;
+}
+
+#contactus {
+    height: 8rem;
+    padding-top: 2rem;
+}
+
+#ourgoals {
+    height: 5rem;
+}
