@@ -108,6 +108,7 @@ quiz.addEventListener("click", () => {
       let rec = document.createElement("h3");
       rec.classList.add("text-light");
       rec.textContent = "Encounter recommends...";
+      wrapper1.appendChild(rec)
 
       role1 = document.createElement("button");
       role1.classList.add("buttonoptions");
